@@ -1,0 +1,6211 @@
+{
+ "model": "gemma4:e4b-it-qat",
+ "date": "2026-11-25_1642",
+ "prompt": "A passage of a scientific paper defines these codes:\n{legend}\n\nBelow are table columns of the same paper (id | header | cell values). For each column, judge every cell value on its own: does the value use codes above with the meanings above? A column may also hold values the definitions above do not cover (other codes, labels, numbers, formulas, stray header text); such a value says nothing about the column's other values. Cells that only share the same letters, numbers or words but mean something else are not decoded by these definitions.\n\nColumns:\n{columns}\n\nFor every column give its id and, for every cell value listed for it:\n- value: the value as listed\n- codes: the codes above that the value contains ([] if none)\n- same_meaning: true if, in this column, the value uses those codes with the meanings above; false if not, or if codes is []\n- reason: a short reason, from the column's header or cells\n\nReply with JSON only.",
+ "base_run": "../../output/legend_coverage/calib2_run_2026-11-25_1158.json",
+ "units": [
+  {
+   "uid": "Cajaiba2023#p113",
+   "oracle_input": [
+    {
+     "code": "PF",
+     "term": "Primary Forest",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "SF-15",
+     "term": "Secondary forest with 15 years of regeneration",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "SF-5",
+     "term": "Secondary forest with 5 years of regeneration",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "AG",
+     "term": "Agriculture",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "PA",
+     "term": "Pasture",
+     "variable": "ecosystem"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ]
+    },
+    {
+     "id": "C4",
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ]
+    },
+    {
+     "id": "C5",
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "Intercept",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "Predictor variable",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      },
+      {
+       "value": "Sampled sites",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      }
+     ]
+    },
+    {
+     "id": "C6",
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      },
+      {
+       "value": "TT_FT: Trophic type",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      }
+     ]
+    },
+    {
+     "id": "C7",
+     "values": [
+      {
+       "value": "11.79",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "13.23",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "13.44",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "19.67",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "21.88",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "24.17",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "33.52",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "35.23",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      }
+     ]
+    },
+    {
+     "id": "C8",
+     "values": [
+      {
+       "value": "0.0001",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.001",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.05",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "5.15",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "8.15",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      }
+     ]
+    },
+    {
+     "id": "C9",
+     "values": [
+      {
+       "value": "0.0001",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.001",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.01",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.05",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t1c0": {
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "legend_codes": [
+        "AG"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "legend_codes": [
+        "PA"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "legend_codes": [
+        "PF"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "legend_codes": [
+        "SF-15"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "legend_codes": [
+        "SF-5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ],
+     "codes": [
+      "AG",
+      "PA",
+      "PF",
+      "SF-15",
+      "SF-5"
+     ]
+    },
+    "t2c0": {
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "legend_codes": [
+        "AG"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "legend_codes": [
+        "PA"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "legend_codes": [
+        "PF"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "legend_codes": [
+        "SF-15"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "legend_codes": [
+        "SF-5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ],
+     "codes": [
+      "AG",
+      "PA",
+      "PF",
+      "SF-15",
+      "SF-5"
+     ]
+    },
+    "t3c0": {
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "legend_codes": [
+        "AG"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "legend_codes": [
+        "PA"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "legend_codes": [
+        "PF"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "legend_codes": [
+        "SF-15"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "legend_codes": [
+        "SF-5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ],
+     "codes": [
+      "AG",
+      "PA",
+      "PF",
+      "SF-15",
+      "SF-5"
+     ]
+    },
+    "t4c0": {
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "legend_codes": [
+        "AG"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "legend_codes": [
+        "PA"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "legend_codes": [
+        "PF"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "legend_codes": [
+        "SF-15"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "legend_codes": [
+        "SF-5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      }
+     ],
+     "codes": [
+      "AG",
+      "PA",
+      "PF",
+      "SF-15",
+      "SF-5"
+     ]
+    },
+    "t9c1": {
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "legend_codes": [
+        "AG"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "Intercept",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "legend_codes": [
+        "PA"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "legend_codes": [
+        "PF"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "Predictor variable",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "legend_codes": [
+        "SF-15"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "legend_codes": [
+        "SF-5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      },
+      {
+       "value": "Sampled sites",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      }
+     ],
+     "codes": [
+      "AG",
+      "PA",
+      "PF",
+      "SF-15",
+      "SF-5"
+     ]
+    },
+    "t10c0": {
+     "values": [
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "legend_codes": [
+        "AG"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "legend_codes": [
+        "PA"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "legend_codes": [
+        "PF"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      },
+      {
+       "value": "SF-15",
+       "codes": [
+        "SF-15"
+       ],
+       "legend_codes": [
+        "SF-15"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 15 years of regeneration"
+      },
+      {
+       "value": "SF-5",
+       "codes": [
+        "SF-5"
+       ],
+       "legend_codes": [
+        "SF-5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Secondary forest with 5 years of regeneration"
+      },
+      {
+       "value": "TT_FT: Trophic type",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Not one of the defined ecosystem codes"
+      }
+     ],
+     "codes": [
+      "AG",
+      "PA",
+      "PF",
+      "SF-15",
+      "SF-5"
+     ]
+    },
+    "t10c1": {
+     "values": [
+      {
+       "value": "11.79",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "13.23",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "13.44",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "19.67",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "21.88",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "24.17",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "33.52",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "35.23",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "PF",
+       "codes": [
+        "PF"
+       ],
+       "legend_codes": [
+        "PF"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Primary Forest"
+      }
+     ],
+     "codes": [
+      "PF"
+     ]
+    },
+    "t10c4": {
+     "values": [
+      {
+       "value": "0.0001",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.001",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.05",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "5.15",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "8.15",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "AG",
+       "codes": [
+        "AG"
+       ],
+       "legend_codes": [
+        "AG"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Agriculture"
+      }
+     ],
+     "codes": [
+      "AG"
+     ]
+    },
+    "t10c5": {
+     "values": [
+      {
+       "value": "0.0001",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.001",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.01",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "0.05",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Numerical value, not a defined code"
+      },
+      {
+       "value": "PA",
+       "codes": [
+        "PA"
+       ],
+       "legend_codes": [
+        "PA"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches defined code for Pasture"
+      }
+     ],
+     "codes": [
+      "PA"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t1c0": [
+     "AG",
+     "PA",
+     "PF",
+     "SF-15",
+     "SF-5"
+    ],
+    "t2c0": [
+     "AG",
+     "PA",
+     "PF",
+     "SF-15",
+     "SF-5"
+    ],
+    "t3c0": [
+     "AG",
+     "PA",
+     "PF",
+     "SF-15",
+     "SF-5"
+    ],
+    "t4c0": [
+     "AG",
+     "PA",
+     "PF",
+     "SF-15",
+     "SF-5"
+    ],
+    "t9c1": [
+     "AG",
+     "PA",
+     "PF",
+     "SF-15",
+     "SF-5"
+    ],
+    "t10c0": [
+     "AG",
+     "PA",
+     "PF",
+     "SF-15",
+     "SF-5"
+    ],
+    "t10c1": [
+     "PF"
+    ],
+    "t10c4": [
+     "AG"
+    ],
+    "t10c5": [
+     "PA"
+    ]
+   },
+   "seconds": 22.6
+  },
+  {
+   "uid": "Cappellari2022#p63",
+   "oracle_input": [
+    {
+     "code": "Apis",
+     "term": "honeybee abundance",
+     "variable": "explanatory variables"
+    },
+    {
+     "code": "Temp",
+     "term": "temperature",
+     "variable": "explanatory variables"
+    },
+    {
+     "code": "ProbS",
+     "term": "proboscis similar to the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "ProbL",
+     "term": "proboscis longer than the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "BodyS",
+     "term": "body size similar to the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "BodyL",
+     "term": "body size larger than the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "For_NC",
+     "term": "non-central forager",
+     "variable": "levels of the four trait categories"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Apis + Temp + FDis + TSim + Apis × FDis",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis + Temp + FRic + TSim + Apis × FRic",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × Body + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × Fam + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × For + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × Prob + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t5c3": {
+     "values": [
+      {
+       "value": "Apis + Temp + FDis + TSim + Apis × FDis",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "legend_codes": [
+        "Apis",
+        "Temp"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis + Temp + FRic + TSim + Apis × FRic",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "legend_codes": [
+        "Apis",
+        "Temp"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × Body + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "legend_codes": [
+        "Apis",
+        "Temp"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × Fam + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "legend_codes": [
+        "Apis",
+        "Temp"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × For + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "legend_codes": [
+        "Apis",
+        "Temp"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      },
+      {
+       "value": "Apis × Prob + Temp",
+       "codes": [
+        "Apis",
+        "Temp"
+       ],
+       "legend_codes": [
+        "Apis",
+        "Temp"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains Apis and Temp, which are defined explanatory variables."
+      }
+     ],
+     "codes": [
+      "Apis",
+      "Temp"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t5c3": [
+     "Apis",
+     "Temp"
+    ]
+   },
+   "seconds": 3.7
+  },
+  {
+   "uid": "Cecala2021#p134",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "nursery was sampled",
+     "variable": "sampling schedule"
+    },
+    {
+     "code": "0",
+     "term": "not sampled due to logistical reasons",
+     "variable": "sampling schedule"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "01",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "02",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "03",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "04",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "05",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "06",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "07",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "08",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "09",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "10",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "11",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "12",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "13",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "TOTAL",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "This is a label, not a code."
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "01",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "02",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "03",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "04",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "05",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "06",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "07",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "08",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "09",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "10",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "11",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "12",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "13",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "nurseries sampled",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "This is a descriptive label, not a code."
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code '1' = 'nursery was sampled'."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '2' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '3' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '5' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "58",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '58' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "6",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '6' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '7' is a count, not a code for sampling schedule."
+      }
+     ]
+    },
+    {
+     "id": "C4",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "The value '0' matches the code '0' = 'not sampled due to logistical reasons'."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code '1' = 'nursery was sampled'."
+      },
+      {
+       "value": "10",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value '10' is an identifier, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "12",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value '12' is an identifier, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "13",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "The value '13' is an identifier, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "14",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '14' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '2' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '3' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "4",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '4' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '5' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "6",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '6' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "8",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '8' is an identifier, not a code for sampling schedule."
+      }
+     ]
+    },
+    {
+     "id": "C5",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "The value '0' matches the code '0' = 'not sampled due to logistical reasons'."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code '1' = 'nursery was sampled'."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '2' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "25",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '25' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '3' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "4",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '4' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '5' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "6",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '6' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '7' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "8",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '8' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value '9' is a count, not a code for sampling schedule."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t0c0": {
+     "values": [
+      {
+       "value": "01",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "02",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "03",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "04",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "05",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "06",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "07",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "08",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "09",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "10",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "11",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "12",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "13",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "TOTAL",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "This is a label, not a code."
+      }
+     ],
+     "codes": []
+    },
+    "t1c0": {
+     "values": [
+      {
+       "value": "01",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "02",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "03",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "04",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "05",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "06",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "07",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "08",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "09",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "10",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "11",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "12",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "13",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "nurseries sampled",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "This is a descriptive label, not a code."
+      }
+     ],
+     "codes": []
+    },
+    "t1c8": {
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code '1' = 'nursery was sampled'."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '2' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '3' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '5' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "58",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '58' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "6",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '6' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '7' is a count, not a code for sampling schedule."
+      }
+     ],
+     "codes": [
+      "1"
+     ]
+    },
+    "t6c2": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '0' matches the code '0' = 'not sampled due to logistical reasons'."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code '1' = 'nursery was sampled'."
+      },
+      {
+       "value": "10",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '10' is an identifier, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "12",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '12' is an identifier, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "13",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '13' is an identifier, not a direct representation of the sampling schedule codes."
+      },
+      {
+       "value": "14",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '14' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '2' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '3' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "4",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '4' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '5' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "6",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '6' is an identifier, not a code for sampling schedule."
+      },
+      {
+       "value": "8",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '8' is an identifier, not a code for sampling schedule."
+      }
+     ],
+     "codes": [
+      "0",
+      "1"
+     ]
+    },
+    "t6c3": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '0' matches the code '0' = 'not sampled due to logistical reasons'."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code '1' = 'nursery was sampled'."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '2' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "25",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '25' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '3' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "4",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '4' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '5' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "6",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '6' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '7' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "8",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '8' is a count, not a code for sampling schedule."
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value '9' is a count, not a code for sampling schedule."
+      }
+     ],
+     "codes": [
+      "0",
+      "1"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t1c8": [
+     "1"
+    ],
+    "t6c2": [
+     "0",
+     "1"
+    ],
+    "t6c3": [
+     "0",
+     "1"
+    ]
+   },
+   "seconds": 25.6
+  },
+  {
+   "uid": "Eckert2023#t4r70",
+   "oracle_input": [
+    {
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "variable": ""
+    },
+    {
+     "code": "Pred",
+     "term": "Predator",
+     "variable": ""
+    },
+    {
+     "code": "Sap",
+     "term": "Saprovore",
+     "variable": ""
+    },
+    {
+     "code": "Soil",
+     "term": "soil-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Litter",
+     "term": "litter-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "variable": ""
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Forage strategy",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "This is the column header."
+      },
+      {
+       "value": "Forage strategy ; GenForager ; Pred ; Sap",
+       "codes": [
+        "GenForager",
+        "Pred",
+        "Sap"
+       ],
+       "same_meaning": true,
+       "reason": "The cell contains the defined codes GenForager, Pred, and Sap."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t4c2": {
+     "values": [
+      {
+       "value": "Forage strategy",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "This is the column header."
+      },
+      {
+       "value": "Forage strategy ; GenForager ; Pred ; Sap",
+       "codes": [
+        "GenForager",
+        "Pred",
+        "Sap"
+       ],
+       "legend_codes": [
+        "GenForager",
+        "Pred",
+        "Sap"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The cell contains the defined codes GenForager, Pred, and Sap."
+      }
+     ],
+     "codes": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t4c2": [
+     "GenForager",
+     "Pred",
+     "Sap"
+    ]
+   },
+   "seconds": 1.1
+  },
+  {
+   "uid": "Eckert2023#t4r134",
+   "oracle_input": [
+    {
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "variable": ""
+    },
+    {
+     "code": "Pred",
+     "term": "Predator",
+     "variable": ""
+    },
+    {
+     "code": "Sap",
+     "term": "Saprovore",
+     "variable": ""
+    },
+    {
+     "code": "Soil",
+     "term": "soil-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Litter",
+     "term": "litter-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "variable": ""
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Forage strategy",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "This is the column header."
+      },
+      {
+       "value": "Forage strategy ; GenForager ; Pred ; Sap",
+       "codes": [
+        "GenForager",
+        "Pred",
+        "Sap"
+       ],
+       "same_meaning": true,
+       "reason": "The cell contains the defined codes GenForager, Pred, and Sap."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t4c2": {
+     "values": [
+      {
+       "value": "Forage strategy",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "This is the column header."
+      },
+      {
+       "value": "Forage strategy ; GenForager ; Pred ; Sap",
+       "codes": [
+        "GenForager",
+        "Pred",
+        "Sap"
+       ],
+       "legend_codes": [
+        "GenForager",
+        "Pred",
+        "Sap"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The cell contains the defined codes GenForager, Pred, and Sap."
+      }
+     ],
+     "codes": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t4c2": [
+     "GenForager",
+     "Pred",
+     "Sap"
+    ]
+   },
+   "seconds": 1.5
+  },
+  {
+   "uid": "Ji2024#t0r0c3",
+   "oracle_input": [
+    {
+     "code": "E",
+     "term": "Effect",
+     "variable": "effect / response trait"
+    },
+    {
+     "code": "R",
+     "term": "response",
+     "variable": "effect / response trait"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Effect (E)/ response (R) trait",
+       "codes": [
+        "E",
+        "R"
+       ],
+       "same_meaning": true,
+       "reason": "The header explicitly defines E as Effect and R as response."
+      },
+      {
+       "value": "E and R",
+       "codes": [
+        "E",
+        "R"
+       ],
+       "same_meaning": true,
+       "reason": "The value uses the defined codes E and R."
+      },
+      {
+       "value": "R",
+       "codes": [
+        "R"
+       ],
+       "same_meaning": true,
+       "reason": "The value uses the defined code R."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t0c3": {
+     "values": [
+      {
+       "value": "Effect (E)/ response (R) trait",
+       "codes": [
+        "E",
+        "R"
+       ],
+       "legend_codes": [
+        "E",
+        "R"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The header explicitly defines E as Effect and R as response."
+      },
+      {
+       "value": "E and R",
+       "codes": [
+        "E",
+        "R"
+       ],
+       "legend_codes": [
+        "E",
+        "R"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value uses the defined codes E and R."
+      },
+      {
+       "value": "R",
+       "codes": [
+        "R"
+       ],
+       "legend_codes": [
+        "R"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value uses the defined code R."
+      }
+     ],
+     "codes": [
+      "E",
+      "R"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t0c3": [
+     "E",
+     "R"
+    ]
+   },
+   "seconds": 1.2
+  },
+  {
+   "uid": "Jones2015#p67",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "relatively sedentary",
+     "variable": "mobility points"
+    },
+    {
+     "code": "1",
+     "term": "mobile",
+     "variable": "mobility points"
+    },
+    {
+     "code": "2",
+     "term": "very mobile",
+     "variable": "mobility points"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 1"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 1"
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 2"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 2"
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 3"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 3"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 3"
+      }
+     ]
+    },
+    {
+     "id": "C4",
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 4"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 4"
+      }
+     ]
+    },
+    {
+     "id": "C5",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 5"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 5"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Expert 5"
+      }
+     ]
+    },
+    {
+     "id": "C6",
+     "values": [
+      {
+       "value": "0.6",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "0.8",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1.2",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1.4",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1.6",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Mean points"
+      }
+     ]
+    },
+    {
+     "id": "C7",
+     "values": [
+      {
+       "value": "0.6",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "0.8",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1.2",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1.4",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1.6",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Expert opinion"
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t1c1": {
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 1"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 1"
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    },
+    "t1c2": {
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 2"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 2"
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    },
+    "t1c3": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 3"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 3"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 3"
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2"
+     ]
+    },
+    "t1c4": {
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 4"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 4"
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    },
+    "t1c5": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 5"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 5"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert 5"
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2"
+     ]
+    },
+    "t1c6": {
+     "values": [
+      {
+       "value": "0.6",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "0.8",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1.2",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1.4",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "1.6",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Mean points"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Mean points"
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    },
+    "t2c3": {
+     "values": [
+      {
+       "value": "0.6",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "0.8",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1.2",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1.4",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "1.6",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Expert opinion"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Expert opinion"
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t1c1": [
+     "1",
+     "2"
+    ],
+    "t1c2": [
+     "1",
+     "2"
+    ],
+    "t1c3": [
+     "0",
+     "1",
+     "2"
+    ],
+    "t1c4": [
+     "1",
+     "2"
+    ],
+    "t1c5": [
+     "0",
+     "1",
+     "2"
+    ],
+    "t1c6": [
+     "1",
+     "2"
+    ],
+    "t2c3": [
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 9.6
+  },
+  {
+   "uid": "Kratschmer2019#t8r11",
+   "oracle_input": [
+    {
+     "code": "G",
+     "term": "Ground-nesting",
+     "variable": "nesting type"
+    },
+    {
+     "code": "A",
+     "term": "Above-ground nesting",
+     "variable": "nesting type"
+    },
+    {
+     "code": "P",
+     "term": "Parasitic",
+     "variable": "nesting type"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "P",
+       "codes": [
+        "P"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'P' = 'Parasitic'"
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "H",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 'H' is not defined in the provided list."
+      },
+      {
+       "value": "P",
+       "codes": [
+        "P"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'P' = 'Parasitic'"
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "H",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 'H' is not defined in the provided list."
+      }
+     ]
+    },
+    {
+     "id": "C4",
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "BP",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Value 'BP' does not match any single defined code (A, G, P)."
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "P",
+       "codes": [
+        "P"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition for 'P' = 'Parasitic'"
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t10c2": {
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "legend_codes": [
+        "A"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "legend_codes": [
+        "G"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "P",
+       "codes": [
+        "P"
+       ],
+       "legend_codes": [
+        "P"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'P' = 'Parasitic'"
+      }
+     ],
+     "codes": [
+      "A",
+      "G",
+      "P"
+     ]
+    },
+    "t11c2": {
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "legend_codes": [
+        "A"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "legend_codes": [
+        "G"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "H",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 'H' is not defined in the provided list."
+      },
+      {
+       "value": "P",
+       "codes": [
+        "P"
+       ],
+       "legend_codes": [
+        "P"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'P' = 'Parasitic'"
+      }
+     ],
+     "codes": [
+      "A",
+      "G",
+      "P"
+     ]
+    },
+    "t12c2": {
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "legend_codes": [
+        "A"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "legend_codes": [
+        "G"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "H",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 'H' is not defined in the provided list."
+      }
+     ],
+     "codes": [
+      "A",
+      "G"
+     ]
+    },
+    "t13c2": {
+     "values": [
+      {
+       "value": "A",
+       "codes": [
+        "A"
+       ],
+       "legend_codes": [
+        "A"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'A' = 'Above-ground nesting'"
+      },
+      {
+       "value": "BP",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Value 'BP' does not match any single defined code (A, G, P)."
+      },
+      {
+       "value": "G",
+       "codes": [
+        "G"
+       ],
+       "legend_codes": [
+        "G"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'G' = 'Ground-nesting'"
+      },
+      {
+       "value": "P",
+       "codes": [
+        "P"
+       ],
+       "legend_codes": [
+        "P"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition for 'P' = 'Parasitic'"
+      }
+     ],
+     "codes": [
+      "A",
+      "G",
+      "P"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t10c2": [
+     "A",
+     "G",
+     "P"
+    ],
+    "t11c2": [
+     "A",
+     "G",
+     "P"
+    ],
+    "t12c2": [
+     "A",
+     "G"
+    ],
+    "t13c2": [
+     "A",
+     "G",
+     "P"
+    ]
+   },
+   "seconds": 6.4
+  },
+  {
+   "uid": "Nelson2020#p73",
+   "oracle_input": [
+    {
+     "code": "FRic",
+     "term": "functional richness",
+     "variable": "functional trait diversity"
+    },
+    {
+     "code": "FEve",
+     "term": "functional evenness",
+     "variable": "functional trait diversity"
+    },
+    {
+     "code": "FDis",
+     "term": "functional dispersion",
+     "variable": "functional trait diversity"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Model",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "General model label"
+      },
+      {
+       "value": "Body size CWM ; FDis ; FDiv ; FEve ; FRic ; Herbivore/omnivore activity density ; Null ; Proportion brachypterous ; Proportion diurnal ; Proportion herbivore/omnivore ; Proportion spring active ; Rarefied richness ; Total activity density",
+       "codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "same_meaning": true,
+       "reason": "Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics."
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "Model",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "General model label"
+      },
+      {
+       "value": "Body size CWM ; Carnivore activity density ; FDis ; FDiv ; FEve ; FRic ; Null ; Proportion brachypterous ; Proportion carnivore ; Proportion diurnal ; Proportion spring active ; Rarefied richness ; Total activity density",
+       "codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "same_meaning": true,
+       "reason": "Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics."
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "Proportion carnivore",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Specific proportion label"
+      },
+      {
+       "value": "Body size CWM ; FDis ; FDiv ; FEve ; FRic ; Proportion brachypterous ; Proportion diurnal ; Proportion spring active ; Rarefied richness ; Total activity density",
+       "codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "same_meaning": true,
+       "reason": "Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t9c0": {
+     "values": [
+      {
+       "value": "Model",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "General model label"
+      },
+      {
+       "value": "Body size CWM ; FDis ; FDiv ; FEve ; FRic ; Herbivore/omnivore activity density ; Null ; Proportion brachypterous ; Proportion diurnal ; Proportion herbivore/omnivore ; Proportion spring active ; Rarefied richness ; Total activity density",
+       "codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "legend_codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics."
+      }
+     ],
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ]
+    },
+    "t10c0": {
+     "values": [
+      {
+       "value": "Model",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "General model label"
+      },
+      {
+       "value": "Body size CWM ; Carnivore activity density ; FDis ; FDiv ; FEve ; FRic ; Null ; Proportion brachypterous ; Proportion carnivore ; Proportion diurnal ; Proportion spring active ; Rarefied richness ; Total activity density",
+       "codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "legend_codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics."
+      }
+     ],
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ]
+    },
+    "t12c0": {
+     "values": [
+      {
+       "value": "Proportion carnivore",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Specific proportion label"
+      },
+      {
+       "value": "Body size CWM ; FDis ; FDiv ; FEve ; FRic ; Proportion brachypterous ; Proportion diurnal ; Proportion spring active ; Rarefied richness ; Total activity density",
+       "codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "legend_codes": [
+        "FDis",
+        "FEve",
+        "FRic"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics."
+      }
+     ],
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t9c0": [
+     "FDis",
+     "FEve",
+     "FRic"
+    ],
+    "t10c0": [
+     "FDis",
+     "FEve",
+     "FRic"
+    ],
+    "t12c0": [
+     "FDis",
+     "FEve",
+     "FRic"
+    ]
+   },
+   "seconds": 4.6
+  },
+  {
+   "uid": "Tonelli2021#p125",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "underdeveloped",
+     "variable": "zygum"
+    },
+    {
+     "code": "2",
+     "term": "developed",
+     "variable": "zygum"
+    },
+    {
+     "code": "3",
+     "term": "strong prolongation of spatula-shaped epizygum",
+     "variable": "zygum"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code for 'underdeveloped' in the header."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "The value '2' matches the code for 'developed' in the header."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c11": {
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '1' matches the code for 'underdeveloped' in the header."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '2' matches the code for 'developed' in the header."
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c11": [
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 1.4
+  },
+  {
+   "uid": "Tonelli2021#p143",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "Nest composed of a single brood mass located within the excrement",
+     "variable": ""
+    },
+    {
+     "code": "2",
+     "term": "Nest composed of several brood masses located within the excrement",
+     "variable": ""
+    },
+    {
+     "code": "3",
+     "term": "Nest composed of a single brood mass located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "4",
+     "term": "Nest composed of several brood masses located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "5",
+     "term": "Nest composed of several isolated brood masses located underground in a compound nest",
+     "variable": ""
+    },
+    {
+     "code": "6",
+     "term": "Nest composed of several brood masses per chamber, located underground in a compound nest",
+     "variable": ""
+    },
+    {
+     "code": "7",
+     "term": "Nest composed of a single brood ball located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "8",
+     "term": "Nest composed of several isolated brood balls located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "9",
+     "term": "Nest composed of several brood balls per chamber located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "10",
+     "term": "Nest composed of several isolated brood balls located underground in a compound nest",
+     "variable": ""
+    },
+    {
+     "code": "11",
+     "term": "Nest composed of several brood balls per chamber located underground in a compound nest",
+     "variable": ""
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "10",
+       "codes": [
+        "10"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 10 which is defined."
+      },
+      {
+       "value": "11",
+       "codes": [
+        "11"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 11 which is defined."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 2 which is defined."
+      },
+      {
+       "value": "5",
+       "codes": [
+        "5"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 5 which is defined."
+      },
+      {
+       "value": "7",
+       "codes": [
+        "7"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 7 which is defined."
+      },
+      {
+       "value": "8",
+       "codes": [
+        "8"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 8 which is defined."
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "0",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 0 is not defined in the provided list."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 1 which is defined."
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 3 which is defined."
+      },
+      {
+       "value": "5",
+       "codes": [
+        "5"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 5 which is defined."
+      },
+      {
+       "value": "7",
+       "codes": [
+        "7"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 7 which is defined."
+      },
+      {
+       "value": "9",
+       "codes": [
+        "9"
+       ],
+       "same_meaning": true,
+       "reason": "Uses code 9 which is defined."
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "0",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 0 is not defined in the provided list."
+      },
+      {
+       "value": "1",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 1 is not defined in the provided list."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 2 is not defined in the provided list."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 3 is not defined in the provided list."
+      }
+     ]
+    },
+    {
+     "id": "C4",
+     "values": [
+      {
+       "value": "0",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 0 is not defined in the provided list."
+      },
+      {
+       "value": "1",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 1 is not defined in the provided list."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code 3 is not defined in the provided list."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c13": {
+     "values": [
+      {
+       "value": "10",
+       "codes": [
+        "10"
+       ],
+       "legend_codes": [
+        "10"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 10 which is defined."
+      },
+      {
+       "value": "11",
+       "codes": [
+        "11"
+       ],
+       "legend_codes": [
+        "11"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 11 which is defined."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 2 which is defined."
+      },
+      {
+       "value": "5",
+       "codes": [
+        "5"
+       ],
+       "legend_codes": [
+        "5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 5 which is defined."
+      },
+      {
+       "value": "7",
+       "codes": [
+        "7"
+       ],
+       "legend_codes": [
+        "7"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 7 which is defined."
+      },
+      {
+       "value": "8",
+       "codes": [
+        "8"
+       ],
+       "legend_codes": [
+        "8"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 8 which is defined."
+      }
+     ],
+     "codes": [
+      "10",
+      "11",
+      "2",
+      "5",
+      "7",
+      "8"
+     ]
+    },
+    "t7c14": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 0 is not defined in the provided list."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 1 which is defined."
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 3 which is defined."
+      },
+      {
+       "value": "5",
+       "codes": [
+        "5"
+       ],
+       "legend_codes": [
+        "5"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 5 which is defined."
+      },
+      {
+       "value": "7",
+       "codes": [
+        "7"
+       ],
+       "legend_codes": [
+        "7"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 7 which is defined."
+      },
+      {
+       "value": "9",
+       "codes": [
+        "9"
+       ],
+       "legend_codes": [
+        "9"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Uses code 9 which is defined."
+      }
+     ],
+     "codes": [
+      "1",
+      "3",
+      "5",
+      "7",
+      "9"
+     ]
+    },
+    "t7c15": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 0 is not defined in the provided list."
+      },
+      {
+       "value": "1",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 1 is not defined in the provided list."
+      },
+      {
+       "value": "2",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 2 is not defined in the provided list."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 3 is not defined in the provided list."
+      }
+     ],
+     "codes": []
+    },
+    "t7c16": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 0 is not defined in the provided list."
+      },
+      {
+       "value": "1",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 1 is not defined in the provided list."
+      },
+      {
+       "value": "3",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code 3 is not defined in the provided list."
+      }
+     ],
+     "codes": []
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c13": [
+     "10",
+     "11",
+     "2",
+     "5",
+     "7",
+     "8"
+    ],
+    "t7c14": [
+     "1",
+     "3",
+     "5",
+     "7",
+     "9"
+    ]
+   },
+   "seconds": 7.8
+  },
+  {
+   "uid": "Tonelli2021#p145",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within excrement",
+     "variable": "nest depth"
+    },
+    {
+     "code": "1",
+     "term": "dungsoil interphase",
+     "variable": "nest depth"
+    },
+    {
+     "code": "2",
+     "term": "little depth",
+     "variable": "nest depth"
+    },
+    {
+     "code": "3",
+     "term": "great depth",
+     "variable": "nest depth"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '0' = 'within excrement' (variable: nest depth)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '1' = 'dungsoil interphase' (variable: nest depth)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '2' = 'little depth' (variable: nest depth)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '3' = 'great depth' (variable: nest depth)"
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      }
+     ],
+     "codes": []
+    },
+    "t7c15": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '0' = 'within excrement' (variable: nest depth)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '1' = 'dungsoil interphase' (variable: nest depth)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '2' = 'little depth' (variable: nest depth)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '3' = 'great depth' (variable: nest depth)"
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    "t7c16": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      }
+     ],
+     "codes": []
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c15": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 5.7
+  },
+  {
+   "uid": "Tonelli2021#p147",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within food source",
+     "variable": "horizontal distance of the nest"
+    },
+    {
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "variable": "horizontal distance of the nest"
+    },
+    {
+     "code": "2",
+     "term": "a short distance out from the food source",
+     "variable": "horizontal distance of the nest"
+    },
+    {
+     "code": "3",
+     "term": "a great distance out from the food source",
+     "variable": "horizontal distance of the nest"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within food source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"a great distance out from the food source\""
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code '5' is not defined in the provided set."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code '7' is not defined in the provided set."
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code '9' is not defined in the provided set."
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within food source\" (though C2 header defines 0 differently, the value matches the code definition)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\" (though C2 header defines 1 differently, the value matches the code definition)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '2' definition: \"a short distance out from the food source\" (though C2 header defines 2 differently, the value matches the code definition)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"a great distance out from the food source\" (though C2 header defines 3 differently, the value matches the code definition)"
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within food source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"a great distance out from the food source\""
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within food source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"a great distance out from the food source\""
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code '5' is not defined in the provided set."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code '7' is not defined in the provided set."
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code '9' is not defined in the provided set."
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "3"
+     ]
+    },
+    "t7c15": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within food source\" (though C2 header defines 0 differently, the value matches the code definition)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\" (though C2 header defines 1 differently, the value matches the code definition)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '2' definition: \"a short distance out from the food source\" (though C2 header defines 2 differently, the value matches the code definition)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"a great distance out from the food source\" (though C2 header defines 3 differently, the value matches the code definition)"
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    "t7c16": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within food source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"a great distance out from the food source\""
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "3"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c14": [
+     "0",
+     "1",
+     "3"
+    ],
+    "t7c15": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ],
+    "t7c16": [
+     "0",
+     "1",
+     "3"
+    ]
+   },
+   "seconds": 7.0
+  },
+  {
+   "uid": "Tonelli2021#t7r0c11",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "underdeveloped",
+     "variable": "zigum"
+    },
+    {
+     "code": "2",
+     "term": "developed",
+     "variable": "zigum"
+    },
+    {
+     "code": "3",
+     "term": "epizygum",
+     "variable": "zigum"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "The value '1' corresponds to 'underdeveloped' (zigum)."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "The value '2' corresponds to 'developed' (zigum)."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c11": {
+     "values": [
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '1' corresponds to 'underdeveloped' (zigum)."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "The value '2' corresponds to 'developed' (zigum)."
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c11": [
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 1.5
+  },
+  {
+   "uid": "Tonelli2021#t7r0c15",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within excrement",
+     "variable": "nest depth"
+    },
+    {
+     "code": "1",
+     "term": "dung soil interphase",
+     "variable": "nest depth"
+    },
+    {
+     "code": "2",
+     "term": "little depth",
+     "variable": "nest depth"
+    },
+    {
+     "code": "3",
+     "term": "great depth",
+     "variable": "nest depth"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '0' = 'within excrement' (variable: nest depth)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '1' = 'dung soil interphase' (variable: nest depth)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '2' = 'little depth' (variable: nest depth)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches definition: '3' = 'great depth' (variable: nest depth)"
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C1 header refers to Nest type"
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Value does not match defined codes for Nest depth"
+      }
+     ],
+     "codes": []
+    },
+    "t7c15": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '0' = 'within excrement' (variable: nest depth)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '1' = 'dung soil interphase' (variable: nest depth)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '2' = 'little depth' (variable: nest depth)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches definition: '3' = 'great depth' (variable: nest depth)"
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    "t7c16": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Header defines codes for Nest depth, C3 header refers to Horizontal nest distance"
+      }
+     ],
+     "codes": []
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c15": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 5.6
+  },
+  {
+   "uid": "Tonelli2021#t7r0c16",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within trophic source",
+     "variable": "horizontal nest distance"
+    },
+    {
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "variable": "horizontal nest distance"
+    },
+    {
+     "code": "2",
+     "term": "short distance",
+     "variable": "horizontal nest distance"
+    },
+    {
+     "code": "3",
+     "term": "great distance",
+     "variable": "horizontal nest distance"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within trophic source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"great distance\""
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code '5' is not defined in the provided set."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code '7' is not defined in the provided set."
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "Code '9' is not defined in the provided set."
+      }
+     ]
+    },
+    {
+     "id": "C2",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within trophic source\" (though header defines it differently, the value matches the code mapping)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\" (though header defines it differently, the value matches the code mapping)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '2' definition: \"short distance\" (though header defines it differently, the value matches the code mapping)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"great distance\" (though header defines it differently, the value matches the code mapping)"
+      }
+     ]
+    },
+    {
+     "id": "C3",
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within trophic source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"great distance\""
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within trophic source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"great distance\""
+      },
+      {
+       "value": "5",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code '5' is not defined in the provided set."
+      },
+      {
+       "value": "7",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code '7' is not defined in the provided set."
+      },
+      {
+       "value": "9",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "Code '9' is not defined in the provided set."
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "3"
+     ]
+    },
+    "t7c15": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within trophic source\" (though header defines it differently, the value matches the code mapping)"
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\" (though header defines it differently, the value matches the code mapping)"
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '2' definition: \"short distance\" (though header defines it differently, the value matches the code mapping)"
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"great distance\" (though header defines it differently, the value matches the code mapping)"
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ]
+    },
+    "t7c16": {
+     "values": [
+      {
+       "value": "0",
+       "codes": [
+        "0"
+       ],
+       "legend_codes": [
+        "0"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '0' definition: \"within trophic source\""
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '1' definition: \"starting within food source but with a horizontal extension\""
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '3' definition: \"great distance\""
+      }
+     ],
+     "codes": [
+      "0",
+      "1",
+      "3"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c14": [
+     "0",
+     "1",
+     "3"
+    ],
+    "t7c15": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ],
+    "t7c16": [
+     "0",
+     "1",
+     "3"
+    ]
+   },
+   "seconds": 6.3
+  },
+  {
+   "uid": "Tonelli2021#t7r0c17",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "diurnal",
+     "variable": "daily activity"
+    },
+    {
+     "code": "2",
+     "term": "crepuscolar/nocturnal",
+     "variable": "daily activity"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Daily activity (1: diurnal; 2: crepuscolar/nocturnal)",
+       "codes": [
+        "1",
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Header defines 1 as diurnal and 2 as crepuscular/nocturnal."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Cell value matches code '1' defined as diurnal."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Cell value matches code '2' defined as crepuscular/nocturnal."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t7c17": {
+     "values": [
+      {
+       "value": "Daily activity (1: diurnal; 2: crepuscolar/nocturnal)",
+       "codes": [
+        "1",
+        "2"
+       ],
+       "legend_codes": [
+        "1",
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Header defines 1 as diurnal and 2 as crepuscular/nocturnal."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Cell value matches code '1' defined as diurnal."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Cell value matches code '2' defined as crepuscular/nocturnal."
+      }
+     ],
+     "codes": [
+      "1",
+      "2"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c17": [
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 1.9
+  },
+  {
+   "uid": "Uemori2022#t1r1",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "herbivorous",
+     "variable": "trophic level"
+    },
+    {
+     "code": "2",
+     "term": "primary predators",
+     "variable": "trophic level"
+    },
+    {
+     "code": "3",
+     "term": "hyper predators",
+     "variable": "trophic level"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Table S1. All functional traits, distribution index, and feeding guild of each species / Trophic level",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "This is a header/description, not a coded value."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '1' = 'herbivorous' (trophic level)."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '2' = 'primary predators' (trophic level)."
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "same_meaning": true,
+       "reason": "Matches code '3' = 'hyper predators' (trophic level)."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t3c1": {
+     "values": [
+      {
+       "value": "Table S1. All functional traits, distribution index, and feeding guild of each species / Trophic level",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "This is a header/description, not a coded value."
+      },
+      {
+       "value": "1",
+       "codes": [
+        "1"
+       ],
+       "legend_codes": [
+        "1"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '1' = 'herbivorous' (trophic level)."
+      },
+      {
+       "value": "2",
+       "codes": [
+        "2"
+       ],
+       "legend_codes": [
+        "2"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '2' = 'primary predators' (trophic level)."
+      },
+      {
+       "value": "3",
+       "codes": [
+        "3"
+       ],
+       "legend_codes": [
+        "3"
+       ],
+       "not_legend_codes": [],
+       "same_meaning": true,
+       "reason": "Matches code '3' = 'hyper predators' (trophic level)."
+      }
+     ],
+     "codes": [
+      "1",
+      "2",
+      "3"
+     ]
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t3c1": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 2.1
+  },
+  {
+   "uid": "Viza2023#t5r87",
+   "oracle_input": [
+    {
+     "code": "x2 + x",
+     "term": "quadratic regression",
+     "variable": "distribution codes for GLM"
+    },
+    {
+     "code": "x",
+     "term": "linear regression",
+     "variable": "distribution codes for GLM"
+    },
+    {
+     "code": "x",
+     "term": "variables selected",
+     "variable": "variables selected"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "values": [
+      {
+       "value": "Model selected",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "This is a column header."
+      },
+      {
+       "value": "BRT ; GLM",
+       "codes": [],
+       "same_meaning": false,
+       "reason": "The value contains 'GLM', but it is not explicitly defined as 'x' or 'x2 + x' in the provided context for this column."
+      }
+     ]
+    }
+   ],
+   "columns": {
+    "t5c1": {
+     "values": [
+      {
+       "value": "Model selected",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "This is a column header."
+      },
+      {
+       "value": "BRT ; GLM",
+       "codes": [],
+       "legend_codes": [],
+       "not_legend_codes": [],
+       "same_meaning": false,
+       "reason": "The value contains 'GLM', but it is not explicitly defined as 'x' or 'x2 + x' in the provided context for this column."
+      }
+     ],
+     "codes": []
+    }
+   },
+   "bad_ids": [],
+   "assoc": {},
+   "seconds": 1.0
+  }
+ ]
+}
