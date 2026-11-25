@@ -1,0 +1,591 @@
+Two-stage legend calibration: gemma4:e4b-it-qat, run 2026-11-25_1158, gold v4.1 frozen 2026-11-25, GAP 40
+59 units, 106 gold mappings, 165 candidate associations.
+A stratified set with positive controls: calibration and failure analysis, not corpus-wide precision. Each unit counts once. Gold v4 differs from v3: v3 scores are not comparable to these; the v3 run rescored on gold v4 is at the end.
+
+====================================================================================================
+STAGE 1, raw entries
+====================================================================================================
+  unit recognition (does the unit define anything?): precision 0.76 (19/25), recall 0.79 (19/24); true negatives 29
+    code legend            recognised 14/17, with an entry of this kind 12/14
+    variable abbreviation  recognised 2/2, with an entry of this kind 2/2
+    figure key             recognised 5/6, with an entry of this kind 4/5
+    other definition       recognised 0/1, with an entry of this kind 0/0
+    none                   wrongly recognised 6/35
+    by structure (TP FP FN TN): prose 2 2 0 12; caption 6 0 1 5; numbered list 2 2 2 1; head cell 4 0 2 1; footnote 3 0 0 0; table row 2 2 0 10
+  mapping extraction (exact = the wording of the unit the model got, or its printed_as):
+    all                    106 pairs: exact 71, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 6, missing 29
+    code legend             68 pairs: exact 50, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 1, missing 17
+    variable abbreviation   10 pairs: exact 10, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 0, missing 0
+    figure key              25 pairs: exact 11, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 5, missing 9
+    other definition         3 pairs: exact 0, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 0, missing 3
+    repeated legends: 14/17 codes read alike in every copy
+    kind of the matched pairs: same kind 60, code legend -> variable abbreviation 12, variable abbreviation -> code legend 5
+  variable provenance (matched pairs): not printed: supplied 22, printed: differs 11, printed: given 44
+  unsupported pairs (not gold mappings of the unit): 16 (definition unit 1, non-definition unit 15)
+
+====================================================================================================
+STAGE 1, after the evidence check
+====================================================================================================
+  unit recognition (does the unit define anything?): precision 0.83 (19/23), recall 0.79 (19/24); true negatives 31
+    code legend            recognised 14/17, with an entry of this kind 12/14
+    variable abbreviation  recognised 2/2, with an entry of this kind 2/2
+    figure key             recognised 5/6, with an entry of this kind 4/5
+    other definition       recognised 0/1, with an entry of this kind 0/0
+    none                   wrongly recognised 4/35
+    by structure (TP FP FN TN): prose 2 1 0 13; caption 6 0 1 5; numbered list 2 1 2 2; head cell 4 0 2 1; footnote 3 0 0 0; table row 2 2 0 10
+  mapping extraction (exact = the wording of the unit the model got, or its printed_as):
+    all                    106 pairs: exact 65, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 6, missing 35
+    code legend             68 pairs: exact 48, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 1, missing 19
+    variable abbreviation   10 pairs: exact 6, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 0, missing 4
+    figure key              25 pairs: exact 11, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 5, missing 9
+    other definition         3 pairs: exact 0, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 0, missing 3
+    repeated legends: 14/17 codes read alike in every copy
+    kind of the matched pairs: same kind 58, code legend -> variable abbreviation 12, variable abbreviation -> code legend 1
+  variable provenance (matched pairs): not printed: supplied 22, printed: differs 10, printed: given 39
+  unsupported pairs (not gold mappings of the unit): 5 (non-definition unit 5)
+
+====================================================================================================
+EVIDENCE CHECK (exact gold pairs vs the rest of stage 1's entries)
+====================================================================================================
+  exact gold pairs: kept 65, rejected 6
+  other entries: removed 11, kept 11
+  reasons: term not in the evidence 9, evidence not printed in the unit 5, code and term not next to each other 2, code not in the evidence 1
+  rejected a gold pair: Cappellari2022#p63 '$P r o b { L }$' = 'proboscis longer than the honeybee': evidence not printed in the unit (evidence 'the levels of the four trait categories $( P r o b { L }$ proboscis longer than ')
+  rejected a gold pair: Cappellari2022#p63 '$B o d y { S }$' = 'body size similar to the honeybee': evidence not printed in the unit (evidence 'the levels of the four trait categories $( B o d y { S }$ body size similar to t')
+  rejected a gold pair: Cappellari2022#p63 '$B o d y { L }$' = 'body size larger than the honeybee': evidence not printed in the unit (evidence 'the levels of the four trait categories $( B o d y { L }$ body size larger than ')
+  rejected a gold pair: Cappellari2022#p63 '$F o r _ { N C }$' = 'non-central forager': evidence not printed in the unit (evidence 'the levels of the four trait categories $( F o r _ { N C }$ non-central forager')
+  rejected a gold pair: Jones2015#p67 '0' = 'relatively sedentary': code and term not next to each other (evidence 'Five experts categorized species as relatively sedentary, mobile, or very mobile')
+  rejected a gold pair: Viza2023#t5r87 'x' = 'linear regression': evidence not printed in the unit (evidence 'Distribution codes for GLM: x =: linear regression')
+
+  stage 2 codes written with their terms, read as their code: oracle 5, end to end 6
+
+====================================================================================================
+STAGE 2, oracle input (the gold's cell-code mappings): association alone
+====================================================================================================
+  with the disputed-header cases: right column + right codes 24, right column + wrong/incomplete codes 0, missed column 7, wrong column 2, TN 132
+    column precision 0.92, strict (right codes) 0.92; column recall 0.77, strict 0.77
+    code legend            RR 21 RW  0 MC  6 WC  2 TN  20
+    variable abbreviation  RR  3 RW  0 MC  1 WC  0 TN   0
+    figure key             RR  0 RW  0 MC  0 WC  0 TN  17
+    other definition       RR  0 RW  0 MC  0 WC  0 TN   7
+    none                   RR  0 RW  0 MC  0 WC  0 TN  88
+    end to end: right column + right codes 24 of 46 genuine target columns (31 proposed by the selector + 15 it missed) = 0.52
+  without the disputed-header cases: right column + right codes 23, right column + wrong/incomplete codes 0, missed column 7, wrong column 2, TN 132
+    column precision 0.92, strict (right codes) 0.92; column recall 0.77, strict 0.77
+
+====================================================================================================
+STAGE 2, end to end (stage 1's checked cell-code entries)
+====================================================================================================
+  with the disputed-header cases: right column + right codes 18, right column + wrong/incomplete codes 3, missed column 10, wrong column 1, TN 133
+    column precision 0.95, strict (right codes) 0.82; column recall 0.68, strict 0.58
+    code legend            RR 14 RW  3 MC 10 WC  0 TN  22
+    variable abbreviation  RR  4 RW  0 MC  0 WC  0 TN   0
+    figure key             RR  0 RW  0 MC  0 WC  0 TN  17
+    other definition       RR  0 RW  0 MC  0 WC  0 TN   7
+    none                   RR  0 RW  0 MC  0 WC  1 TN  87
+    end to end: right column + right codes 18 of 46 genuine target columns (31 proposed by the selector + 15 it missed) = 0.39
+  without the disputed-header cases: right column + right codes 17, right column + wrong/incomplete codes 3, missed column 10, wrong column 1, TN 133
+    column precision 0.95, strict (right codes) 0.81; column recall 0.67, strict 0.57
+
+  stage 2 calls: oracle 19, end to end 18
+====================================================================================================
+REFERENCE: the v3 single-call run (2026-11-24_2345) scored on gold v4, raw entries
+====================================================================================================
+  unit recognition (does the unit define anything?): precision 0.57 (23/40), recall 0.96 (23/24); true negatives 18
+    code legend            recognised 16/17, with an entry of this kind 13/16
+    variable abbreviation  recognised 2/2, with an entry of this kind 1/2
+    figure key             recognised 6/6, with an entry of this kind 5/6
+    other definition       recognised 1/1, with an entry of this kind 0/1
+    none                   wrongly recognised 17/35
+    by structure (TP FP FN TN): prose 2 9 0 5; caption 7 1 0 4; numbered list 4 0 0 3; head cell 5 0 1 1; footnote 3 0 0 0; table row 2 7 0 5
+  mapping extraction (exact = the wording of the unit the model got, or its printed_as):
+    all                    106 pairs: exact 79, cross-source equivalent 0, ordinal substitution 4, wrong pairing 0, other wording 8, missing 15
+    code legend             68 pairs: exact 58, cross-source equivalent 0, ordinal substitution 4, wrong pairing 0, other wording 2, missing 4
+    variable abbreviation   10 pairs: exact 5, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 0, missing 5
+    figure key              25 pairs: exact 13, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 6, missing 6
+    other definition         3 pairs: exact 3, cross-source equivalent 0, ordinal substitution 0, wrong pairing 0, other wording 0, missing 0
+    repeated legends: 17/17 codes read alike in every copy
+    kind of the matched pairs: same kind 70, code legend -> variable abbreviation 14, figure key -> variable abbreviation 4, other definition -> code legend 3
+  variable provenance (matched pairs): not printed: supplied 35, printed: differs 24, printed: given 32
+  unsupported pairs (not gold mappings of the unit): 85 (definition unit 15, non-definition unit 70)
+  association:
+  with the disputed-header cases: right column + right codes 21, right column + wrong/incomplete codes 6, missed column 4, wrong column 52, TN 82
+    column precision 0.34, strict (right codes) 0.27; column recall 0.87, strict 0.68
+    code legend            RR 21 RW  2 MC  4 WC 10 TN  12
+    variable abbreviation  RR  0 RW  4 MC  0 WC  0 TN   0
+    figure key             RR  0 RW  0 MC  0 WC 10 TN   7
+    other definition       RR  0 RW  0 MC  0 WC  4 TN   3
+    none                   RR  0 RW  0 MC  0 WC 28 TN  60
+    end to end: right column + right codes 21 of 46 genuine target columns (31 proposed by the selector + 15 it missed) = 0.46
+  without the disputed-header cases: right column + right codes 21, right column + wrong/incomplete codes 5, missed column 4, wrong column 52, TN 82
+    column precision 0.33, strict (right codes) 0.27; column recall 0.87, strict 0.70
+
+====================================================================================================
+DETAIL
+====================================================================================================
+
+--- STAGE 1, raw entries
+  unit wrongly recognised: Cao2024#p385 [prose]: LOI=organic content; DOC=organic matter; TOC=organic matter
+  unit missed: Eckert2023#p135 [caption] figure key
+  unit missed: Eskilden2015#t5r0c0 [head cell] other definition
+  unit missed: Ji2024#t0r0c3 [head cell] code legend
+  unit wrongly recognised: MacDonald2021#p35 [numbered list]: γ-diversity=species richness
+  unit wrongly recognised: Scalercio2020#p23 [numbered list]: COI=mitochondrial COI gene
+  unit missed: Tonelli2021#p125 [numbered list] code legend
+  unit missed: Tonelli2021#p143 [numbered list] code legend
+  unit wrongly recognised: Vidal2023#p91 [prose]: A=taxonomic and functional community struc; S=taxonomic and functional community struc; H=taxonomic and functional community struc; J=taxonomic and functional community struc; FRic=taxonomic and functional community struc; FEve=taxonomic and function
+  unit wrongly recognised: Wallon2024#t12r21 [table row]: LOW OTC=MID OTC
+  unit wrongly recognised: Wallon2024#t9r30 [table row]: LOW=MID
+  variable printed: differs: Cappellari2022#p63 'Apis': gold printed 'explanatory variables' (context 'explanatory variable') / model 'honeybee abundance'
+  variable printed: differs: Cappellari2022#p63 'Temp': gold printed 'explanatory variables' (context 'explanatory variable') / model 'temperature'
+  other wording: Cappellari2022#p63 'a' = 'proboscis length (Model 3)' / model 'a' = 'proboscis length'
+  variable not printed: supplied: Cappellari2022#p63 'a': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  other wording: Cappellari2022#p63 'b' = 'body size (Model 4)' / model 'b' = 'body size'
+  variable not printed: supplied: Cappellari2022#p63 'b': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  other wording: Cappellari2022#p63 'c' = 'type of foraging range (Model 5)' / model 'c' = 'type of foraging range'
+  variable not printed: supplied: Cappellari2022#p63 'c': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  other wording: Cappellari2022#p63 'd' = 'taxonomic family (Model 6)' / model 'd' = 'taxonomic family'
+  variable not printed: supplied: Cappellari2022#p63 'd': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  variable printed: differs: Cecala2021#p134 '1': gold printed 'sampling schedule' (context 'sampling schedule') / model 'nursery'
+  other wording: Cecala2021#p134 '0' = 'not sampled due to logistical reasons' / model '0' = 'it was not sampled due to logistical reasons'
+  variable printed: differs: Cecala2021#p134 '0': gold printed 'sampling schedule' (context 'sampling schedule') / model 'nursery'
+  missing: Eckert2023#p135 'a' = 'Collembola and Formicidae in the Midlands' [figure key]
+  missing: Eckert2023#p135 'b' = 'Collembola and Formicidae in Zululand' [figure key]
+  variable not printed: supplied: Eckert2023#p47 'a': gold printed '' (context 'figure panel') / model 'focal plantation estates'
+  other wording: Eckert2023#p47 'b' = 'Zululand' / model 'b)' = 'Zululand, KwaZulu-Natal, South Africa'
+  variable not printed: supplied: Eckert2023#p47 'b': gold printed '' (context 'figure panel') / model 'focal plantation estates'
+  variable not printed: supplied: Eckert2023#p47 'grey': gold printed '' (context 'map shading') / model 'Plantation compartments (grey), non-plantation areas (white) and estate names indicated'
+  variable not printed: supplied: Eckert2023#p47 'white': gold printed '' (context 'map shading') / model 'Plantation compartments (grey), non-plantation areas (white) and estate names indicated'
+  variable not printed: supplied: Eckert2023#t4r134 'GenForager': gold printed '' (context 'forage strategy') / model 'GenForager'
+  variable not printed: supplied: Eckert2023#t4r134 'Pred': gold printed '' (context 'forage strategy') / model 'Pred'
+  variable not printed: supplied: Eckert2023#t4r134 'Sap': gold printed '' (context 'forage strategy') / model 'Sap'
+  variable not printed: supplied: Eckert2023#t4r134 'Soil': gold printed '' (context 'habitat position') / model 'Soil'
+  variable not printed: supplied: Eckert2023#t4r134 'Litter': gold printed '' (context 'habitat position') / model 'Litter'
+  variable not printed: supplied: Eckert2023#t4r134 'Veg': gold printed '' (context 'habitat position') / model 'Veg'
+  variable not printed: supplied: Eckert2023#t4r70 'GenForager': gold printed '' (context 'forage strategy') / model 'GenForager'
+  variable not printed: supplied: Eckert2023#t4r70 'Pred': gold printed '' (context 'forage strategy') / model 'Pred'
+  variable not printed: supplied: Eckert2023#t4r70 'Sap': gold printed '' (context 'forage strategy') / model 'Sap'
+  variable not printed: supplied: Eckert2023#t4r70 'Soil': gold printed '' (context 'habitat position') / model 'Soil'
+  variable not printed: supplied: Eckert2023#t4r70 'Litter': gold printed '' (context 'habitat position') / model 'Litter'
+  variable not printed: supplied: Eckert2023#t4r70 'Veg': gold printed '' (context 'habitat position') / model 'Veg'
+  missing: Eskilden2015#t5r0c0 'a' = 'at least 15 records per period' [other definition]
+  missing: Eskilden2015#t5r0c0 'b' = 'a records-to-species ratio of at least 1.5 in each of the two time per' [other definition]
+  missing: Eskilden2015#t5r0c0 'c' = 'for locations with low sampling effort in one of the periods (i.e. les' [other definition]
+  variable not printed: supplied: Guareschi2015#p122 'A': gold printed '' (context 'figure panel') / model 'grid cells where “gap species” occur'
+  variable not printed: supplied: Guareschi2015#p122 'B': gold printed '' (context 'figure panel') / model 'grid cells where “gap species” occur'
+  missing: Ji2024#t0r0c3 'E' = 'Effect' [code legend]
+  missing: Ji2024#t0r0c3 'R' = 'response' [code legend]
+  variable printed: differs: Jones2015#p67 '0': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  variable printed: differs: Jones2015#p67 '1': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  variable printed: differs: Jones2015#p67 '2': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  missing: Nelson2020#p73 'point' = 'a site' [figure key]
+  missing: Nelson2020#p73 'open points' = 'sites with bison present' [figure key]
+  missing: Nelson2020#p73 'dashed line' = 'sites with bison present' [figure key]
+  missing: Nelson2020#p73 'triangles' = 'remnant prairie sites' [figure key]
+  missing: Pessoa2017#p51 'Area 1' = 'Conceicão Farm' [figure key]
+  missing: Pessoa2017#p51 'Area 2' = 'Alvorada Farm' [figure key]
+  missing: Pessoa2017#p51 'Area 3' = 'RPPN SESC Pantanal' [figure key]
+  missing: Tonelli2021#p125 '1' = 'underdeveloped' [code legend]
+  missing: Tonelli2021#p125 '2' = 'developed' [code legend]
+  missing: Tonelli2021#p125 '3' = 'strong prolongation of spatula-shaped epizygum' [code legend]
+  missing: Tonelli2021#p143 '1' = 'Nest composed of a single brood mass located within the excrement' [code legend]
+  missing: Tonelli2021#p143 '2' = 'Nest composed of several brood masses located within the excrement' [code legend]
+  missing: Tonelli2021#p143 '3' = 'Nest composed of a single brood mass located underground in a simple n' [code legend]
+  missing: Tonelli2021#p143 '4' = 'Nest composed of several brood masses located underground in a simple ' [code legend]
+  missing: Tonelli2021#p143 '5' = 'Nest composed of several isolated brood masses located underground in ' [code legend]
+  missing: Tonelli2021#p143 '6' = 'Nest composed of several brood masses per chamber, located underground' [code legend]
+  missing: Tonelli2021#p143 '7' = 'Nest composed of a single brood ball located underground in a simple n' [code legend]
+  missing: Tonelli2021#p143 '8' = 'Nest composed of several isolated brood balls located underground in a' [code legend]
+  missing: Tonelli2021#p143 '9' = 'Nest composed of several brood balls per chamber located underground i' [code legend]
+  missing: Tonelli2021#p143 '10' = 'Nest composed of several isolated brood balls located underground in a' [code legend]
+  missing: Tonelli2021#p143 '11' = 'Nest composed of several brood balls per chamber located underground i' [code legend]
+  variable printed: differs: Tonelli2021#p145 '0': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '1': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '2': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '3': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  missing: Viza2023#t5r87 'x' = 'variables selected' [code legend]
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'LOI' = 'organic content' (check: code not in the evidence)
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'DOC' = 'organic matter' (check: kept)
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'TOC' = 'organic matter' (check: kept)
+  unsupported: Cappellari2022#p63 [def] variable abbreviation: 'Apid' = 'taxonomic family' (check: term not in the evidence)
+  unsupported: MacDonald2021#p35 [none] variable abbreviation: 'γ-diversity' = 'species richness' (check: kept)
+  unsupported: Scalercio2020#p23 [none] variable abbreviation: 'COI' = 'mitochondrial COI gene' (check: code and term not next to each other)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'A' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'S' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'H' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'J' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FRic' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FEve' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FDis' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FDiv' = 'taxonomic and functional community structure indexes' (check: term not in the evidence)
+  unsupported: Wallon2024#t12r21 [none] other definition: 'LOW OTC' = 'MID OTC' (check: kept)
+  unsupported: Wallon2024#t9r30 [none] other definition: 'LOW' = 'MID' (check: kept)
+
+--- STAGE 1, after the evidence check
+  unit wrongly recognised: Cao2024#p385 [prose]: DOC=organic matter; TOC=organic matter
+  unit missed: Eckert2023#p135 [caption] figure key
+  unit missed: Eskilden2015#t5r0c0 [head cell] other definition
+  unit missed: Ji2024#t0r0c3 [head cell] code legend
+  unit wrongly recognised: MacDonald2021#p35 [numbered list]: γ-diversity=species richness
+  unit missed: Tonelli2021#p125 [numbered list] code legend
+  unit missed: Tonelli2021#p143 [numbered list] code legend
+  unit wrongly recognised: Wallon2024#t12r21 [table row]: LOW OTC=MID OTC
+  unit wrongly recognised: Wallon2024#t9r30 [table row]: LOW=MID
+  variable printed: differs: Cappellari2022#p63 'Apis': gold printed 'explanatory variables' (context 'explanatory variable') / model 'honeybee abundance'
+  variable printed: differs: Cappellari2022#p63 'Temp': gold printed 'explanatory variables' (context 'explanatory variable') / model 'temperature'
+  missing: Cappellari2022#p63 'ProbL' = 'proboscis longer than the honeybee' [variable abbreviation]
+  missing: Cappellari2022#p63 'BodyS' = 'body size similar to the honeybee' [variable abbreviation]
+  missing: Cappellari2022#p63 'BodyL' = 'body size larger than the honeybee' [variable abbreviation]
+  missing: Cappellari2022#p63 'For_NC' = 'non-central forager' [variable abbreviation]
+  other wording: Cappellari2022#p63 'a' = 'proboscis length (Model 3)' / model 'a' = 'proboscis length'
+  variable not printed: supplied: Cappellari2022#p63 'a': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  other wording: Cappellari2022#p63 'b' = 'body size (Model 4)' / model 'b' = 'body size'
+  variable not printed: supplied: Cappellari2022#p63 'b': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  other wording: Cappellari2022#p63 'c' = 'type of foraging range (Model 5)' / model 'c' = 'type of foraging range'
+  variable not printed: supplied: Cappellari2022#p63 'c': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  other wording: Cappellari2022#p63 'd' = 'taxonomic family (Model 6)' / model 'd' = 'taxonomic family'
+  variable not printed: supplied: Cappellari2022#p63 'd': gold printed '' (context 'figure panel') / model 'single traits of pollinators'
+  variable printed: differs: Cecala2021#p134 '1': gold printed 'sampling schedule' (context 'sampling schedule') / model 'nursery'
+  other wording: Cecala2021#p134 '0' = 'not sampled due to logistical reasons' / model '0' = 'it was not sampled due to logistical reasons'
+  variable printed: differs: Cecala2021#p134 '0': gold printed 'sampling schedule' (context 'sampling schedule') / model 'nursery'
+  missing: Eckert2023#p135 'a' = 'Collembola and Formicidae in the Midlands' [figure key]
+  missing: Eckert2023#p135 'b' = 'Collembola and Formicidae in Zululand' [figure key]
+  variable not printed: supplied: Eckert2023#p47 'a': gold printed '' (context 'figure panel') / model 'focal plantation estates'
+  other wording: Eckert2023#p47 'b' = 'Zululand' / model 'b)' = 'Zululand, KwaZulu-Natal, South Africa'
+  variable not printed: supplied: Eckert2023#p47 'b': gold printed '' (context 'figure panel') / model 'focal plantation estates'
+  variable not printed: supplied: Eckert2023#p47 'grey': gold printed '' (context 'map shading') / model 'Plantation compartments (grey), non-plantation areas (white) and estate names indicated'
+  variable not printed: supplied: Eckert2023#p47 'white': gold printed '' (context 'map shading') / model 'Plantation compartments (grey), non-plantation areas (white) and estate names indicated'
+  variable not printed: supplied: Eckert2023#t4r134 'GenForager': gold printed '' (context 'forage strategy') / model 'GenForager'
+  variable not printed: supplied: Eckert2023#t4r134 'Pred': gold printed '' (context 'forage strategy') / model 'Pred'
+  variable not printed: supplied: Eckert2023#t4r134 'Sap': gold printed '' (context 'forage strategy') / model 'Sap'
+  variable not printed: supplied: Eckert2023#t4r134 'Soil': gold printed '' (context 'habitat position') / model 'Soil'
+  variable not printed: supplied: Eckert2023#t4r134 'Litter': gold printed '' (context 'habitat position') / model 'Litter'
+  variable not printed: supplied: Eckert2023#t4r134 'Veg': gold printed '' (context 'habitat position') / model 'Veg'
+  variable not printed: supplied: Eckert2023#t4r70 'GenForager': gold printed '' (context 'forage strategy') / model 'GenForager'
+  variable not printed: supplied: Eckert2023#t4r70 'Pred': gold printed '' (context 'forage strategy') / model 'Pred'
+  variable not printed: supplied: Eckert2023#t4r70 'Sap': gold printed '' (context 'forage strategy') / model 'Sap'
+  variable not printed: supplied: Eckert2023#t4r70 'Soil': gold printed '' (context 'habitat position') / model 'Soil'
+  variable not printed: supplied: Eckert2023#t4r70 'Litter': gold printed '' (context 'habitat position') / model 'Litter'
+  variable not printed: supplied: Eckert2023#t4r70 'Veg': gold printed '' (context 'habitat position') / model 'Veg'
+  missing: Eskilden2015#t5r0c0 'a' = 'at least 15 records per period' [other definition]
+  missing: Eskilden2015#t5r0c0 'b' = 'a records-to-species ratio of at least 1.5 in each of the two time per' [other definition]
+  missing: Eskilden2015#t5r0c0 'c' = 'for locations with low sampling effort in one of the periods (i.e. les' [other definition]
+  variable not printed: supplied: Guareschi2015#p122 'A': gold printed '' (context 'figure panel') / model 'grid cells where “gap species” occur'
+  variable not printed: supplied: Guareschi2015#p122 'B': gold printed '' (context 'figure panel') / model 'grid cells where “gap species” occur'
+  missing: Ji2024#t0r0c3 'E' = 'Effect' [code legend]
+  missing: Ji2024#t0r0c3 'R' = 'response' [code legend]
+  missing: Jones2015#p67 '0' = 'relatively sedentary' [code legend]
+  variable printed: differs: Jones2015#p67 '1': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  variable printed: differs: Jones2015#p67 '2': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  missing: Nelson2020#p73 'point' = 'a site' [figure key]
+  missing: Nelson2020#p73 'open points' = 'sites with bison present' [figure key]
+  missing: Nelson2020#p73 'dashed line' = 'sites with bison present' [figure key]
+  missing: Nelson2020#p73 'triangles' = 'remnant prairie sites' [figure key]
+  missing: Pessoa2017#p51 'Area 1' = 'Conceicão Farm' [figure key]
+  missing: Pessoa2017#p51 'Area 2' = 'Alvorada Farm' [figure key]
+  missing: Pessoa2017#p51 'Area 3' = 'RPPN SESC Pantanal' [figure key]
+  missing: Tonelli2021#p125 '1' = 'underdeveloped' [code legend]
+  missing: Tonelli2021#p125 '2' = 'developed' [code legend]
+  missing: Tonelli2021#p125 '3' = 'strong prolongation of spatula-shaped epizygum' [code legend]
+  missing: Tonelli2021#p143 '1' = 'Nest composed of a single brood mass located within the excrement' [code legend]
+  missing: Tonelli2021#p143 '2' = 'Nest composed of several brood masses located within the excrement' [code legend]
+  missing: Tonelli2021#p143 '3' = 'Nest composed of a single brood mass located underground in a simple n' [code legend]
+  missing: Tonelli2021#p143 '4' = 'Nest composed of several brood masses located underground in a simple ' [code legend]
+  missing: Tonelli2021#p143 '5' = 'Nest composed of several isolated brood masses located underground in ' [code legend]
+  missing: Tonelli2021#p143 '6' = 'Nest composed of several brood masses per chamber, located underground' [code legend]
+  missing: Tonelli2021#p143 '7' = 'Nest composed of a single brood ball located underground in a simple n' [code legend]
+  missing: Tonelli2021#p143 '8' = 'Nest composed of several isolated brood balls located underground in a' [code legend]
+  missing: Tonelli2021#p143 '9' = 'Nest composed of several brood balls per chamber located underground i' [code legend]
+  missing: Tonelli2021#p143 '10' = 'Nest composed of several isolated brood balls located underground in a' [code legend]
+  missing: Tonelli2021#p143 '11' = 'Nest composed of several brood balls per chamber located underground i' [code legend]
+  variable printed: differs: Tonelli2021#p145 '0': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '1': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '2': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '3': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  missing: Viza2023#t5r87 'x' = 'linear regression' [code legend]
+  missing: Viza2023#t5r87 'x' = 'variables selected' [code legend]
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'DOC' = 'organic matter' (check: kept)
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'TOC' = 'organic matter' (check: kept)
+  unsupported: MacDonald2021#p35 [none] variable abbreviation: 'γ-diversity' = 'species richness' (check: kept)
+  unsupported: Wallon2024#t12r21 [none] other definition: 'LOW OTC' = 'MID OTC' (check: kept)
+  unsupported: Wallon2024#t9r30 [none] other definition: 'LOW' = 'MID' (check: kept)
+
+--- STAGE 2, oracle input (the gold's cell-code mappings): association alone
+  missed column: Cajaiba2023#p113 -> t9c1 'Table A - Comparisons for Abundance and Richn': gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] model -
+  missed column: Cajaiba2023#p113 -> t10c0 'ES_FT: Ecosystem specificity': gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] model -
+  missed column: Cappellari2022#p63 -> t5c3 'Explanatory variables': gold ['Apis', 'Temp'] model -
+  wrong column: Cecala2021#p134 -> t1c0 'Nursery': gold [] model ['1']
+  missed column: Kratschmer2019#t8r11 -> t11c2 'Nesting type': gold ['A', 'G', 'P'] model -
+  missed column: Kratschmer2019#t8r11 -> t12c2 'Nesting type': gold ['A', 'G'] model -
+  missed column: Kratschmer2019#t8r11 -> t13c2 'Nesting type': gold ['A', 'G', 'P'] model -
+  wrong column: Tonelli2021#p143 -> t7c13 'Nesting patterns (see supplementary material ': gold [] model ['10', '11', '2', '5', '7', '8']
+  missed column: Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for ': gold ['1', '3', '5', '7', '9'] model -
+
+--- STAGE 2, end to end (stage 1's checked cell-code entries)
+  missed column: Cajaiba2023#p113 -> t9c1 'Table A - Comparisons for Abundance and Richn': gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] model -
+  missed column: Cajaiba2023#p113 -> t10c0 'ES_FT: Ecosystem specificity': gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] model -
+  wrong column: Cao2024#p385 -> t6c0 '': gold [] model ['TOC']
+  missed column: Ji2024#t0r0c3 -> t0c3 'Effect (E)/ response (R) trait': gold ['E', 'R'] model -
+  right column, wrong or incomplete codes: Jones2015#p67 -> t1c1 'Expert 1': gold ['1', '2'] model ['1']
+  right column, wrong or incomplete codes: Jones2015#p67 -> t1c2 'Expert 2': gold ['1', '2'] model ['1']
+  missed column: Jones2015#p67 -> t1c3 'Expert 3': gold ['0', '1', '2'] model -
+  right column, wrong or incomplete codes: Jones2015#p67 -> t1c4 'Expert 4': gold ['1', '2'] model ['1']
+  missed column: Jones2015#p67 -> t1c5 'Expert 5': gold ['0', '1', '2'] model -
+  missed column: Kratschmer2019#t8r11 -> t11c2 'Nesting type': gold ['A', 'G', 'P'] model -
+  missed column: Kratschmer2019#t8r11 -> t12c2 'Nesting type': gold ['A', 'G'] model -
+  missed column: Kratschmer2019#t8r11 -> t13c2 'Nesting type': gold ['A', 'G', 'P'] model -
+  missed column: Tonelli2021#p125 -> t7c11 'Zigum (1: underdeveloped; 2: developed 3: epi': gold ['1', '2'] model -
+  missed column: Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for ': gold ['1', '3', '5', '7', '9'] model -
+
+--- v3 run on gold v4
+  unit wrongly recognised: Araujo2021#p72 [prose]: PA=PA; TR=TR; MR=MR; NR=NR
+  unit wrongly recognised: Cajaiba2023#t10r8 [table row]: AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5; AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5; AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5
+  unit wrongly recognised: CamargoVanegas2024#p96 [prose]: N1=N1; N2=N2; N3=N3
+  unit wrongly recognised: Cao2024#p312 [prose]: pH=water pH; Mg 2+=Mg 2+; Ca 2+=Ca 2+; LOI=LOI; DWT=DWT; Na +=Na +; K +=K +
+  unit wrongly recognised: Cao2024#p385 [prose]: LOI=organic content; LOI=organic content; DWT=environmental factors controlling chiron; K=environmental factors controlling chiron; DOC=organic matter; TOC=organic matter; LOI=organic matter
+  unit wrongly recognised: Cao2024#p53 [prose]: LOI=Loss on Ignition; TOC=Total Organic Carbon; TN=Total Nitrogen; pH=acidity
+  unit wrongly recognised: Eskilden2015#t7r5 [table row]: local=local
+  unit wrongly recognised: Ji2024#p138 [prose]: CWM=CWM-optimality hypothesis
+  unit missed: Ji2024#t0r0c3 [head cell] code legend
+  unit wrongly recognised: Lizee2016#p101 [caption]: BR=BR; NODF=NODF; T=T
+  unit wrongly recognised: Lizee2016#p69 [prose]: BR=BR; NODF=NODF; T=T
+  unit wrongly recognised: Vidal2023#p91 [prose]: A=A; S=S; H=H; J=J; FRic=FRic; FEve=FEve; FDis=FDis; FDiv=FDiv
+  unit wrongly recognised: Wallon2024#p51 [prose]: Control=control plots; OTCs=enclosed by OTC
+  unit wrongly recognised: Wallon2024#t12r21 [table row]: LOW OTC=LOW OTC = MID OTC
+  unit wrongly recognised: Wallon2024#t19r27 [table row]: Winter=Winter; ActivNight=ActivNight; Elevation=Elevation; LOW-MID=LOW-MID; LOW=LOW; MID=MID
+  unit wrongly recognised: Wallon2024#t20r15 [table row]: MID OTC-HIGH OTC=MID OTC-HIGH OTC
+  unit wrongly recognised: Wallon2024#t9r25 [table row]: MID=MID; OTC-HIGH=OTC-HIGH; OTC=OTC
+  unit wrongly recognised: Wallon2024#t9r30 [table row]: LOW=LOW = MID
+  missing: Cappellari2022#p63 'Apis' = 'honeybee abundance' [variable abbreviation]
+  missing: Cappellari2022#p63 'Temp' = 'temperature' [variable abbreviation]
+  variable printed: differs: Cappellari2022#p63 'ProbS': gold printed 'levels of the four trait categories' (context 'trait category level') / model 'proboscis similar to the honeybee'
+  variable printed: differs: Cappellari2022#p63 'ProbL': gold printed 'levels of the four trait categories' (context 'trait category level') / model 'proboscis longer than the honeybee'
+  variable printed: differs: Cappellari2022#p63 'BodyS': gold printed 'levels of the four trait categories' (context 'trait category level') / model 'body size similar to the honeybee'
+  variable printed: differs: Cappellari2022#p63 'BodyL': gold printed 'levels of the four trait categories' (context 'trait category level') / model 'body size larger than the honeybee'
+  variable printed: differs: Cappellari2022#p63 'For_NC': gold printed 'levels of the four trait categories' (context 'trait category level') / model 'non-central forager'
+  other wording: Cappellari2022#p63 'a' = 'proboscis length (Model 3)' / model 'a' = 'proboscis length'
+  variable not printed: supplied: Cappellari2022#p63 'a': gold printed '' (context 'figure panel') / model 'proboscis length'
+  other wording: Cappellari2022#p63 'b' = 'body size (Model 4)' / model 'b' = 'body size'
+  variable not printed: supplied: Cappellari2022#p63 'b': gold printed '' (context 'figure panel') / model 'body size'
+  other wording: Cappellari2022#p63 'c' = 'type of foraging range (Model 5)' / model 'c' = 'type of foraging range'
+  variable not printed: supplied: Cappellari2022#p63 'c': gold printed '' (context 'figure panel') / model 'type of foraging range'
+  other wording: Cappellari2022#p63 'd' = 'taxonomic family (Model 6)' / model 'd' = 'taxonomic family'
+  variable not printed: supplied: Cappellari2022#p63 'd': gold printed '' (context 'figure panel') / model 'taxonomic family'
+  other wording: Cecala2021#p134 '1' = 'nursery was sampled' / model '1' = 'indicates that nursery was sampled'
+  variable printed: differs: Cecala2021#p134 '1': gold printed 'sampling schedule' (context 'sampling schedule') / model 'nursery'
+  other wording: Cecala2021#p134 '0' = 'not sampled due to logistical reasons' / model '0' = 'indicates it was not sampled due to logistical reasons'
+  variable printed: differs: Cecala2021#p134 '0': gold printed 'sampling schedule' (context 'sampling schedule') / model 'nursery'
+  variable not printed: supplied: Eckert2023#p135 'a': gold printed '' (context 'figure panel') / model 'panels'
+  variable not printed: supplied: Eckert2023#p135 'b': gold printed '' (context 'figure panel') / model 'panels'
+  variable not printed: supplied: Eckert2023#p47 'a': gold printed '' (context 'figure panel') / model 'focal plantation estates'
+  other wording: Eckert2023#p47 'b' = 'Zululand' / model 'b' = 'Zululand, KwaZulu-Natal, South Africa'
+  variable not printed: supplied: Eckert2023#p47 'b': gold printed '' (context 'figure panel') / model 'focal plantation estates'
+  variable not printed: supplied: Eckert2023#p47 'grey': gold printed '' (context 'map shading') / model 'Plantation compartments'
+  variable not printed: supplied: Eckert2023#p47 'white': gold printed '' (context 'map shading') / model 'non-plantation areas'
+  variable not printed: supplied: Eckert2023#t4r134 'GenForager': gold printed '' (context 'forage strategy') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r134 'Pred': gold printed '' (context 'forage strategy') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r134 'Sap': gold printed '' (context 'forage strategy') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r134 'Soil': gold printed '' (context 'habitat position') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r134 'Litter': gold printed '' (context 'habitat position') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r134 'Veg': gold printed '' (context 'habitat position') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r70 'GenForager': gold printed '' (context 'forage strategy') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r70 'Pred': gold printed '' (context 'forage strategy') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r70 'Sap': gold printed '' (context 'forage strategy') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r70 'Soil': gold printed '' (context 'habitat position') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r70 'Litter': gold printed '' (context 'habitat position') / model 'Forage strategy'
+  variable not printed: supplied: Eckert2023#t4r70 'Veg': gold printed '' (context 'habitat position') / model 'Forage strategy'
+  variable printed: differs: Eskilden2015#t5r0c0 'a': gold printed 'selection criteria' (context 'selection criteria') / model 'grid cells'
+  variable printed: differs: Eskilden2015#t5r0c0 'b': gold printed 'selection criteria' (context 'selection criteria') / model 'grid cells'
+  variable printed: differs: Eskilden2015#t5r0c0 'c': gold printed 'selection criteria' (context 'selection criteria') / model 'grid cells'
+  variable not printed: supplied: Guareschi2015#p122 'A': gold printed '' (context 'figure panel') / model 'grid cells where “gap species” occur'
+  variable not printed: supplied: Guareschi2015#p122 'B': gold printed '' (context 'figure panel') / model 'grid cells where “gap species” occur'
+  missing: Ji2024#t0r0c3 'E' = 'Effect' [code legend]
+  missing: Ji2024#t0r0c3 'R' = 'response' [code legend]
+  variable printed: differs: Jones2015#p67 '0': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  variable printed: differs: Jones2015#p67 '1': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  variable printed: differs: Jones2015#p67 '2': gold printed 'mobility points' (context 'mobility points') / model 'species'
+  missing: Nelson2020#p73 'FRic' = 'functional richness' [variable abbreviation]
+  missing: Nelson2020#p73 'FEve' = 'functional evenness' [variable abbreviation]
+  missing: Nelson2020#p73 'FDis' = 'functional dispersion' [variable abbreviation]
+  missing: Nelson2020#p73 'point' = 'a site' [figure key]
+  missing: Nelson2020#p73 'open points' = 'sites with bison present' [figure key]
+  missing: Nelson2020#p73 'dashed line' = 'sites with bison present' [figure key]
+  other wording: Nelson2020#p73 'triangles' = 'remnant prairie sites' / model 'triangles' = 'remnant prairie sites for comparison'
+  variable not printed: supplied: Nelson2020#p73 'triangles': gold printed '' (context 'plot symbol') / model 'site'
+  missing: Pessoa2017#p51 'Area 1' = 'Conceicão Farm' [figure key]
+  missing: Pessoa2017#p51 'Area 2' = 'Alvorada Farm' [figure key]
+  missing: Pessoa2017#p51 'Area 3' = 'RPPN SESC Pantanal' [figure key]
+  variable printed: differs: Tonelli2021#p125 '1': gold printed 'zygum' (context 'zygum') / model 'setae'
+  variable printed: differs: Tonelli2021#p125 '2': gold printed 'zygum' (context 'zygum') / model 'setae'
+  variable printed: differs: Tonelli2021#p125 '3': gold printed 'zygum' (context 'zygum') / model 'setae'
+  ordinal substitution: Tonelli2021#p143 '1' = 'Nest composed of a single brood mass located within the excr' / model '0' = 'Nest composed of a single brood mass located within the excr'
+  variable not printed: supplied: Tonelli2021#p143 '1': gold printed '' (context 'nest type') / model 'Nest'
+  ordinal substitution: Tonelli2021#p143 '2' = 'Nest composed of several brood masses located within the exc' / model '1' = 'Nest composed of several brood masses located within the exc'
+  variable not printed: supplied: Tonelli2021#p143 '2': gold printed '' (context 'nest type') / model 'Nest'
+  ordinal substitution: Tonelli2021#p143 '3' = 'Nest composed of a single brood mass located underground in ' / model '2' = 'Nest composed of a single brood mass located underground in '
+  variable not printed: supplied: Tonelli2021#p143 '3': gold printed '' (context 'nest type') / model 'Nest'
+  ordinal substitution: Tonelli2021#p143 '4' = 'Nest composed of several brood masses located underground in' / model '3' = 'Nest composed of several brood masses located underground in'
+  variable not printed: supplied: Tonelli2021#p143 '4': gold printed '' (context 'nest type') / model 'Nest'
+  variable not printed: supplied: Tonelli2021#p143 '5': gold printed '' (context 'nest type') / model 'Nest'
+  missing: Tonelli2021#p143 '6' = 'Nest composed of several brood masses per chamber, located underground' [code legend]
+  variable not printed: supplied: Tonelli2021#p143 '7': gold printed '' (context 'nest type') / model 'Nest'
+  variable not printed: supplied: Tonelli2021#p143 '8': gold printed '' (context 'nest type') / model 'Nest'
+  variable not printed: supplied: Tonelli2021#p143 '9': gold printed '' (context 'nest type') / model 'Nest'
+  variable not printed: supplied: Tonelli2021#p143 '10': gold printed '' (context 'nest type') / model 'Nest'
+  variable not printed: supplied: Tonelli2021#p143 '11': gold printed '' (context 'nest type') / model 'Nest'
+  variable printed: differs: Tonelli2021#p145 '0': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '1': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '2': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p145 '3': gold printed 'nest depth' (context 'nest depth') / model 'species'
+  variable printed: differs: Tonelli2021#p147 '0': gold printed 'horizontal distance of the nest' (context 'horizontal nest distance') / model 'four categories'
+  variable printed: differs: Tonelli2021#p147 '1': gold printed 'horizontal distance of the nest' (context 'horizontal nest distance') / model 'four categories'
+  variable printed: differs: Tonelli2021#p147 '2': gold printed 'horizontal distance of the nest' (context 'horizontal nest distance') / model 'four categories'
+  variable printed: differs: Tonelli2021#p147 '3': gold printed 'horizontal distance of the nest' (context 'horizontal nest distance') / model 'four categories'
+  missing: Viza2023#t5r87 'x' = 'variables selected' [code legend]
+  unsupported: Araujo2021#p72 [none] code legend: 'PA' = 'PA'
+  unsupported: Araujo2021#p72 [none] code legend: 'TR' = 'TR'
+  unsupported: Araujo2021#p72 [none] code legend: 'MR' = 'MR'
+  unsupported: Araujo2021#p72 [none] code legend: 'NR' = 'NR'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'AG' = 'AG'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'PA' = 'PA'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'PF' = 'PF'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'SF-15' = 'SF-15'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'SF-5' = 'SF-5'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'AG' = 'AG'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'PA' = 'PA'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'PF' = 'PF'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'SF-15' = 'SF-15'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'SF-5' = 'SF-5'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'AG' = 'AG'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'PA' = 'PA'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'PF' = 'PF'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'SF-15' = 'SF-15'
+  unsupported: Cajaiba2023#t10r8 [none] code legend: 'SF-5' = 'SF-5'
+  unsupported: CamargoVanegas2024#p96 [none] code legend: 'N1' = 'N1'
+  unsupported: CamargoVanegas2024#p96 [none] code legend: 'N2' = 'N2'
+  unsupported: CamargoVanegas2024#p96 [none] code legend: 'N3' = 'N3'
+  unsupported: Cao2024#p312 [none] variable abbreviation: 'pH' = 'water pH'
+  unsupported: Cao2024#p312 [none] variable abbreviation: 'Mg 2+' = 'Mg 2+'
+  unsupported: Cao2024#p312 [none] variable abbreviation: 'Ca 2+' = 'Ca 2+'
+  unsupported: Cao2024#p312 [none] variable abbreviation: 'LOI' = 'LOI'
+  unsupported: Cao2024#p312 [none] variable abbreviation: 'DWT' = 'DWT'
+  unsupported: Cao2024#p312 [none] variable abbreviation: 'Na +' = 'Na +'
+  unsupported: Cao2024#p312 [none] variable abbreviation: 'K +' = 'K +'
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'LOI' = 'organic content'
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'LOI' = 'organic content'
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'DWT' = 'environmental factors controlling chironomid communities'
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'K' = 'environmental factors controlling chironomid communities'
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'DOC' = 'organic matter'
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'TOC' = 'organic matter'
+  unsupported: Cao2024#p385 [none] variable abbreviation: 'LOI' = 'organic matter'
+  unsupported: Cao2024#p53 [none] variable abbreviation: 'LOI' = 'Loss on Ignition'
+  unsupported: Cao2024#p53 [none] variable abbreviation: 'TOC' = 'Total Organic Carbon'
+  unsupported: Cao2024#p53 [none] variable abbreviation: 'TN' = 'Total Nitrogen'
+  unsupported: Cao2024#p53 [none] variable abbreviation: 'pH' = 'acidity'
+  unsupported: Cappellari2022#p63 [def] variable abbreviation: 'Apid' = 'Apid'
+  unsupported: Eskilden2015#t7r5 [none] code legend: 'local' = 'local'
+  unsupported: Ji2024#p138 [none] variable abbreviation: 'CWM' = 'CWM-optimality hypothesis'
+  unsupported: Lizee2016#p101 [none] variable abbreviation: 'BR' = 'BR'
+  unsupported: Lizee2016#p101 [none] variable abbreviation: 'NODF' = 'NODF'
+  unsupported: Lizee2016#p101 [none] variable abbreviation: 'T' = 'T'
+  unsupported: Lizee2016#p69 [none] variable abbreviation: 'BR' = 'BR'
+  unsupported: Lizee2016#p69 [none] variable abbreviation: 'NODF' = 'NODF'
+  unsupported: Lizee2016#p69 [none] variable abbreviation: 'T' = 'T'
+  unsupported: Nelson2020#p73 [def] figure key: 'E' = 'sites with bison present are indicated by open points'
+  unsupported: Tonelli2021#p143 [def] code legend: '0' = 'Nest composed of a single brood mass located within the excrement'
+  unsupported: Tonelli2021#p143 [def] code legend: '1' = 'Nest composed of several brood masses located within the excrement'
+  unsupported: Tonelli2021#p143 [def] code legend: '3' = 'Nest composed of several brood masses located underground in a simple '
+  unsupported: Tonelli2021#p143 [def] code legend: '5' = 'Nest composed of several isolated brood masses located underground in '
+  unsupported: Tonelli2021#p143 [def] code legend: '7' = 'Nest composed of a single brood ball located underground in a simple n'
+  unsupported: Tonelli2021#p143 [def] code legend: '9' = 'Nest composed of several brood balls per chamber located underground i'
+  unsupported: Tonelli2021#p143 [def] code legend: '0' = 'within excrement'
+  unsupported: Tonelli2021#p143 [def] code legend: '1' = 'dung soil interphase'
+  unsupported: Tonelli2021#p143 [def] code legend: '2' = 'little depth'
+  unsupported: Tonelli2021#p143 [def] code legend: '3' = 'great depth'
+  unsupported: Tonelli2021#p143 [def] code legend: '0' = 'within trophic source'
+  unsupported: Tonelli2021#p143 [def] code legend: '1' = 'starting within food source but with a horizontal extension'
+  unsupported: Tonelli2021#p143 [def] code legend: '3' = 'shor'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'A' = 'A'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'S' = 'S'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'H' = 'H'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'J' = 'J'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FRic' = 'FRic'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FEve' = 'FEve'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FDis' = 'FDis'
+  unsupported: Vidal2023#p91 [none] variable abbreviation: 'FDiv' = 'FDiv'
+  unsupported: Wallon2024#p51 [none] code legend: 'Control' = 'control plots'
+  unsupported: Wallon2024#p51 [none] code legend: 'OTCs' = 'enclosed by OTC'
+  unsupported: Wallon2024#t12r21 [none] variable abbreviation: 'LOW OTC' = 'LOW OTC = MID OTC'
+  unsupported: Wallon2024#t19r27 [none] code legend: 'Winter' = 'Winter'
+  unsupported: Wallon2024#t19r27 [none] code legend: 'ActivNight' = 'ActivNight'
+  unsupported: Wallon2024#t19r27 [none] code legend: 'Elevation' = 'Elevation'
+  unsupported: Wallon2024#t19r27 [none] code legend: 'LOW-MID' = 'LOW-MID'
+  unsupported: Wallon2024#t19r27 [none] code legend: 'LOW' = 'LOW'
+  unsupported: Wallon2024#t19r27 [none] code legend: 'MID' = 'MID'
+  unsupported: Wallon2024#t20r15 [none] code legend: 'MID OTC-HIGH OTC' = 'MID OTC-HIGH OTC'
+  unsupported: Wallon2024#t9r25 [none] code legend: 'MID' = 'MID'
+  unsupported: Wallon2024#t9r25 [none] code legend: 'OTC-HIGH' = 'OTC-HIGH'
+  unsupported: Wallon2024#t9r25 [none] code legend: 'OTC' = 'OTC'
+  unsupported: Wallon2024#t9r30 [none] code legend: 'LOW' = 'LOW = MID'
+  wrong column: Araujo2021#p72 -> t1c0 'Category': gold [] model ['MR', 'NR', 'PA', 'TR']
+  wrong column: Cajaiba2023#p113 -> t10c1 'ES_FT: Ecosystem specificity / PF': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: Cajaiba2023#p113 -> t10c4 'ES_FT: Ecosystem specificity / AG': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: Cajaiba2023#p113 -> t10c5 'ES_FT: Ecosystem specificity / PA': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: Cajaiba2023#t10r8 -> t1c0 'Series': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: Cajaiba2023#t10r8 -> t2c0 'Category': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: Cajaiba2023#t10r8 -> t3c0 'Category': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: Cajaiba2023#t10r8 -> t4c0 'Category': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: Cajaiba2023#t10r8 -> t9c1 'Table A - Comparisons for Abundance and Richn': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  wrong column: CamargoVanegas2024#p96 -> t3c0 'Category': gold [] model ['N1', 'N2', 'N3']
+  wrong column: CamargoVanegas2024#p96 -> t5c0 'Series': gold [] model ['N1', 'N2', 'N3']
+  wrong column: CamargoVanegas2024#p96 -> t18c0 'Region': gold [] model ['N1', 'N2', 'N3']
+  wrong column: CamargoVanegas2024#p96 -> t19c0 'TDF Fragments': gold [] model ['N1', 'N2', 'N3']
+  wrong column: CamargoVanegas2024#p96 -> t29c0 'TDF fragments': gold [] model ['N1', 'N2', 'N3']
+  wrong column: Cao2024#p312 -> t6c0 '': gold [] model ['Ca 2+', 'DWT', 'K +', 'LOI', 'Mg 2+', 'pH']
+  wrong column: Cao2024#p312 -> t6c5 'DWT': gold [] model ['DWT']
+  wrong column: Cao2024#p385 -> t6c0 '': gold [] model ['DOC', 'DWT', 'K', 'LOI', 'LOI', 'LOI', 'TOC']
+  wrong column: Cao2024#p53 -> t6c0 '': gold [] model ['LOI', 'TN', 'TOC', 'pH']
+  right column, wrong or incomplete codes: Cappellari2022#p63 -> t5c3 'Explanatory variables': gold ['Apis', 'Temp'] model ['Apid', 'Body{L}', 'Body{S}', 'For_NC', 'Prob{L}', 'Prob{S}', 'a', 'b', 'c', 'd']
+  wrong column: Cecala2021#p134 -> t1c0 'Nursery': gold [] model ['0', '1']
+  wrong column: Eckert2023#p135 -> t1c2 'Formicidae / Midlands': gold [] model ['a', 'b']
+  wrong column: Eckert2023#p135 -> t1c3 'Formicidae / Midlands': gold [] model ['a', 'b']
+  wrong column: Eckert2023#p135 -> t1c8 'Collembola / Midlands': gold [] model ['a', 'b']
+  wrong column: Eckert2023#p135 -> t1c9 'Collembola / Midlands': gold [] model ['b']
+  wrong column: Eckert2023#p47 -> t1c2 'Formicidae / Midlands': gold [] model ['a', 'b']
+  wrong column: Eckert2023#p47 -> t1c3 'Formicidae / Midlands': gold [] model ['a', 'b']
+  wrong column: Eckert2023#p47 -> t1c8 'Collembola / Midlands': gold [] model ['a', 'b']
+  wrong column: Eckert2023#p47 -> t1c9 'Collembola / Midlands': gold [] model ['b']
+  wrong column: Eskilden2015#t5r0c0 -> t6c4 'Table S5. Comparison of species richness chan': gold [] model ['a', 'b', 'c']
+  wrong column: Eskilden2015#t5r0c0 -> t6c5 'Table S5. Comparison of species richness chan': gold [] model ['a', 'b', 'c']
+  wrong column: Eskilden2015#t5r0c0 -> t6c8 'Table S5. Comparison of species richness chan': gold [] model ['a', 'b', 'c']
+  wrong column: Eskilden2015#t5r0c0 -> t6c11 'Table S5. Comparison of species richness chan': gold [] model ['a', 'b', 'c']
+  wrong column: Eskilden2015#t7r5 -> t5c7 'Table S4. Number of cells included in species': gold [] model ['local']
+  wrong column: Ji2024#p138 -> t4c1 'Series': gold [] model ['CWM']
+  missed column: Ji2024#t0r0c3 -> t0c3 'Effect (E)/ response (R) trait': gold ['E', 'R'] model -
+  missed column: Jones2015#p67 -> t1c1 'Expert 1': gold ['1', '2'] model -
+  missed column: Jones2015#p67 -> t1c2 'Expert 2': gold ['1', '2'] model -
+  missed column: Jones2015#p67 -> t1c4 'Expert 4': gold ['1', '2'] model -
+  right column, wrong or incomplete codes: Kratschmer2019#t8r11 -> t12c2 'Nesting type': gold ['A', 'G'] model ['A']
+  wrong column: Lizee2016#p101 -> t2c0 'Metric': gold [] model ['BR', 'NODF', 'T']
+  wrong column: Lizee2016#p101 -> t3c0 'Metric': gold [] model ['BR', 'NODF', 'T']
+  wrong column: Lizee2016#p69 -> t2c0 'Metric': gold [] model ['BR', 'NODF', 'T']
+  wrong column: Lizee2016#p69 -> t3c0 'Metric': gold [] model ['BR', 'NODF', 'T']
+  right column, wrong or incomplete codes: Nelson2020#p73 -> t9c0 'Model': gold ['FDis', 'FEve', 'FRic'] model ['E']
+  right column, wrong or incomplete codes: Nelson2020#p73 -> t10c0 'Model': gold ['FDis', 'FEve', 'FRic'] model ['E']
+  right column, wrong or incomplete codes: Nelson2020#p73 -> t12c0 'Proportion carnivore': gold ['FDis', 'FEve', 'FRic'] model ['E']
+  wrong column: Pessoa2017#p51 -> t0c5 'Area 3 / FL': gold [] model ['Circles', 'Triangles']
+  wrong column: Pessoa2017#p51 -> t0c6 'Area 3 / NF': gold [] model ['Squares', 'Triangles']
+  wrong column: Tonelli2021#p143 -> t7c13 'Nesting patterns (see supplementary material ': gold [] model ['0', '1', '10', '11', '2', '3', '5', '7', '8', '9']
+  right column, wrong or incomplete codes: Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for ': gold ['1', '3', '5', '7', '9'] model ['0', '1', '3', '5', '7', '9']
+  wrong column: Tonelli2021#p143 -> t7c15 'Nest depth (0=within excrement; 1=dung soil i': gold [] model ['0', '1', '2', '3']
+  wrong column: Tonelli2021#p143 -> t7c16 'Horizontal nest distance (0=within trophic so': gold [] model ['0', '1', '3']
+  wrong column: Tonelli2021#p147 -> t7c14 'Nest type (see supplementary material S1 for ': gold [] model ['0)', '1)', '3)']
+  wrong column: Tonelli2021#t7r0c16 -> t7c14 'Nest type (see supplementary material S1 for ': gold [] model ['0', '1', '3']
+  wrong column: Vidal2023#p91 -> t0c4 'S / F': gold [] model ['A', 'FEve', 'S']
+  wrong column: Viza2023#t5r87 -> t5c1 'Model selected': gold [] model ['x', 'x2 + x']
+  wrong column: Wallon2024#p51 -> t3c2 'Treatment': gold [] model ['Control', 'OTCs']
+  wrong column: Wallon2024#t12r21 -> t3c2 'Treatment': gold [] model ['LOW OTC']
+  wrong column: Wallon2024#t19r27 -> t13c1 'Trait': gold [] model ['ActivNight', 'Elevation', 'LOW', 'LOW-MID', 'MID', 'Winter']
+  wrong column: Wallon2024#t20r15 -> t3c2 'Treatment': gold [] model ['MID OTC-HIGH OTC']
+  wrong column: Wallon2024#t9r25 -> t3c2 'Treatment': gold [] model ['MID', 'OTC', 'OTC-HIGH']
+  wrong column: Wallon2024#t9r30 -> t10c1 'Trait': gold [] model ['LOW']
