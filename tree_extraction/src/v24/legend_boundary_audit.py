@@ -62,7 +62,7 @@ import legend_ablation as la
 import legend_coverage as lc
 import legend_inventory as li
 import legend_scope as ls
-from fill_template import _drop_reference_lists
+from fill_template import _PAGE_NOISE_RE, _drop_reference_lists
 
 OUT = lc.OUT
 SKIP = 3
@@ -167,7 +167,11 @@ def run_end(seq, kind):
 
 
 def is_short(t):
-    return len(t) < SHORT and not is_heading(t) and start_marker(t) is None
+    """Page furniture: a short paragraph (no heading, no item), a publisher's running header or footer (the
+    patterns fill_template already treats as page noise), or an image placeholder."""
+    if is_heading(t) or start_marker(t) is not None:
+        return False
+    return len(t) < SHORT or bool(_PAGE_NOISE_RE.search(t)) or t.startswith("![")
 
 
 def lists(paras):
@@ -364,8 +368,8 @@ def audit(papers):
             rec = {"paper": p, "group": ls.SPLIT.get(p), "file": paras[ps[0]]["file"],
                    "paragraphs": ps, "kind": ("interrupted list" if "between" in c else "split list") if len(ps) > 1
                    else "list unit", "between": between,
-                   "between_kinds": ["page furniture" if is_short(paras[x]["text"]) else "image" if
-                                     paras[x]["text"].startswith("![") else "caption" if lc.CAPTION.match(paras[x]["text"])
+                   "between_kinds": ["image" if paras[x]["text"].startswith("![") else "page furniture" if
+                                     is_short(paras[x]["text"]) else "caption" if lc.CAPTION.match(paras[x]["text"])
                                      else "text" for x in between],
                    "items": {str(x): [code_of(kind, m) for m in c["items"][x]] for x in ps}, **d,
                    "main_is_list_unit": lc.numbered(paras[main]["text"]),
@@ -386,6 +390,8 @@ def audit(papers):
             ha, hb_ = li.shape_hits(a), li.shape_hits(b)
             if ha or hb_:
                 stats["continued across a page, a definition shape in either half"] += 1
+            if (ha >= 2) != (hb_ >= 2) and ha + hb_ >= 2:
+                stats["continued across a page, inventory unit in one half only (2+ shapes there)"] += 1
             if ha and hb_:
                 stats["continued across a page, definition shapes in both halves"] += 1
                 pages.append({"paper": p, "before": i, "after": k, "shapes": [ha, hb_], "end": a[-160:],
@@ -471,7 +477,9 @@ def report(recs, stats, mismatch, strip, pages):
           "lower case (after furniture, images, captions) continues the paragraph before it, in another unit.",
           f"  continued paragraphs {stats['paragraphs continued across a page']}; a definition shape in either half "
           f"{stats['continued across a page, a definition shape in either half']}; in both halves (a legend may "
-          f"straddle the break) {stats['continued across a page, definition shapes in both halves']}"]
+          f"straddle the break) {stats['continued across a page, definition shapes in both halves']}; one half an "
+          f"inventory unit (2+ shapes) and the other not "
+          f"{stats['continued across a page, inventory unit in one half only (2+ shapes there)']}"]
     for x in pages[:60]:
         L.append(f"    {x['paper']} p{x['before']}|p{x['after']} shapes {x['shapes']} inventory {x['inventory']}: "
                  f"...{x['end'][-90:]!r} || {x['start'][:90]!r}...")
