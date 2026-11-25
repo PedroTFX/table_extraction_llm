@@ -453,7 +453,7 @@ def compare(recs, pages, against):
              f"({len(flagged_new)})")
     seen = set()
     for r in flagged_old:
-        where = f"p{','.join(map(str, r['paragraphs']))}"[:60]
+        where = ("p" + ",p".join(map(str, r["paragraphs"])))[:60]          # as boundary_labels_<date>.csv writes it
         m = next((i for i, x in enumerate(flagged_new) if x["paper"] == r["paper"] and i not in seen
                   and _same(main_text(x), main_text(r))), None)
         if m is None:
