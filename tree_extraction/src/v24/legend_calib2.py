@@ -437,8 +437,29 @@ def score(gold_file, run_file, v3_file=None):
           f"  other entries: removed {acc[(False, False)]}, kept {acc[(False, True)]}",
           "  reasons: " + ", ".join(f"{a} {b}" for a, b in why.most_common())] + lost + [""]
 
-    orc = {k: {c: v["codes"] for c, v in r["oracle"].items() if v["decodes"]} for k, r in run_.items()}
-    e2e = {k: {c: v["codes"] for c, v in r["stage2"].items() if v["decodes"]} for k, r in run_.items()}
+    repaired = collections.Counter()
+
+    def read_codes(pred, legend, which):
+        """A code the model wrote with its term ('1: underdeveloped', '0) = "within excrement"') is read as that
+        code when it is one of the legend's codes."""
+        ln = {cal.ncode(c) for c in legend}
+        out = []
+        for s in pred:
+            m = re.match(r"\s*([^\s:=)]+)\s*[:=)]", s)
+            if cal.ncode(s) not in ln and m and cal.ncode(m.group(1)) in ln:
+                repaired[which] += 1
+                s = m.group(1)
+            out.append(s)
+        return out
+
+    orc = {k: {c: read_codes(v["codes"], [m["code"] for m in r["oracle_input"]], "oracle")
+               for c, v in r["oracle"].items() if v["decodes"]} for k, r in run_.items()}
+    e2e = {k: {c: read_codes(v["codes"], [e["code"] for e in r["stage1"] if not e["check"] and e["kind"] in CELL_KINDS],
+                             "end to end")
+               for c, v in r["stage2"].items() if v["decodes"]} for k, r in run_.items()}
+    L.append(f"  stage 2 codes written with their terms, read as their code: oracle {repaired['oracle']}, "
+             f"end to end {repaired['end to end']}")
+    L.append("")
     for name, a in (("STAGE 2, oracle input (the gold's cell-code mappings): association alone", orc),
                     ("STAGE 2, end to end (stage 1's checked cell-code entries)", e2e)):
         S, D = stage2_eval(G, a, cols)
@@ -460,7 +481,7 @@ def score(gold_file, run_file, v3_file=None):
               "=" * 100] + S1 + ["  association:"] + S2 + [""]
         details += ["", "--- v3 run on gold v4"] + D1 + D2
     L += ["=" * 100, "DETAIL", "=" * 100] + details
-    f = OUT / f"CALIB2_REPORT_{R['date']}.txt"
+    f = OUT / f"CALIB2_REPORT_{R['date']}_gold{gold['version'].split()[0]}.txt"
     f.write_text("\n".join(L) + "\n", encoding="utf-8")
     print("\n".join(L[:L.index("DETAIL") - 1]))
     print(f"-> {f}")
