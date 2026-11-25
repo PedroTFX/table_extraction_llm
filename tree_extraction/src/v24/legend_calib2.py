@@ -146,7 +146,8 @@ def term_spans(term, s):
     words = re.findall(r"[^\W_]+", term)
     if not words:
         return []
-    pat = r"(?<![^\W_])" + r"[\W_]+".join(map(re.escape, words)) + r"(?![^\W_])"
+    pat = r"(?<![^\W\d_])" + r"[\W_]+".join(map(re.escape, words)) + r"(?![^\W\d_])"   # a glued marker digit
+    #                                                                     may touch a term ('herbivorous2.')
     return [(m.start(), m.end()) for m in re.finditer(pat, s, re.I)]
 
 
