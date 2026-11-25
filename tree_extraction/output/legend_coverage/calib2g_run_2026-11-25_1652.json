@@ -1,0 +1,1823 @@
+{
+ "model": "gemma4:e4b-it-qat",
+ "date": "2026-11-25_1652",
+ "test": "gate",
+ "prompt": "A passage of a scientific paper defines these codes:\n{legend}\n\nBelow are table columns of the same paper (id | header | cell values). For each column, decide from its header and its cells taken together whether the column records what these definitions describe: whether its cells use these codes for the same thing the definitions are about. A column can record it and still hold values the definitions do not cover (other codes, labels, numbers, formulas, stray header text); such values do not decide it. Cells that only share the same letters, numbers or words but mean something else are not decoded by these definitions.\n\nColumns:\n{columns}\n\nFor every column give:\n- id: the column's id\n- records: true if the column records what these definitions describe, false if not\n- codes: the codes above that the column's cells use with these meanings ([] if records is false)\n- evidence: a short reason, from the column's header or cells\n\nReply with JSON only.",
+ "base_run": "../../output/legend_coverage/calib2_run_2026-11-25_1158.json",
+ "units": [
+  {
+   "uid": "Cajaiba2023#p113",
+   "oracle_input": [
+    {
+     "code": "PF",
+     "term": "Primary Forest",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "SF-15",
+     "term": "Secondary forest with 15 years of regeneration",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "SF-5",
+     "term": "Secondary forest with 5 years of regeneration",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "AG",
+     "term": "Agriculture",
+     "variable": "ecosystem"
+    },
+    {
+     "code": "PA",
+     "term": "Pasture",
+     "variable": "ecosystem"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The header lists AG, PA, PF, SF-15, and SF-5."
+    },
+    {
+     "id": "C2",
+     "records": true,
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    {
+     "id": "C3",
+     "records": true,
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    {
+     "id": "C4",
+     "records": true,
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    {
+     "id": "C5",
+     "records": false,
+     "codes": [],
+     "evidence": "The cells contain mixed types: AG, Intercept, PA, PF, Predictor variable, SF-15, SF-5, Sampled sites. 'Intercept', 'Predictor variable', and 'Sampled sites' are not defined codes."
+    },
+    {
+     "id": "C6",
+     "records": true,
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    {
+     "id": "C7",
+     "records": true,
+     "codes": [
+      "PF"
+     ],
+     "evidence": "The cells contain numerical values and 'PF', which is one of the defined ecosystem codes."
+    },
+    {
+     "id": "C8",
+     "records": true,
+     "codes": [
+      "AG"
+     ],
+     "evidence": "The cells contain numerical values and 'AG', which is one of the defined ecosystem codes."
+    },
+    {
+     "id": "C9",
+     "records": true,
+     "codes": [
+      "PA"
+     ],
+     "evidence": "The cells contain numerical values and 'PA', which is one of the defined ecosystem codes."
+    }
+   ],
+   "columns": {
+    "t1c0": {
+     "records": true,
+     "written": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The header lists AG, PA, PF, SF-15, and SF-5."
+    },
+    "t2c0": {
+     "records": true,
+     "written": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    "t3c0": {
+     "records": true,
+     "written": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    "t4c0": {
+     "records": true,
+     "written": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    "t9c1": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "The cells contain mixed types: AG, Intercept, PA, PF, Predictor variable, SF-15, SF-5, Sampled sites. 'Intercept', 'Predictor variable', and 'Sampled sites' are not defined codes."
+    },
+    "t10c0": {
+     "records": true,
+     "written": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "codes": [
+      "PF",
+      "SF-15",
+      "SF-5",
+      "AG",
+      "PA"
+     ],
+     "evidence": "The cells contain AG, PA, PF, SF-15, and SF-5."
+    },
+    "t10c1": {
+     "records": true,
+     "written": [
+      "PF"
+     ],
+     "codes": [
+      "PF"
+     ],
+     "evidence": "The cells contain numerical values and 'PF', which is one of the defined ecosystem codes."
+    },
+    "t10c4": {
+     "records": true,
+     "written": [
+      "AG"
+     ],
+     "codes": [
+      "AG"
+     ],
+     "evidence": "The cells contain numerical values and 'AG', which is one of the defined ecosystem codes."
+    },
+    "t10c5": {
+     "records": true,
+     "written": [
+      "PA"
+     ],
+     "codes": [
+      "PA"
+     ],
+     "evidence": "The cells contain numerical values and 'PA', which is one of the defined ecosystem codes."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t1c0": [
+     "PF",
+     "SF-15",
+     "SF-5",
+     "AG",
+     "PA"
+    ],
+    "t2c0": [
+     "PF",
+     "SF-15",
+     "SF-5",
+     "AG",
+     "PA"
+    ],
+    "t3c0": [
+     "PF",
+     "SF-15",
+     "SF-5",
+     "AG",
+     "PA"
+    ],
+    "t4c0": [
+     "PF",
+     "SF-15",
+     "SF-5",
+     "AG",
+     "PA"
+    ],
+    "t10c0": [
+     "PF",
+     "SF-15",
+     "SF-5",
+     "AG",
+     "PA"
+    ],
+    "t10c1": [
+     "PF"
+    ],
+    "t10c4": [
+     "AG"
+    ],
+    "t10c5": [
+     "PA"
+    ]
+   },
+   "seconds": 7.3
+  },
+  {
+   "uid": "Cappellari2022#p63",
+   "oracle_input": [
+    {
+     "code": "Apis",
+     "term": "honeybee abundance",
+     "variable": "explanatory variables"
+    },
+    {
+     "code": "Temp",
+     "term": "temperature",
+     "variable": "explanatory variables"
+    },
+    {
+     "code": "ProbS",
+     "term": "proboscis similar to the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "ProbL",
+     "term": "proboscis longer than the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "BodyS",
+     "term": "body size similar to the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "BodyL",
+     "term": "body size larger than the honeybee",
+     "variable": "levels of the four trait categories"
+    },
+    {
+     "code": "For_NC",
+     "term": "non-central forager",
+     "variable": "levels of the four trait categories"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "Apis",
+      "Temp",
+      "For_NC"
+     ],
+     "evidence": "The cells contain combinations of 'Apis', 'Temp', and 'For' (which likely relates to 'For_NC')."
+    }
+   ],
+   "columns": {
+    "t5c3": {
+     "records": true,
+     "written": [
+      "Apis",
+      "Temp",
+      "For_NC"
+     ],
+     "codes": [
+      "Apis",
+      "Temp",
+      "For_NC"
+     ],
+     "evidence": "The cells contain combinations of 'Apis', 'Temp', and 'For' (which likely relates to 'For_NC')."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t5c3": [
+     "Apis",
+     "Temp",
+     "For_NC"
+    ]
+   },
+   "seconds": 0.7
+  },
+  {
+   "uid": "Cecala2021#p134",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "nursery was sampled",
+     "variable": "sampling schedule"
+    },
+    {
+     "code": "0",
+     "term": "not sampled due to logistical reasons",
+     "variable": "sampling schedule"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": false,
+     "codes": [],
+     "evidence": "Cells contain numerical identifiers (01-13) and a total, not the defined codes '1' or '0' for sampling schedule."
+    },
+    {
+     "id": "C2",
+     "records": false,
+     "codes": [],
+     "evidence": "Cells contain numerical identifiers (01-13) and a descriptive header, not the defined codes '1' or '0' for sampling schedule."
+    },
+    {
+     "id": "C3",
+     "records": false,
+     "codes": [],
+     "evidence": "Cells contain counts of samplings per nursery (e.g., 1, 2, 3, 5, 58, 6, 7), not the binary sampling schedule codes '1' or '0'."
+    },
+    {
+     "id": "C4",
+     "records": false,
+     "codes": [],
+     "evidence": "Cells contain nursery IDs (0, 1, 10, 12, 13, 14, 2, 3, 4, 5, 6, 8), not the binary sampling schedule codes '1' or '0'."
+    },
+    {
+     "id": "C5",
+     "records": false,
+     "codes": [],
+     "evidence": "Cells contain nursery IDs (0, 1, 2, 25, 3, 4, 5, 6, 7, 8, 9), not the binary sampling schedule codes '1' or '0'."
+    }
+   ],
+   "columns": {
+    "t0c0": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Cells contain numerical identifiers (01-13) and a total, not the defined codes '1' or '0' for sampling schedule."
+    },
+    "t1c0": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Cells contain numerical identifiers (01-13) and a descriptive header, not the defined codes '1' or '0' for sampling schedule."
+    },
+    "t1c8": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Cells contain counts of samplings per nursery (e.g., 1, 2, 3, 5, 58, 6, 7), not the binary sampling schedule codes '1' or '0'."
+    },
+    "t6c2": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Cells contain nursery IDs (0, 1, 10, 12, 13, 14, 2, 3, 4, 5, 6, 8), not the binary sampling schedule codes '1' or '0'."
+    },
+    "t6c3": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Cells contain nursery IDs (0, 1, 2, 25, 3, 4, 5, 6, 7, 8, 9), not the binary sampling schedule codes '1' or '0'."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {},
+   "seconds": 2.8
+  },
+  {
+   "uid": "Eckert2023#t4r70",
+   "oracle_input": [
+    {
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "variable": ""
+    },
+    {
+     "code": "Pred",
+     "term": "Predator",
+     "variable": ""
+    },
+    {
+     "code": "Sap",
+     "term": "Saprovore",
+     "variable": ""
+    },
+    {
+     "code": "Soil",
+     "term": "soil-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Litter",
+     "term": "litter-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "variable": ""
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ],
+     "evidence": "The header 'Forage strategy' and the cell values explicitly contain the defined codes: 'GenForager', 'Pred', and 'Sap'."
+    }
+   ],
+   "columns": {
+    "t4c2": {
+     "records": true,
+     "written": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ],
+     "codes": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ],
+     "evidence": "The header 'Forage strategy' and the cell values explicitly contain the defined codes: 'GenForager', 'Pred', and 'Sap'."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t4c2": [
+     "GenForager",
+     "Pred",
+     "Sap"
+    ]
+   },
+   "seconds": 0.7
+  },
+  {
+   "uid": "Eckert2023#t4r134",
+   "oracle_input": [
+    {
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "variable": ""
+    },
+    {
+     "code": "Pred",
+     "term": "Predator",
+     "variable": ""
+    },
+    {
+     "code": "Sap",
+     "term": "Saprovore",
+     "variable": ""
+    },
+    {
+     "code": "Soil",
+     "term": "soil-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Litter",
+     "term": "litter-dweller",
+     "variable": ""
+    },
+    {
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "variable": ""
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ],
+     "evidence": "The header 'Forage strategy' and the cell values explicitly contain the defined codes: 'GenForager', 'Pred', and 'Sap'."
+    }
+   ],
+   "columns": {
+    "t4c2": {
+     "records": true,
+     "written": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ],
+     "codes": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ],
+     "evidence": "The header 'Forage strategy' and the cell values explicitly contain the defined codes: 'GenForager', 'Pred', and 'Sap'."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t4c2": [
+     "GenForager",
+     "Pred",
+     "Sap"
+    ]
+   },
+   "seconds": 0.6
+  },
+  {
+   "uid": "Ji2024#t0r0c3",
+   "oracle_input": [
+    {
+     "code": "E",
+     "term": "Effect",
+     "variable": "effect / response trait"
+    },
+    {
+     "code": "R",
+     "term": "response",
+     "variable": "effect / response trait"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "E",
+      "R"
+     ],
+     "evidence": "The header explicitly mentions 'Effect (E)/ response (R) trait' and the cell values contain 'E' and 'R'."
+    }
+   ],
+   "columns": {
+    "t0c3": {
+     "records": true,
+     "written": [
+      "E",
+      "R"
+     ],
+     "codes": [
+      "E",
+      "R"
+     ],
+     "evidence": "The header explicitly mentions 'Effect (E)/ response (R) trait' and the cell values contain 'E' and 'R'."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t0c3": [
+     "E",
+     "R"
+    ]
+   },
+   "seconds": 0.9
+  },
+  {
+   "uid": "Jones2015#p67",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "relatively sedentary",
+     "variable": "mobility points"
+    },
+    {
+     "code": "1",
+     "term": "mobile",
+     "variable": "mobility points"
+    },
+    {
+     "code": "2",
+     "term": "very mobile",
+     "variable": "mobility points"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '1' and '2', which correspond to 'mobile' and 'very mobile' in the definitions."
+    },
+    {
+     "id": "C2",
+     "records": true,
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '1' and '2', which correspond to 'mobile' and 'very mobile' in the definitions."
+    },
+    {
+     "id": "C3",
+     "records": true,
+     "codes": [
+      "0",
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '0', '1', and '2', matching all defined codes."
+    },
+    {
+     "id": "C4",
+     "records": true,
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '1' and '2', which correspond to 'mobile' and 'very mobile' in the definitions."
+    },
+    {
+     "id": "C5",
+     "records": true,
+     "codes": [
+      "0",
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '0', '1', and '2', matching all defined codes."
+    },
+    {
+     "id": "C6",
+     "records": false,
+     "codes": [],
+     "evidence": "Cells contain decimal numbers (e.g., 0.6, 1.2), which are not the defined codes (0, 1, 2)."
+    },
+    {
+     "id": "C7",
+     "records": false,
+     "codes": [],
+     "evidence": "Cells contain decimal numbers (e.g., 0.6, 1.2), which are not the defined codes (0, 1, 2)."
+    }
+   ],
+   "columns": {
+    "t1c1": {
+     "records": true,
+     "written": [
+      "1",
+      "2"
+     ],
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '1' and '2', which correspond to 'mobile' and 'very mobile' in the definitions."
+    },
+    "t1c2": {
+     "records": true,
+     "written": [
+      "1",
+      "2"
+     ],
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '1' and '2', which correspond to 'mobile' and 'very mobile' in the definitions."
+    },
+    "t1c3": {
+     "records": true,
+     "written": [
+      "0",
+      "1",
+      "2"
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '0', '1', and '2', matching all defined codes."
+    },
+    "t1c4": {
+     "records": true,
+     "written": [
+      "1",
+      "2"
+     ],
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '1' and '2', which correspond to 'mobile' and 'very mobile' in the definitions."
+    },
+    "t1c5": {
+     "records": true,
+     "written": [
+      "0",
+      "1",
+      "2"
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2"
+     ],
+     "evidence": "Cells contain '0', '1', and '2', matching all defined codes."
+    },
+    "t1c6": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Cells contain decimal numbers (e.g., 0.6, 1.2), which are not the defined codes (0, 1, 2)."
+    },
+    "t2c3": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Cells contain decimal numbers (e.g., 0.6, 1.2), which are not the defined codes (0, 1, 2)."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t1c1": [
+     "1",
+     "2"
+    ],
+    "t1c2": [
+     "1",
+     "2"
+    ],
+    "t1c3": [
+     "0",
+     "1",
+     "2"
+    ],
+    "t1c4": [
+     "1",
+     "2"
+    ],
+    "t1c5": [
+     "0",
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 3.6
+  },
+  {
+   "uid": "Kratschmer2019#t8r11",
+   "oracle_input": [
+    {
+     "code": "G",
+     "term": "Ground-nesting",
+     "variable": "nesting type"
+    },
+    {
+     "code": "A",
+     "term": "Above-ground nesting",
+     "variable": "nesting type"
+    },
+    {
+     "code": "P",
+     "term": "Parasitic",
+     "variable": "nesting type"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "G",
+      "A",
+      "P"
+     ],
+     "evidence": "Header is 'Nesting type' and cells contain 'A', 'G', 'P' which match the definitions."
+    },
+    {
+     "id": "C2",
+     "records": true,
+     "codes": [
+      "A",
+      "G",
+      "P"
+     ],
+     "evidence": "Header is 'Nesting type' and cells contain 'A', 'G', 'P' (H is an unmapped value)."
+    },
+    {
+     "id": "C3",
+     "records": false,
+     "codes": [],
+     "evidence": "Header is 'Nesting type', but cells contain 'H' which is not defined in the provided codes (G, A, P)."
+    },
+    {
+     "id": "C4",
+     "records": false,
+     "codes": [],
+     "evidence": "Header is 'Nesting type', but cells contain 'BP' which is not one of the defined codes (G, A, P)."
+    }
+   ],
+   "columns": {
+    "t10c2": {
+     "records": true,
+     "written": [
+      "G",
+      "A",
+      "P"
+     ],
+     "codes": [
+      "G",
+      "A",
+      "P"
+     ],
+     "evidence": "Header is 'Nesting type' and cells contain 'A', 'G', 'P' which match the definitions."
+    },
+    "t11c2": {
+     "records": true,
+     "written": [
+      "A",
+      "G",
+      "P"
+     ],
+     "codes": [
+      "A",
+      "G",
+      "P"
+     ],
+     "evidence": "Header is 'Nesting type' and cells contain 'A', 'G', 'P' (H is an unmapped value)."
+    },
+    "t12c2": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header is 'Nesting type', but cells contain 'H' which is not defined in the provided codes (G, A, P)."
+    },
+    "t13c2": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header is 'Nesting type', but cells contain 'BP' which is not one of the defined codes (G, A, P)."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t10c2": [
+     "G",
+     "A",
+     "P"
+    ],
+    "t11c2": [
+     "A",
+     "G",
+     "P"
+    ]
+   },
+   "seconds": 2.2
+  },
+  {
+   "uid": "Nelson2020#p73",
+   "oracle_input": [
+    {
+     "code": "FRic",
+     "term": "functional richness",
+     "variable": "functional trait diversity"
+    },
+    {
+     "code": "FEve",
+     "term": "functional evenness",
+     "variable": "functional trait diversity"
+    },
+    {
+     "code": "FDis",
+     "term": "functional dispersion",
+     "variable": "functional trait diversity"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "evidence": "The header contains 'FDis', 'FEve', and 'FRic' which correspond to functional dispersion, functional evenness, and functional richness."
+    },
+    {
+     "id": "C2",
+     "records": true,
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "evidence": "The header contains 'FDis', 'FEve', and 'FRic' which correspond to functional dispersion, functional evenness, and functional richness."
+    },
+    {
+     "id": "C3",
+     "records": true,
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "evidence": "The header contains 'FDis', 'FEve', and 'FRic' which correspond to functional dispersion, functional evenness, and functional richness."
+    }
+   ],
+   "columns": {
+    "t9c0": {
+     "records": true,
+     "written": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "evidence": "The header contains 'FDis', 'FEve', and 'FRic' which correspond to functional dispersion, functional evenness, and functional richness."
+    },
+    "t10c0": {
+     "records": true,
+     "written": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "evidence": "The header contains 'FDis', 'FEve', and 'FRic' which correspond to functional dispersion, functional evenness, and functional richness."
+    },
+    "t12c0": {
+     "records": true,
+     "written": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "codes": [
+      "FDis",
+      "FEve",
+      "FRic"
+     ],
+     "evidence": "The header contains 'FDis', 'FEve', and 'FRic' which correspond to functional dispersion, functional evenness, and functional richness."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t9c0": [
+     "FDis",
+     "FEve",
+     "FRic"
+    ],
+    "t10c0": [
+     "FDis",
+     "FEve",
+     "FRic"
+    ],
+    "t12c0": [
+     "FDis",
+     "FEve",
+     "FRic"
+    ]
+   },
+   "seconds": 2.0
+  },
+  {
+   "uid": "Tonelli2021#p125",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "underdeveloped",
+     "variable": "zygum"
+    },
+    {
+     "code": "2",
+     "term": "developed",
+     "variable": "zygum"
+    },
+    {
+     "code": "3",
+     "term": "strong prolongation of spatula-shaped epizygum",
+     "variable": "zygum"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "The header explicitly mentions the definitions: 'Zigum (1: underdeveloped; 2: developed 3: epizygum)' and the cells contain '1' and '2'."
+    }
+   ],
+   "columns": {
+    "t7c11": {
+     "records": true,
+     "written": [
+      "1",
+      "2"
+     ],
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "The header explicitly mentions the definitions: 'Zigum (1: underdeveloped; 2: developed 3: epizygum)' and the cells contain '1' and '2'."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c11": [
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 0.9
+  },
+  {
+   "uid": "Tonelli2021#p143",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "Nest composed of a single brood mass located within the excrement",
+     "variable": ""
+    },
+    {
+     "code": "2",
+     "term": "Nest composed of several brood masses located within the excrement",
+     "variable": ""
+    },
+    {
+     "code": "3",
+     "term": "Nest composed of a single brood mass located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "4",
+     "term": "Nest composed of several brood masses located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "5",
+     "term": "Nest composed of several isolated brood masses located underground in a compound nest",
+     "variable": ""
+    },
+    {
+     "code": "6",
+     "term": "Nest composed of several brood masses per chamber, located underground in a compound nest",
+     "variable": ""
+    },
+    {
+     "code": "7",
+     "term": "Nest composed of a single brood ball located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "8",
+     "term": "Nest composed of several isolated brood balls located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "9",
+     "term": "Nest composed of several brood balls per chamber located underground in a simple nest",
+     "variable": ""
+    },
+    {
+     "code": "10",
+     "term": "Nest composed of several isolated brood balls located underground in a compound nest",
+     "variable": ""
+    },
+    {
+     "code": "11",
+     "term": "Nest composed of several brood balls per chamber located underground in a compound nest",
+     "variable": ""
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "10",
+      "11",
+      "2",
+      "5",
+      "7",
+      "8"
+     ],
+     "evidence": "The cells contain codes (10, 11, 2, 5, 7, 8) that match the defined nesting patterns."
+    },
+    {
+     "id": "C2",
+     "records": false,
+     "codes": [],
+     "evidence": "The cells contain codes (0, 1, 3, 5, 7, 9) which do not exclusively match the defined nesting patterns (1-11)."
+    },
+    {
+     "id": "C3",
+     "records": false,
+     "codes": [],
+     "evidence": "The cells describe nest depth (0, 1, 2, 3), which is a physical characteristic, not the nesting pattern defined by the codes."
+    },
+    {
+     "id": "C4",
+     "records": false,
+     "codes": [],
+     "evidence": "The cells describe horizontal nest distance (0, 1, 3), which is a spatial measurement, not the nesting pattern defined by the codes."
+    }
+   ],
+   "columns": {
+    "t7c13": {
+     "records": true,
+     "written": [
+      "10",
+      "11",
+      "2",
+      "5",
+      "7",
+      "8"
+     ],
+     "codes": [
+      "10",
+      "11",
+      "2",
+      "5",
+      "7",
+      "8"
+     ],
+     "evidence": "The cells contain codes (10, 11, 2, 5, 7, 8) that match the defined nesting patterns."
+    },
+    "t7c14": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "The cells contain codes (0, 1, 3, 5, 7, 9) which do not exclusively match the defined nesting patterns (1-11)."
+    },
+    "t7c15": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "The cells describe nest depth (0, 1, 2, 3), which is a physical characteristic, not the nesting pattern defined by the codes."
+    },
+    "t7c16": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "The cells describe horizontal nest distance (0, 1, 3), which is a spatial measurement, not the nesting pattern defined by the codes."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c13": [
+     "10",
+     "11",
+     "2",
+     "5",
+     "7",
+     "8"
+    ]
+   },
+   "seconds": 2.1
+  },
+  {
+   "uid": "Tonelli2021#p145",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within excrement",
+     "variable": "nest depth"
+    },
+    {
+     "code": "1",
+     "term": "dungsoil interphase",
+     "variable": "nest depth"
+    },
+    {
+     "code": "2",
+     "term": "little depth",
+     "variable": "nest depth"
+    },
+    {
+     "code": "3",
+     "term": "great depth",
+     "variable": "nest depth"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": false,
+     "codes": [],
+     "evidence": "Header refers to 'Nest type' and cells contain codes (0, 1, 3, 5, 7, 9) that do not match the defined meanings for nest depth."
+    },
+    {
+     "id": "C2",
+     "records": true,
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "Header explicitly defines the codes (0, 1, 2, 3) corresponding to the specified nest depth categories."
+    },
+    {
+     "id": "C3",
+     "records": false,
+     "codes": [],
+     "evidence": "Header refers to 'Horizontal nest distance' and the codes (0, 1, 3) do not correspond to the defined nest depth categories."
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header refers to 'Nest type' and cells contain codes (0, 1, 3, 5, 7, 9) that do not match the defined meanings for nest depth."
+    },
+    "t7c15": {
+     "records": true,
+     "written": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "Header explicitly defines the codes (0, 1, 2, 3) corresponding to the specified nest depth categories."
+    },
+    "t7c16": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header refers to 'Horizontal nest distance' and the codes (0, 1, 3) do not correspond to the defined nest depth categories."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c15": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 1.9
+  },
+  {
+   "uid": "Tonelli2021#p147",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within food source",
+     "variable": "horizontal distance of the nest"
+    },
+    {
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "variable": "horizontal distance of the nest"
+    },
+    {
+     "code": "2",
+     "term": "a short distance out from the food source",
+     "variable": "horizontal distance of the nest"
+    },
+    {
+     "code": "3",
+     "term": "a great distance out from the food source",
+     "variable": "horizontal distance of the nest"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": false,
+     "codes": [],
+     "evidence": "Header refers to 'Nest type' and cells contain codes 0, 1, 3, 5, 7, 9, which do not match the defined codes for horizontal distance."
+    },
+    {
+     "id": "C2",
+     "records": false,
+     "codes": [],
+     "evidence": "Header defines codes based on 'Nest depth' (e.g., 0=within excrement), which is a different variable than the horizontal distance described by the codes."
+    },
+    {
+     "id": "C3",
+     "records": true,
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "Header explicitly states 'Horizontal nest distance' and the cell values (0, 1, 3) align with the provided definitions for horizontal distance."
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header refers to 'Nest type' and cells contain codes 0, 1, 3, 5, 7, 9, which do not match the defined codes for horizontal distance."
+    },
+    "t7c15": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header defines codes based on 'Nest depth' (e.g., 0=within excrement), which is a different variable than the horizontal distance described by the codes."
+    },
+    "t7c16": {
+     "records": true,
+     "written": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "Header explicitly states 'Horizontal nest distance' and the cell values (0, 1, 3) align with the provided definitions for horizontal distance."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c16": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 1.5
+  },
+  {
+   "uid": "Tonelli2021#t7r0c11",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "underdeveloped",
+     "variable": "zigum"
+    },
+    {
+     "code": "2",
+     "term": "developed",
+     "variable": "zigum"
+    },
+    {
+     "code": "3",
+     "term": "epizygum",
+     "variable": "zigum"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "The header explicitly states the mapping: 'Zigum (1: underdeveloped; 2: developed 3: epizygum)' and the cells contain '1' and '2'."
+    }
+   ],
+   "columns": {
+    "t7c11": {
+     "records": true,
+     "written": [
+      "1",
+      "2"
+     ],
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "The header explicitly states the mapping: 'Zigum (1: underdeveloped; 2: developed 3: epizygum)' and the cells contain '1' and '2'."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c11": [
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 0.7
+  },
+  {
+   "uid": "Tonelli2021#t7r0c15",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within excrement",
+     "variable": "nest depth"
+    },
+    {
+     "code": "1",
+     "term": "dung soil interphase",
+     "variable": "nest depth"
+    },
+    {
+     "code": "2",
+     "term": "little depth",
+     "variable": "nest depth"
+    },
+    {
+     "code": "3",
+     "term": "great depth",
+     "variable": "nest depth"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": false,
+     "codes": [],
+     "evidence": "Header refers to 'Nest type' and cells contain codes (0, 1, 3, 5, 7, 9) that do not match the defined codes for nest depth."
+    },
+    {
+     "id": "C2",
+     "records": true,
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "Header explicitly defines the codes (0, 1, 2, 3) corresponding to nest depth categories."
+    },
+    {
+     "id": "C3",
+     "records": false,
+     "codes": [],
+     "evidence": "Header refers to 'Horizontal nest distance' and the codes (0, 1, 3) do not correspond to the defined meanings for nest depth."
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header refers to 'Nest type' and cells contain codes (0, 1, 3, 5, 7, 9) that do not match the defined codes for nest depth."
+    },
+    "t7c15": {
+     "records": true,
+     "written": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "Header explicitly defines the codes (0, 1, 2, 3) corresponding to nest depth categories."
+    },
+    "t7c16": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "Header refers to 'Horizontal nest distance' and the codes (0, 1, 3) do not correspond to the defined meanings for nest depth."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c15": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 2.2
+  },
+  {
+   "uid": "Tonelli2021#t7r0c16",
+   "oracle_input": [
+    {
+     "code": "0",
+     "term": "within trophic source",
+     "variable": "horizontal nest distance"
+    },
+    {
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "variable": "horizontal nest distance"
+    },
+    {
+     "code": "2",
+     "term": "short distance",
+     "variable": "horizontal nest distance"
+    },
+    {
+     "code": "3",
+     "term": "great distance",
+     "variable": "horizontal nest distance"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": false,
+     "codes": [],
+     "evidence": "The header refers to 'Nest type' and the cell values (0, 1, 3, 5, 7, 9) do not align with the provided definitions for horizontal nest distance."
+    },
+    {
+     "id": "C2",
+     "records": false,
+     "codes": [],
+     "evidence": "The header defines the codes based on 'Nest depth' (e.g., 0=within excrement), which is a different concept than the horizontal nest distance defined by the codes."
+    },
+    {
+     "id": "C3",
+     "records": true,
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "The header explicitly states 'Horizontal nest distance' and the cell values (0, 1, 3) match the definitions provided for these codes."
+    }
+   ],
+   "columns": {
+    "t7c14": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "The header refers to 'Nest type' and the cell values (0, 1, 3, 5, 7, 9) do not align with the provided definitions for horizontal nest distance."
+    },
+    "t7c15": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "The header defines the codes based on 'Nest depth' (e.g., 0=within excrement), which is a different concept than the horizontal nest distance defined by the codes."
+    },
+    "t7c16": {
+     "records": true,
+     "written": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "codes": [
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "The header explicitly states 'Horizontal nest distance' and the cell values (0, 1, 3) match the definitions provided for these codes."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c16": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 2.4
+  },
+  {
+   "uid": "Tonelli2021#t7r0c17",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "diurnal",
+     "variable": "daily activity"
+    },
+    {
+     "code": "2",
+     "term": "crepuscolar/nocturnal",
+     "variable": "daily activity"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Header explicitly defines '1' as 'diurnal' and '2' as 'crepuscular/nocturnal' for 'Daily activity', and cells contain '1' and '2'."
+    }
+   ],
+   "columns": {
+    "t7c17": {
+     "records": true,
+     "written": [
+      "1",
+      "2"
+     ],
+     "codes": [
+      "1",
+      "2"
+     ],
+     "evidence": "Header explicitly defines '1' as 'diurnal' and '2' as 'crepuscular/nocturnal' for 'Daily activity', and cells contain '1' and '2'."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t7c17": [
+     "1",
+     "2"
+    ]
+   },
+   "seconds": 1.2
+  },
+  {
+   "uid": "Uemori2022#t1r1",
+   "oracle_input": [
+    {
+     "code": "1",
+     "term": "herbivorous",
+     "variable": "trophic level"
+    },
+    {
+     "code": "2",
+     "term": "primary predators",
+     "variable": "trophic level"
+    },
+    {
+     "code": "3",
+     "term": "hyper predators",
+     "variable": "trophic level"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": true,
+     "codes": [
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "The header mentions 'feeding guild' and the cells contain '1', '2', and '3', which correspond to defined trophic levels."
+    }
+   ],
+   "columns": {
+    "t3c1": {
+     "records": true,
+     "written": [
+      "1",
+      "2",
+      "3"
+     ],
+     "codes": [
+      "1",
+      "2",
+      "3"
+     ],
+     "evidence": "The header mentions 'feeding guild' and the cells contain '1', '2', and '3', which correspond to defined trophic levels."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {
+    "t3c1": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "seconds": 0.7
+  },
+  {
+   "uid": "Viza2023#t5r87",
+   "oracle_input": [
+    {
+     "code": "x2 + x",
+     "term": "quadratic regression",
+     "variable": "distribution codes for GLM"
+    },
+    {
+     "code": "x",
+     "term": "linear regression",
+     "variable": "distribution codes for GLM"
+    },
+    {
+     "code": "x",
+     "term": "variables selected",
+     "variable": "variables selected"
+    }
+   ],
+   "raw": [
+    {
+     "id": "C1",
+     "records": false,
+     "codes": [],
+     "evidence": "The header 'Model selected' and cell values 'BRT ; GLM' refer to model types, not the specific GLM distribution codes defined (x2+x or x)."
+    }
+   ],
+   "columns": {
+    "t5c1": {
+     "records": false,
+     "written": [],
+     "codes": [],
+     "evidence": "The header 'Model selected' and cell values 'BRT ; GLM' refer to model types, not the specific GLM distribution codes defined (x2+x or x)."
+    }
+   },
+   "bad_ids": [],
+   "assoc": {},
+   "seconds": 1.2
+  }
+ ]
+}

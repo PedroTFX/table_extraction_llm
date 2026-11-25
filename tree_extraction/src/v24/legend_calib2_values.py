@@ -9,10 +9,18 @@ neighbouring variables), and the base refused all of them.
 
   values  (run 2026-11-25_1642, failed) the model judges every cell value on its own; code links a column when at
           least one value uses a legend code with its meaning. 7 misses recovered, 10 of the 14 decoys linked.
-  gate    (the last stage 2 test on this calibration set) the column question becomes "does this column, header and
-          cells taken together, record what the definitions describe?"; values the definitions do not cover do not
-          decide it. Same output otherwise (id, the gate, codes, evidence); the column is linked when the gate is
-          true, with the codes the model gives.
+  gate    (run 2026-11-25_1652, failed; the last stage 2 test on this calibration set) the column question becomes
+          "does this column, header and cells taken together, record what the definitions describe?"; values the
+          definitions do not cover do not decide it. Same output otherwise (id, the gate, codes, evidence); the
+          column is linked when the gate is true, with the codes the model gives. 3 of the 7 misses recovered; the
+          other 4 still refused for an undefined value, among them Kratschmer t12c2/t13c2 while the same header
+          t11c2 is accepted 'H is an unmapped value'; 3 of the 14 decoys linked (Cajaiba's numeric sub-columns,
+          where a code stands once among numbers).
+
+Decision (fixed before the gate run): the base stage 2 stays. A column that a legend decodes only in part (it also
+holds undefined codes, stray header text or other variables) is refused: a known recall limitation of stage 2, 7 of
+the 31 proposed target columns on the oracle input of this calibration set. Stage 2 is not tuned further on these
+59 units.
 
 Unchanged: the units, the candidate columns and their rendering (legend_calib.render_columns), the oracle input
 (read from the calib2 run: the gold's cell-code mappings), the model and its options, stage 1, the evidence check,

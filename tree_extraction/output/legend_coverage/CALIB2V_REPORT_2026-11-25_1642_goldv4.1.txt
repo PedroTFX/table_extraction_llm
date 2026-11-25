@@ -1,6 +1,6 @@
-Stage 2 value-level test: gemma4:e4b-it-qat, run 2026-11-25_1642, gold v4.1 frozen 2026-11-25, oracle input only (the gold's cell-code mappings, as in the base run calib2_run_2026-11-25_1158.json)
+Stage 2 values test: gemma4:e4b-it-qat, run 2026-11-25_1642, gold v4.1 frozen 2026-11-25, oracle input only (the gold's cell-code mappings, as in the base run calib2_run_2026-11-25_1158.json)
 One change against the base: the model judges each cell value; code links a column when at least one value uses a legend code with its meaning. Units, columns, rendering, oracle input, model and scorer unchanged.
-19 units called; 53 column answers; 255 value judgements; column ids that are not columns: 0
+19 units called; 53 column answers; column ids that are not columns: 0
 
 ====================================================================================================
 BASE: stage 2 oracle (one yes/no per column)
@@ -17,7 +17,7 @@ BASE: stage 2 oracle (one yes/no per column)
     column precision 0.92, strict (right codes) 0.92; column recall 0.77, strict 0.77
 
 ====================================================================================================
-NEW: value-level stage 2 oracle
+NEW: values stage 2 oracle
 ====================================================================================================
   with the disputed-header cases: right column + right codes 31, right column + wrong/incomplete codes 0, missed column 0, wrong column 13, TN 121
     column precision 0.70, strict (right codes) 0.70; column recall 1.00, strict 1.00
@@ -40,30 +40,75 @@ EVERY CANDIDATE COLUMN, base -> new (RR right column + right codes, RW right col
   target, all values legend codes: RR->RR 18
   target, legend codes among other values: MC->RR 7, RR->RR 6
 
-  Tonelli2021#p143 -> t7c13 (base wrong column) is an upstream input-boundary case: the unit starts at item '1.', without the heading '2) Nest type' and the preceding '0. No-nester'. It is scored like every column but is not what this test addresses; t7c14 (base missed) is the value-level case.
+====================================================================================================
+ACCEPTANCE CRITERIA (fixed before the gate run)
+====================================================================================================
+  C1 the columns the base missed: right column + right codes: 7/7 PASS
+  C2 the columns the base got right: still right: 24/24 PASS
+  C3 non-target columns mixing legend codes with other values: refused: 4/14 FAIL
+      fails: Cajaiba2023#p113 -> t10c1 'ES_FT: Ecosystem specificity / PF': TN -> WC
+      fails: Cajaiba2023#p113 -> t10c4 'ES_FT: Ecosystem specificity / AG': TN -> WC
+      fails: Cajaiba2023#p113 -> t10c5 'ES_FT: Ecosystem specificity / PA': TN -> WC
+      fails: Cecala2021#p134 -> t1c8 'samplings per nursery': TN -> WC
+      fails: Cecala2021#p134 -> t6c2 'native nurseries': TN -> WC
+      fails: Cecala2021#p134 -> t6c3 'conventional nurseries': TN -> WC
+      fails: Jones2015#p67 -> t1c6 'Mean points': TN -> WC
+      fails: Jones2015#p67 -> t2c3 'Expert opinion': TN -> WC
+      fails: Tonelli2021#p147 -> t7c14 'Nest type (see supplementary material S1 for detai': TN -> WC
+      fails: Tonelli2021#t7r0c16 -> t7c14 'Nest type (see supplementary material S1 for detai': TN -> WC
+  C4 non-target all-code columns the values test linked and the base refused: refused: 0/2 FAIL
+      fails: Tonelli2021#p147 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': TN -> WC
+      fails: Tonelli2021#t7r0c16 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': TN -> WC
+  C5 the base's other wrong columns: refused: 1/1 PASS
+  overall: FAIL
+  apart (upstream input boundary, not evidence for or against): Tonelli2021#p143 -> t7c13 'Nesting patterns (see supplementary material S1 fo': WC -> WC
+
+  newly linked columns (no link in the base): 19
+      Cajaiba2023#p113 -> t9c1 'Table A - Comparisons for Abundance and Richness o': MC -> RR
+      Cajaiba2023#p113 -> t10c0 'ES_FT: Ecosystem specificity': MC -> RR
+      Cajaiba2023#p113 -> t10c1 'ES_FT: Ecosystem specificity / PF': TN -> WC
+      Cajaiba2023#p113 -> t10c4 'ES_FT: Ecosystem specificity / AG': TN -> WC
+      Cajaiba2023#p113 -> t10c5 'ES_FT: Ecosystem specificity / PA': TN -> WC
+      Cappellari2022#p63 -> t5c3 'Explanatory variables': MC -> RR
+      Cecala2021#p134 -> t1c8 'samplings per nursery': TN -> WC
+      Cecala2021#p134 -> t6c2 'native nurseries': TN -> WC
+      Cecala2021#p134 -> t6c3 'conventional nurseries': TN -> WC
+      Jones2015#p67 -> t1c6 'Mean points': TN -> WC
+      Jones2015#p67 -> t2c3 'Expert opinion': TN -> WC
+      Kratschmer2019#t8r11 -> t11c2 'Nesting type': MC -> RR
+      Kratschmer2019#t8r11 -> t12c2 'Nesting type': MC -> RR
+      Kratschmer2019#t8r11 -> t13c2 'Nesting type': MC -> RR
+      Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for detai': MC -> RR
+      Tonelli2021#p147 -> t7c14 'Nest type (see supplementary material S1 for detai': TN -> WC
+      Tonelli2021#p147 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': TN -> WC
+      Tonelli2021#t7r0c16 -> t7c14 'Nest type (see supplementary material S1 for detai': TN -> WC
+      Tonelli2021#t7r0c16 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': TN -> WC
 
 ====================================================================================================
-DETAIL: every called column that is not TN in both runs, with the value judgements
+DETAIL: every called column that is not TN in both runs, with the model's answers
 ====================================================================================================
 
 --- not target, all values legend codes
-  Tonelli2021#p143 -> t7c13 'Nesting patterns (see supplementary material S1 for details)': WC -> WC; gold [], base ['10', '11', '2', '5', '7', '8'], new ['10', '11', '2', '5', '7', '8']
+  Tonelli2021#p143 -> t7c13 'Nesting patterns (see supplementary material S1 fo': WC -> WC; gold [], base ['10', '11', '2', '5', '7', '8'], new ['10', '11', '2', '5', '7', '8']
       '10': codes ['10'] same_meaning True | Uses code 10 which is defined.
       '11': codes ['11'] same_meaning True | Uses code 11 which is defined.
       '2': codes ['2'] same_meaning True | Uses code 2 which is defined.
       '5': codes ['5'] same_meaning True | Uses code 5 which is defined.
       '7': codes ['7'] same_meaning True | Uses code 7 which is defined.
       '8': codes ['8'] same_meaning True | Uses code 8 which is defined.
-  Tonelli2021#p147 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interphase; 2=li': TN -> WC; gold [], base -, new ['0', '1', '2', '3']
+      base: The cell values (10, 11, 2, 5, 7, 8) match the defined codes for nesting patterns.
+  Tonelli2021#p147 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': TN -> WC; gold [], base -, new ['0', '1', '2', '3']
       '0': codes ['0'] same_meaning True | Matches code '0' definition: "within food source" (though C2 header defines 0 differently, the value matches the code definition)
       '1': codes ['1'] same_meaning True | Matches code '1' definition: "starting within food source but with a horizontal extension" (though C2 header defines 1 differently, the value matches 
       '2': codes ['2'] same_meaning True | Matches code '2' definition: "a short distance out from the food source" (though C2 header defines 2 differently, the value matches the code definitio
       '3': codes ['3'] same_meaning True | Matches code '3' definition: "a great distance out from the food source" (though C2 header defines 3 differently, the value matches the code definitio
-  Tonelli2021#t7r0c16 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interphase; 2=li': TN -> WC; gold [], base -, new ['0', '1', '2', '3']
+      base: The definitions relate to horizontal distance from a food source, but C2 describes 'Nest depth' with different meanings for the codes.
+  Tonelli2021#t7r0c16 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': TN -> WC; gold [], base -, new ['0', '1', '2', '3']
       '0': codes ['0'] same_meaning True | Matches code '0' definition: "within trophic source" (though header defines it differently, the value matches the code mapping)
       '1': codes ['1'] same_meaning True | Matches code '1' definition: "starting within food source but with a horizontal extension" (though header defines it differently, the value matches th
       '2': codes ['2'] same_meaning True | Matches code '2' definition: "short distance" (though header defines it differently, the value matches the code mapping)
       '3': codes ['3'] same_meaning True | Matches code '3' definition: "great distance" (though header defines it differently, the value matches the code mapping)
+      base: The definitions provided relate to 'horizontal nest distance', but C2 describes 'Nest depth' with different meanings for the codes.
 
 --- not target, legend codes among other values
   Cajaiba2023#p113 -> t10c1 'ES_FT: Ecosystem specificity / PF': TN -> WC; gold [], base -, new ['PF']
@@ -76,6 +121,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '33.52': codes [] same_meaning False | Numerical value, not a defined code
       '35.23': codes [] same_meaning False | Numerical value, not a defined code
       'PF': codes ['PF'] same_meaning True | Matches defined code for Primary Forest
+      base: Contains numerical data (e.g., 11.79, 35.23) and the code 'PF', but the column mixes values and codes, and the numerical values do not represent the defined ecosystem codes.
   Cajaiba2023#p113 -> t10c4 'ES_FT: Ecosystem specificity / AG': TN -> WC; gold [], base -, new ['AG']
       '0.0001': codes [] same_meaning False | Numerical value, not a defined code
       '0.001': codes [] same_meaning False | Numerical value, not a defined code
@@ -83,12 +129,14 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '5.15': codes [] same_meaning False | Numerical value, not a defined code
       '8.15': codes [] same_meaning False | Numerical value, not a defined code
       'AG': codes ['AG'] same_meaning True | Matches defined code for Agriculture
+      base: Contains numerical data (e.g., 0.0001, 8.15) and the code 'AG', but the column mixes values and codes, and the numerical values do not represent the defined ecosystem codes.
   Cajaiba2023#p113 -> t10c5 'ES_FT: Ecosystem specificity / PA': TN -> WC; gold [], base -, new ['PA']
       '0.0001': codes [] same_meaning False | Numerical value, not a defined code
       '0.001': codes [] same_meaning False | Numerical value, not a defined code
       '0.01': codes [] same_meaning False | Numerical value, not a defined code
       '0.05': codes [] same_meaning False | Numerical value, not a defined code
       'PA': codes ['PA'] same_meaning True | Matches defined code for Pasture
+      base: Contains numerical data (e.g., 0.0001, 0.05) and the code 'PA', but the column mixes values and codes, and the numerical values do not represent the defined ecosystem codes.
   Cecala2021#p134 -> t1c8 'samplings per nursery': TN -> WC; gold [], base -, new ['1']
       '1': codes ['1'] same_meaning True | The value '1' matches the code '1' = 'nursery was sampled'.
       '2': codes [] same_meaning False | The value '2' is a count, not a code for sampling schedule.
@@ -97,6 +145,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '58': codes [] same_meaning False | The value '58' is a count, not a code for sampling schedule.
       '6': codes [] same_meaning False | The value '6' is a count, not a code for sampling schedule.
       '7': codes [] same_meaning False | The value '7' is a count, not a code for sampling schedule.
+      base: Cells contain counts (1, 2, 3, 5, 58, 6, 7), not the binary codes '1' or '0' defined.
   Cecala2021#p134 -> t6c2 'native nurseries': TN -> WC; gold [], base -, new ['0', '1']
       '0': codes ['0'] same_meaning True | The value '0' matches the code '0' = 'not sampled due to logistical reasons'.
       '1': codes ['1'] same_meaning True | The value '1' matches the code '1' = 'nursery was sampled'.
@@ -110,6 +159,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '5': codes [] same_meaning False | The value '5' is an identifier, not a code for sampling schedule.
       '6': codes [] same_meaning False | The value '6' is an identifier, not a code for sampling schedule.
       '8': codes [] same_meaning False | The value '8' is an identifier, not a code for sampling schedule.
+      base: Cells contain various numbers (0, 1, 10, 12, 13, 14, 2, 3, 4, 5, 6, 8), which do not exclusively map to the defined codes '1' or '0' for sampling schedule.
   Cecala2021#p134 -> t6c3 'conventional nurseries': TN -> WC; gold [], base -, new ['0', '1']
       '0': codes ['0'] same_meaning True | The value '0' matches the code '0' = 'not sampled due to logistical reasons'.
       '1': codes ['1'] same_meaning True | The value '1' matches the code '1' = 'nursery was sampled'.
@@ -122,6 +172,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '7': codes [] same_meaning False | The value '7' is a count, not a code for sampling schedule.
       '8': codes [] same_meaning False | The value '8' is a count, not a code for sampling schedule.
       '9': codes [] same_meaning False | The value '9' is a count, not a code for sampling schedule.
+      base: Cells contain various numbers (0, 1, 2, 25, 3, 4, 5, 6, 7, 8, 9), which do not exclusively map to the defined codes '1' or '0' for sampling schedule.
   Jones2015#p67 -> t1c6 'Mean points': TN -> WC; gold [], base -, new ['1', '2']
       '0.6': codes [] same_meaning False | Mean points
       '0.8': codes [] same_meaning False | Mean points
@@ -130,6 +181,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '1.4': codes [] same_meaning False | Mean points
       '1.6': codes [] same_meaning False | Mean points
       '2': codes ['2'] same_meaning True | Mean points
+      base: Cell values are floating-point numbers (e.g., 0.6, 1.2), not the defined codes ('0', '1', '2').
   Jones2015#p67 -> t2c3 'Expert opinion': TN -> WC; gold [], base -, new ['1', '2']
       '0.6': codes [] same_meaning False | Expert opinion
       '0.8': codes [] same_meaning False | Expert opinion
@@ -138,20 +190,23 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '1.4': codes [] same_meaning False | Expert opinion
       '1.6': codes [] same_meaning False | Expert opinion
       '2': codes ['2'] same_meaning True | Expert opinion
-  Tonelli2021#p147 -> t7c14 'Nest type (see supplementary material S1 for details)': TN -> WC; gold [], base -, new ['0', '1', '3']
+      base: Cell values are floating-point numbers (e.g., 0.6, 1.2), not the defined codes ('0', '1', '2').
+  Tonelli2021#p147 -> t7c14 'Nest type (see supplementary material S1 for detai': TN -> WC; gold [], base -, new ['0', '1', '3']
       '0': codes ['0'] same_meaning True | Matches code '0' definition: "within food source"
       '1': codes ['1'] same_meaning True | Matches code '1' definition: "starting within food source but with a horizontal extension"
       '3': codes ['3'] same_meaning True | Matches code '3' definition: "a great distance out from the food source"
       '5': codes [] same_meaning False | Code '5' is not defined in the provided set.
       '7': codes [] same_meaning False | Code '7' is not defined in the provided set.
       '9': codes [] same_meaning False | Code '9' is not defined in the provided set.
-  Tonelli2021#t7r0c16 -> t7c14 'Nest type (see supplementary material S1 for details)': TN -> WC; gold [], base -, new ['0', '1', '3']
+      base: The cell values (0, 1, 3, 5, 7, 9) do not exclusively match the defined codes (0, 1, 2, 3) and the header refers to 'Nest type'.
+  Tonelli2021#t7r0c16 -> t7c14 'Nest type (see supplementary material S1 for detai': TN -> WC; gold [], base -, new ['0', '1', '3']
       '0': codes ['0'] same_meaning True | Matches code '0' definition: "within trophic source"
       '1': codes ['1'] same_meaning True | Matches code '1' definition: "starting within food source but with a horizontal extension"
       '3': codes ['3'] same_meaning True | Matches code '3' definition: "great distance"
       '5': codes [] same_meaning False | Code '5' is not defined in the provided set.
       '7': codes [] same_meaning False | Code '7' is not defined in the provided set.
       '9': codes [] same_meaning False | Code '9' is not defined in the provided set.
+      base: The cell values (0, 1, 3, 5, 7, 9) do not exclusively match the defined codes (0, 1, 2, 3) for the given meanings.
 
 --- not target, no legend code
   Cecala2021#p134 -> t1c0 'Nursery': WC -> TN; gold [], base ['1'], new -
@@ -169,6 +224,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       '12': codes ['1'] same_meaning False | The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes.
       '13': codes ['1'] same_meaning False | The value is a sequence of digits, but the context is a header/index, not a direct representation of the sampling schedule codes.
       'nurseries sampled': codes [] same_meaning False | This is a descriptive label, not a code.
+      base: The header 'nurseries sampled' suggests a binary status, and cells contain '01' through '13' (which might imply sampling status, but the presence of 'nurseries sampled' as a label suggests the codes might relate to the s
 
 --- target, all values legend codes
   Cajaiba2023#p113 -> t1c0 'Series': RR -> RR; gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], base ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], new ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
@@ -177,81 +233,99 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       'PF': codes ['PF'] same_meaning True | Matches defined code for Primary Forest
       'SF-15': codes ['SF-15'] same_meaning True | Matches defined code for Secondary forest with 15 years of regeneration
       'SF-5': codes ['SF-5'] same_meaning True | Matches defined code for Secondary forest with 5 years of regeneration
+      base: The cell values directly match the defined ecosystem codes: AG, PA, PF, SF-15, SF-5.
   Cajaiba2023#p113 -> t2c0 'Category': RR -> RR; gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], base ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], new ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
       'AG': codes ['AG'] same_meaning True | Matches defined code for Agriculture
       'PA': codes ['PA'] same_meaning True | Matches defined code for Pasture
       'PF': codes ['PF'] same_meaning True | Matches defined code for Primary Forest
       'SF-15': codes ['SF-15'] same_meaning True | Matches defined code for Secondary forest with 15 years of regeneration
       'SF-5': codes ['SF-5'] same_meaning True | Matches defined code for Secondary forest with 5 years of regeneration
+      base: The cell values directly match the defined ecosystem codes: AG, PA, PF, SF-15, SF-5.
   Cajaiba2023#p113 -> t3c0 'Category': RR -> RR; gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], base ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], new ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
       'AG': codes ['AG'] same_meaning True | Matches defined code for Agriculture
       'PA': codes ['PA'] same_meaning True | Matches defined code for Pasture
       'PF': codes ['PF'] same_meaning True | Matches defined code for Primary Forest
       'SF-15': codes ['SF-15'] same_meaning True | Matches defined code for Secondary forest with 15 years of regeneration
       'SF-5': codes ['SF-5'] same_meaning True | Matches defined code for Secondary forest with 5 years of regeneration
+      base: The cell values directly match the defined ecosystem codes: AG, PA, PF, SF-15, SF-5.
   Cajaiba2023#p113 -> t4c0 'Category': RR -> RR; gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], base ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], new ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
       'AG': codes ['AG'] same_meaning True | Matches defined code for Agriculture
       'PA': codes ['PA'] same_meaning True | Matches defined code for Pasture
       'PF': codes ['PF'] same_meaning True | Matches defined code for Primary Forest
       'SF-15': codes ['SF-15'] same_meaning True | Matches defined code for Secondary forest with 15 years of regeneration
       'SF-5': codes ['SF-5'] same_meaning True | Matches defined code for Secondary forest with 5 years of regeneration
+      base: The cell values directly match the defined ecosystem codes: AG, PA, PF, SF-15, SF-5.
   Jones2015#p67 -> t1c1 'Expert 1': RR -> RR; gold ['1', '2'], base ['1', '2'], new ['1', '2']
       '1': codes ['1'] same_meaning True | Expert 1
       '2': codes ['2'] same_meaning True | Expert 1
+      base: Cell values are '1' and '2', which correspond to 'mobile' and 'very mobile'.
   Jones2015#p67 -> t1c2 'Expert 2': RR -> RR; gold ['1', '2'], base ['1', '2'], new ['1', '2']
       '1': codes ['1'] same_meaning True | Expert 2
       '2': codes ['2'] same_meaning True | Expert 2
+      base: Cell values are '1' and '2', which correspond to 'mobile' and 'very mobile'.
   Jones2015#p67 -> t1c3 'Expert 3': RR -> RR; gold ['0', '1', '2'], base ['0', '1', '2'], new ['0', '1', '2']
       '0': codes ['0'] same_meaning True | Expert 3
       '1': codes ['1'] same_meaning True | Expert 3
       '2': codes ['2'] same_meaning True | Expert 3
+      base: Cell values are '0', '1', and '2', matching all defined codes.
   Jones2015#p67 -> t1c4 'Expert 4': RR -> RR; gold ['1', '2'], base ['1', '2'], new ['1', '2']
       '1': codes ['1'] same_meaning True | Expert 4
       '2': codes ['2'] same_meaning True | Expert 4
+      base: Cell values are '1' and '2', which correspond to 'mobile' and 'very mobile'.
   Jones2015#p67 -> t1c5 'Expert 5': RR -> RR; gold ['0', '1', '2'], base ['0', '1', '2'], new ['0', '1', '2']
       '0': codes ['0'] same_meaning True | Expert 5
       '1': codes ['1'] same_meaning True | Expert 5
       '2': codes ['2'] same_meaning True | Expert 5
+      base: Cell values are '0', '1', and '2', matching all defined codes.
   Kratschmer2019#t8r11 -> t10c2 'Nesting type': RR -> RR; gold ['A', 'G', 'P'], base ['A', 'G', 'P'], new ['A', 'G', 'P']
       'A': codes ['A'] same_meaning True | Matches definition for 'A' = 'Above-ground nesting'
       'G': codes ['G'] same_meaning True | Matches definition for 'G' = 'Ground-nesting'
       'P': codes ['P'] same_meaning True | Matches definition for 'P' = 'Parasitic'
-  Tonelli2021#p125 -> t7c11 'Zigum (1: underdeveloped; 2: developed 3: epizygum)': RR -> RR; gold ['1', '2'], base ['1', '2'], new ['1', '2']
+      base: The header is 'Nesting type' and the cell values are 'A', 'G', and 'P', which match the defined codes.
+  Tonelli2021#p125 -> t7c11 'Zigum (1: underdeveloped; 2: developed 3: epizygum': RR -> RR; gold ['1', '2'], base ['1', '2'], new ['1', '2']
       '1': codes ['1'] same_meaning True | The value '1' matches the code for 'underdeveloped' in the header.
       '2': codes ['2'] same_meaning True | The value '2' matches the code for 'developed' in the header.
-  Tonelli2021#p145 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interphase; 2=li': RR -> RR; gold ['0', '1', '2', '3'], base ['0', '1', '2', '3'], new ['0', '1', '2', '3']
+      base: The header 'Zigum (1: underdeveloped; 2: developed 3: epizygum)' explicitly maps the codes 1 and 2 to the defined meanings.
+  Tonelli2021#p145 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': RR -> RR; gold ['0', '1', '2', '3'], base ['0', '1', '2', '3'], new ['0', '1', '2', '3']
       '0': codes ['0'] same_meaning True | Matches definition: '0' = 'within excrement' (variable: nest depth)
       '1': codes ['1'] same_meaning True | Matches definition: '1' = 'dungsoil interphase' (variable: nest depth)
       '2': codes ['2'] same_meaning True | Matches definition: '2' = 'little depth' (variable: nest depth)
       '3': codes ['3'] same_meaning True | Matches definition: '3' = 'great depth' (variable: nest depth)
-  Tonelli2021#p147 -> t7c16 'Horizontal nest distance (0=within trophic source; 1=startin': RR -> RR; gold ['0', '1', '3'], base ['0', '1', '2', '3'], new ['0', '1', '3']
+      base: The header explicitly defines the codes: (0=within excrement; 1=dung soil interphase; 2=little depth; 3=great depth).
+  Tonelli2021#p147 -> t7c16 'Horizontal nest distance (0=within trophic source;': RR -> RR; gold ['0', '1', '3'], base ['0', '1', '2', '3'], new ['0', '1', '3']
       '0': codes ['0'] same_meaning True | Matches code '0' definition: "within food source"
       '1': codes ['1'] same_meaning True | Matches code '1' definition: "starting within food source but with a horizontal extension"
       '3': codes ['3'] same_meaning True | Matches code '3' definition: "a great distance out from the food source"
-  Tonelli2021#t7r0c11 -> t7c11 'Zigum (1: underdeveloped; 2: developed 3: epizygum)': RR -> RR; gold ['1', '2'], base ['1', '2', '3'], new ['1', '2']
+      base: The header 'Horizontal nest distance' and the cell values (0, 1, 3) align with the definitions for horizontal distance from a food source (0, 1, 2, 3).
+  Tonelli2021#t7r0c11 -> t7c11 'Zigum (1: underdeveloped; 2: developed 3: epizygum': RR -> RR; gold ['1', '2'], base ['1', '2', '3'], new ['1', '2']
       '1': codes ['1'] same_meaning True | The value '1' corresponds to 'underdeveloped' (zigum).
       '2': codes ['2'] same_meaning True | The value '2' corresponds to 'developed' (zigum).
-  Tonelli2021#t7r0c15 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interphase; 2=li': RR -> RR; gold ['0', '1', '2', '3'], base ['0', '1', '2', '3'], new ['0', '1', '2', '3']
+      base: Header explicitly states: Zigum (1: underdeveloped; 2: developed 3: epizygum)
+  Tonelli2021#t7r0c15 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': RR -> RR; gold ['0', '1', '2', '3'], base ['0', '1', '2', '3'], new ['0', '1', '2', '3']
       '0': codes ['0'] same_meaning True | Matches definition: '0' = 'within excrement' (variable: nest depth)
       '1': codes ['1'] same_meaning True | Matches definition: '1' = 'dung soil interphase' (variable: nest depth)
       '2': codes ['2'] same_meaning True | Matches definition: '2' = 'little depth' (variable: nest depth)
       '3': codes ['3'] same_meaning True | Matches definition: '3' = 'great depth' (variable: nest depth)
-  Tonelli2021#t7r0c16 -> t7c16 'Horizontal nest distance (0=within trophic source; 1=startin': RR -> RR; gold ['0', '1', '3'], base ['0', '1', '2', '3'], new ['0', '1', '3']
+      base: The header explicitly defines the codes: (0=within excrement; 1=dung soil interphase; 2=little depth; 3=great depth).
+  Tonelli2021#t7r0c16 -> t7c16 'Horizontal nest distance (0=within trophic source;': RR -> RR; gold ['0', '1', '3'], base ['0', '1', '2', '3'], new ['0', '1', '3']
       '0': codes ['0'] same_meaning True | Matches code '0' definition: "within trophic source"
       '1': codes ['1'] same_meaning True | Matches code '1' definition: "starting within food source but with a horizontal extension"
       '3': codes ['3'] same_meaning True | Matches code '3' definition: "great distance"
-  Tonelli2021#t7r0c17 -> t7c17 'Daily activity (1: diurnal; 2: crepuscolar/nocturnal)': RR -> RR; gold ['1', '2'], base ['1', '2'], new ['1', '2']
+      base: The header 'Horizontal nest distance' matches the variable associated with the definitions, and the cell values (0, 1, 3) are a subset of the defined codes (0, 1, 2, 3).
+  Tonelli2021#t7r0c17 -> t7c17 'Daily activity (1: diurnal; 2: crepuscolar/nocturn': RR -> RR; gold ['1', '2'], base ['1', '2'], new ['1', '2']
       'Daily activity (1: diurnal; 2: crepuscol': codes ['1', '2'] same_meaning True | Header defines 1 as diurnal and 2 as crepuscular/nocturnal.
       '1': codes ['1'] same_meaning True | Cell value matches code '1' defined as diurnal.
       '2': codes ['2'] same_meaning True | Cell value matches code '2' defined as crepuscular/nocturnal.
-  Uemori2022#t1r1 -> t3c1 'Table S1. All functional traits, distribution index, and fee': RR -> RR; gold ['1', '2', '3'], base ['1', '2', '3'], new ['1', '2', '3']
+      base: Header explicitly states '(1: diurnal; 2: crepuscolar/nocturnal)' and cells contain '1' and '2'.
+  Uemori2022#t1r1 -> t3c1 'Table S1. All functional traits, distribution inde': RR -> RR; gold ['1', '2', '3'], base ['1', '2', '3'], new ['1', '2', '3']
       'Table S1. All functional traits, distrib': codes [] same_meaning False | This is a header/description, not a coded value.
       '1': codes ['1'] same_meaning True | Matches code '1' = 'herbivorous' (trophic level).
       '2': codes ['2'] same_meaning True | Matches code '2' = 'primary predators' (trophic level).
       '3': codes ['3'] same_meaning True | Matches code '3' = 'hyper predators' (trophic level).
+      base: The header mentions 'Trophic level' and the cell values are '1', '2', and '3', which correspond to the defined trophic level codes.
 
 --- target, legend codes among other values
-  Cajaiba2023#p113 -> t9c1 'Table A - Comparisons for Abundance and Richness of "Ecosyst': MC -> RR; gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], base -, new ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
+  Cajaiba2023#p113 -> t9c1 'Table A - Comparisons for Abundance and Richness o': MC -> RR; gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], base -, new ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
       'AG': codes ['AG'] same_meaning True | Matches defined code for Agriculture
       'Intercept': codes [] same_meaning False | Not one of the defined ecosystem codes
       'PA': codes ['PA'] same_meaning True | Matches defined code for Pasture
@@ -260,6 +334,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       'SF-15': codes ['SF-15'] same_meaning True | Matches defined code for Secondary forest with 15 years of regeneration
       'SF-5': codes ['SF-5'] same_meaning True | Matches defined code for Secondary forest with 5 years of regeneration
       'Sampled sites': codes [] same_meaning False | Not one of the defined ecosystem codes
+      base: Contains non-code entries like 'Intercept', 'Predictor variable', and 'Sampled sites' which are not defined ecosystem codes.
   Cajaiba2023#p113 -> t10c0 'ES_FT: Ecosystem specificity': MC -> RR; gold ['AG', 'PA', 'PF', 'SF-15', 'SF-5'], base -, new ['AG', 'PA', 'PF', 'SF-15', 'SF-5']
       'AG': codes ['AG'] same_meaning True | Matches defined code for Agriculture
       'PA': codes ['PA'] same_meaning True | Matches defined code for Pasture
@@ -267,6 +342,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       'SF-15': codes ['SF-15'] same_meaning True | Matches defined code for Secondary forest with 15 years of regeneration
       'SF-5': codes ['SF-5'] same_meaning True | Matches defined code for Secondary forest with 5 years of regeneration
       'TT_FT: Trophic type': codes [] same_meaning False | Not one of the defined ecosystem codes
+      base: Contains non-code entries like 'TT_FT: Trophic type' which is not one of the defined ecosystem codes.
   Cappellari2022#p63 -> t5c3 'Explanatory variables': MC -> RR; gold ['Apis', 'Temp'], base -, new ['Apis', 'Temp']
       'Apis + Temp + FDis + TSim + Apis × FDis': codes ['Apis', 'Temp'] same_meaning True | Contains Apis and Temp, which are defined explanatory variables.
       'Apis + Temp + FRic + TSim + Apis × FRic': codes ['Apis', 'Temp'] same_meaning True | Contains Apis and Temp, which are defined explanatory variables.
@@ -276,36 +352,43 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       'Apis × Prob + Temp': codes ['Apis', 'Temp'] same_meaning True | Contains Apis and Temp, which are defined explanatory variables.
       'Apis + Temp + FDis + TSim + Apis × FDis ': (no judgement)
       'Apis + Temp + FRic + TSim + Apis × FRic ': (no judgement)
+      base: The cells contain combinations of variables (e.g., 'Apis + Temp + FDis + TSim + Apis × FDis') and include variables not defined (FDis, TSim, FRic, Fam, For, Prob).
   Eckert2023#t4r134 -> t4c2 'Forage strategy': RR -> RR; gold ['GenForager', 'Pred', 'Sap'], base ['GenForager', 'Pred', 'Sap'], new ['GenForager', 'Pred', 'Sap']
       'Forage strategy': codes [] same_meaning False | This is the column header.
       'Forage strategy ; GenForager ; Pred ; Sa': codes ['GenForager', 'Pred', 'Sap'] same_meaning True | The cell contains the defined codes GenForager, Pred, and Sap.
       'GenForager': (no judgement)
       'Pred': (no judgement)
       'Sap': (no judgement)
+      base: The header 'Forage strategy' and the cell values 'GenForager', 'Pred', 'Sap' match the provided definitions.
   Eckert2023#t4r70 -> t4c2 'Forage strategy': RR -> RR; gold ['GenForager', 'Pred', 'Sap'], base ['GenForager', 'Pred', 'Sap'], new ['GenForager', 'Pred', 'Sap']
       'Forage strategy': codes [] same_meaning False | This is the column header.
       'Forage strategy ; GenForager ; Pred ; Sa': codes ['GenForager', 'Pred', 'Sap'] same_meaning True | The cell contains the defined codes GenForager, Pred, and Sap.
       'GenForager': (no judgement)
       'Pred': (no judgement)
       'Sap': (no judgement)
+      base: The header 'Forage strategy' and the cell values 'GenForager', 'Pred', 'Sap' match the provided definitions.
   Ji2024#t0r0c3 -> t0c3 'Effect (E)/ response (R) trait': RR -> RR; gold ['E', 'R'], base ['E', 'R'], new ['E', 'R']
       'Effect (E)/ response (R) trait': codes ['E', 'R'] same_meaning True | The header explicitly defines E as Effect and R as response.
       'E and R': codes ['E', 'R'] same_meaning True | The value uses the defined codes E and R.
       'R': codes ['R'] same_meaning True | The value uses the defined code R.
+      base: Header is 'Effect (E)/ response (R) trait' and cells contain 'E and R ; R'
   Kratschmer2019#t8r11 -> t11c2 'Nesting type': MC -> RR; gold ['A', 'G', 'P'], base -, new ['A', 'G', 'P']
       'A': codes ['A'] same_meaning True | Matches definition for 'A' = 'Above-ground nesting'
       'G': codes ['G'] same_meaning True | Matches definition for 'G' = 'Ground-nesting'
       'H': codes [] same_meaning False | Code 'H' is not defined in the provided list.
       'P': codes ['P'] same_meaning True | Matches definition for 'P' = 'Parasitic'
+      base: The cell value 'H' is present, which is not defined in the provided codes (G, A, P).
   Kratschmer2019#t8r11 -> t12c2 'Nesting type': MC -> RR; gold ['A', 'G'], base -, new ['A', 'G']
       'A': codes ['A'] same_meaning True | Matches definition for 'A' = 'Above-ground nesting'
       'G': codes ['G'] same_meaning True | Matches definition for 'G' = 'Ground-nesting'
       'H': codes [] same_meaning False | Code 'H' is not defined in the provided list.
+      base: The cell value 'H' is present, which is not defined in the provided codes (G, A, P).
   Kratschmer2019#t8r11 -> t13c2 'Nesting type': MC -> RR; gold ['A', 'G', 'P'], base -, new ['A', 'G', 'P']
       'A': codes ['A'] same_meaning True | Matches definition for 'A' = 'Above-ground nesting'
       'BP': codes [] same_meaning False | Value 'BP' does not match any single defined code (A, G, P).
       'G': codes ['G'] same_meaning True | Matches definition for 'G' = 'Ground-nesting'
       'P': codes ['P'] same_meaning True | Matches definition for 'P' = 'Parasitic'
+      base: The cell value 'BP' is present, which is not one of the defined codes (G, A, P).
   Nelson2020#p73 -> t9c0 'Model': RR -> RR; gold ['FDis', 'FEve', 'FRic'], base ['FDis', 'FEve', 'FRic'], new ['FDis', 'FEve', 'FRic']
       'Model': codes [] same_meaning False | General model label
       'Body size CWM ; FDis ; FDiv ; FEve ; FRi': codes ['FDis', 'FEve', 'FRic'] same_meaning True | Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics.
@@ -322,6 +405,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       'Proportion spring active': (no judgement)
       'Rarefied richness': (no judgement)
       'Total activity density': (no judgement)
+      base: Contains FDis, FEve, and FRic which are defined as functional diversity metrics.
   Nelson2020#p73 -> t10c0 'Model': RR -> RR; gold ['FDis', 'FEve', 'FRic'], base ['FDis', 'FEve', 'FRic'], new ['FDis', 'FEve', 'FRic']
       'Model': codes [] same_meaning False | General model label
       'Body size CWM ; Carnivore activity densi': codes ['FDis', 'FEve', 'FRic'] same_meaning True | Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics.
@@ -338,6 +422,7 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       'Proportion spring active': (no judgement)
       'Rarefied richness': (no judgement)
       'Total activity density': (no judgement)
+      base: Contains FDis, FEve, and FRic which are defined as functional diversity metrics.
   Nelson2020#p73 -> t12c0 'Proportion carnivore': RR -> RR; gold ['FDis', 'FEve', 'FRic'], base ['FDis', 'FEve', 'FRic'], new ['FDis', 'FEve', 'FRic'] [disputed header]
       'Proportion carnivore': codes [] same_meaning False | Specific proportion label
       'Body size CWM ; FDis ; FDiv ; FEve ; FRi': codes ['FDis', 'FEve', 'FRic'] same_meaning True | Contains FDis, FEve, and FRic which are defined codes for functional trait diversity metrics.
@@ -351,13 +436,15 @@ DETAIL: every called column that is not TN in both runs, with the value judgemen
       'Proportion spring active': (no judgement)
       'Rarefied richness': (no judgement)
       'Total activity density': (no judgement)
-  Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for details)': MC -> RR; gold ['1', '3', '5', '7', '9'], base -, new ['1', '3', '5', '7', '9']
+      base: Contains FDis, FEve, and FRic which are defined as functional diversity metrics.
+  Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for detai': MC -> RR; gold ['1', '3', '5', '7', '9'], base -, new ['1', '3', '5', '7', '9']
       '0': codes [] same_meaning False | Code 0 is not defined in the provided list.
       '1': codes ['1'] same_meaning True | Uses code 1 which is defined.
       '3': codes ['3'] same_meaning True | Uses code 3 which is defined.
       '5': codes ['5'] same_meaning True | Uses code 5 which is defined.
       '7': codes ['7'] same_meaning True | Uses code 7 which is defined.
       '9': codes ['9'] same_meaning True | Uses code 9 which is defined.
+      base: The cell values (0, 1, 3, 5, 7, 9) do not exclusively match the defined codes (1-11) for nesting patterns, and the header suggests a different classification ('Nest type').
 
 ====================================================================================================
 VALUES WITH A LEGEND CODE JUDGED NOT TO USE ITS MEANING: 41
