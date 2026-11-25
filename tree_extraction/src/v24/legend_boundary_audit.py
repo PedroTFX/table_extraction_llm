@@ -16,6 +16,11 @@ Lists (numbers 0-99 and lower-case letters; a markdown heading '#' is never an i
   split list   paragraphs in a row whose items continue each other: the next paragraph starts with item m+1 where
                the previous one ends with item m (an item paragraph, or a run of >= 2 items); up to SKIP short
                paragraphs (page furniture) between; 3+ items in all
+  interrupted  a run of >= 2 items ending at m, and within WINDOW paragraphs (figures, captions, a table's place,
+               furniture between) a paragraph whose first item, within CONTINUED characters of its start, is m+1 and
+               starts a run (the list broken inside an item, 'metallic | ... | green bees, (4) ...')
+Also counted: paragraphs the reader broke at a page (the first paragraph after a page break starting in lower case
+continues the one before it), and those whose two halves both hold a definition shape.
 For each list, its main unit (the paragraph with most items) and, kept apart:
   leading items       items of the list in paragraphs before the main unit
   trailing items      items in paragraphs after it
@@ -63,6 +68,8 @@ OUT = lc.OUT
 SKIP = 3
 SHORT = 60
 LOOK = 3
+WINDOW = 6         # paragraphs an interrupted list may jump (figures, captions, tables' places, furniture)
+CONTINUED = 80     # at most this many characters before the first item of an interrupted list's second part
 NUM_START = re.compile(r"^\(?(\d{1,2})\s*[.)]\s*(?=[A-Za-z(“\"'])")
 LET_START = re.compile(r"^\(([a-z])\)\s*(?=\S)|^([a-z])\)\s*(?=\S)|^([a-z])\.\s+(?=[A-Za-z])")
 LET_IN = re.compile(r"(?<![\w.])\(?([a-z])\)\s*(?=[A-Za-z])")
@@ -197,10 +204,51 @@ def lists(paras):
             i = chain[-1] + 1
         else:
             i += 1
+    # interrupted lists: a run of >= 2 numbered items ending at m, and within WINDOW paragraphs (any material between:
+    # a figure, a caption, a table's place, page furniture) a paragraph whose first item is m + 1 and starts a run of
+    # >= 2, the text before that item a continued item, not a lead-in of its own
+    for i in range(len(paras)):
+        if i in used:
+            continue
+        last, n = run_end(info[i]["n"], "n")
+        if last is None or n < 2:
+            continue
+        for j in range(i + 1, min(i + 1 + WINDOW, len(paras))):
+            ns = info[j]["n"]
+            if j in used or is_heading(paras[j]["text"]):
+                break
+            m0 = lc.ENUM.search(paras[j]["text"])
+            if ns and ns[0] == last + 1 and len(ns) >= 2 and ns[1] == last + 2 and m0 and m0.start() <= CONTINUED:
+                chains.append({"paragraphs": [i, j], "kind": "n", "items": {i: info[i]["n"], j: ns},
+                               "between": list(range(i + 1, j))})
+                used |= {i, j}
+                break
     for i, p in enumerate(paras):
         if i not in used and lc.numbered(p["text"]):
             chains.append({"paragraphs": [i], "kind": "n", "items": {i: info[i]["n"]}})
     return sorted(chains, key=lambda c: c["paragraphs"][0])
+
+
+def page_splits(paras):
+    """Paragraphs the reader broke at a page: the first paragraph after a page break that starts in lower case
+    (a continued sentence), after any furniture, image or caption paragraphs; with the paragraph it continues."""
+    out = []
+    for j, p in enumerate(paras):
+        if not p["page_break_before"]:
+            continue
+        k = j
+        while k < len(paras) and (is_short(paras[k]["text"]) or paras[k]["text"].startswith("![")
+                                  or lc.CAPTION.match(paras[k]["text"])):
+            k += 1
+        if k >= len(paras) or not re.match(r"[a-z]", paras[k]["text"]):
+            continue
+        i = j - 1
+        while i >= 0 and (is_short(paras[i]["text"]) or paras[i]["text"].startswith("![")
+                          or lc.CAPTION.match(paras[i]["text"])):
+            i -= 1
+        if i >= 0:
+            out.append((i, k))
+    return out
 
 
 def look_back(paras, s):
@@ -266,7 +314,7 @@ def audit(papers):
         if r["unit_table"] is None:
             r3all[r["paper"]][r["unit"]].add((r["table"], r["col"]))
     recs, stats = [], collections.Counter()
-    mismatch, strip = [], []
+    mismatch, strip, pages = [], [], []
     for p in papers:
         t0 = time.time()
         paras, same, (aligned, n_par), lost = annotated(p)
@@ -312,8 +360,13 @@ def audit(papers):
                 if w:
                     named_out.append(tag + f" header words only outside {sorted(w)}"
                                      + (" [main unit R3abc-linked]" if (col["table"], col["col"]) in r3[main] else ""))
+            between = c.get("between", [])
             rec = {"paper": p, "group": ls.SPLIT.get(p), "file": paras[ps[0]]["file"],
-                   "paragraphs": ps, "kind": "split list" if len(ps) > 1 else "list unit",
+                   "paragraphs": ps, "kind": ("interrupted list" if "between" in c else "split list") if len(ps) > 1
+                   else "list unit", "between": between,
+                   "between_kinds": ["page furniture" if is_short(paras[x]["text"]) else "image" if
+                                     paras[x]["text"].startswith("![") else "caption" if lc.CAPTION.match(paras[x]["text"])
+                                     else "text" for x in between],
                    "items": {str(x): [code_of(kind, m) for m in c["items"][x]] for x in ps}, **d,
                    "main_is_list_unit": lc.numbered(paras[main]["text"]),
                    "main_inventory": paras[main]["text"] in inv, "main_r3abc": bool(r3[main]),
@@ -324,16 +377,29 @@ def audit(papers):
                    "stage2_incomplete": incomplete, "stage2_incomplete_related": related,
                    "stage2_name_outside": named_out,
                    "calib": [f"{p}#p{x}" for x in ps if f"{p}#p{x}" in calib],
-                   "texts": {str(x): paras[x]["text"][:400] for x in sorted(set(ps) | set(outside) | set(d["shorts"]))}}
+                   "texts": {str(x): paras[x]["text"][:400]
+                             for x in sorted(set(ps) | set(outside) | set(d["shorts"]) | set(between))}}
             recs.append(rec)
+        for i, k in page_splits(paras):
+            a, b = paras[i]["text"], paras[k]["text"]
+            stats["paragraphs continued across a page"] += 1
+            ha, hb_ = li.shape_hits(a), li.shape_hits(b)
+            if ha or hb_:
+                stats["continued across a page, a definition shape in either half"] += 1
+            if ha and hb_:
+                stats["continued across a page, definition shapes in both halves"] += 1
+                pages.append({"paper": p, "before": i, "after": k, "shapes": [ha, hb_], "end": a[-160:],
+                              "start": b[:160], "inventory": [a in inv, b in inv]})
+        stats["tag-strip spans with a definition shape"] += sum(li.shape_hits(x) >= 1 for x in lost)
+        stats["tag-strip spans with 2+ definition shapes"] += sum(li.shape_hits(x) >= 2 for x in lost)
         print(f"  {p:22s} {len(paras):4d} paragraphs, {sum(1 for r in recs if r['paper'] == p):3d} lists, files "
               f"aligned {aligned}/{n_par}{'' if same else '  (page markers: paragraph mismatch, not used)'}"
               f"{f'  tag strip deletes {sum(len(x) for x in lost)} chars' if lost else ''}  {time.time() - t0:5.1f}s",
               flush=True)
-    return recs, stats, mismatch, strip
+    return recs, stats, mismatch, strip, pages
 
 
-def report(recs, stats, mismatch, strip):
+def report(recs, stats, mismatch, strip, pages):
     stamp = time.strftime("%Y-%m-%d")
     L = [f"Unit-boundary audit of list-like legends ({stamp}); no model. {stats['papers']} tuning papers, "
          f"{stats['paragraphs']} prose paragraphs, {stats['numbered list units']} of them numbered-list units.",
@@ -351,7 +417,10 @@ def report(recs, stats, mismatch, strip):
             by["one item per paragraph"] += 1
         by["heading: " + r["heading_status"]] += 1
     L += ["=" * 100, "LISTS", "=" * 100,
-          f"  lists {len(recs)}: list units {by['list unit']}, split lists {by['split list']}"]
+          f"  lists {len(recs)}: list units {by['list unit']}, split lists {by['split list']}, interrupted lists "
+          f"{by['interrupted list']} (between their parts: "
+          + ", ".join(f"{k} {v}" for k, v in collections.Counter(x for r in recs for x in r["between_kinds"]).items())
+          + ")"]
     for k in ("leading items in other paragraphs", "trailing items in other paragraphs", "one item per paragraph"):
         xs = [r for r in recs if (r["leading"] if k.startswith("leading") else r["trailing"] if k.startswith("trailing")
                                   else r["one_per_paragraph"])]
@@ -389,11 +458,23 @@ def report(recs, stats, mismatch, strip):
           "included.",
           f"  papers {len(strip)} of {stats['papers']}; matches {sum(x['matches'] for x in strip)}; characters deleted "
           f"{sum(x['chars'] for x in strip)}; matches that cross a blank line (paragraphs merged or lost) "
-          f"{sum(x['blank_lines_crossed'] for x in strip)}"]
+          f"{sum(x['blank_lines_crossed'] for x in strip)}",
+          f"  deleted spans with a definition shape (legend_inventory.SHAPES) {stats['tag-strip spans with a definition shape']},"
+          f" with 2+ {stats['tag-strip spans with 2+ definition shapes']}"]
     for x in sorted(strip, key=lambda x: -x["chars"]):
         name = x["paper"] if x["group"] in ls.TUNING else "(a paper outside the tuning set)"
         L.append(f"    {name:22s} {x['matches']:3d} matches {x['chars']:6d} chars, {x['blank_lines_crossed']} across "
                  f"blank lines; e.g. {x['examples'][0][:110]!r}")
+    L.append("")
+    L += ["=" * 100, "THE SAME MECHANISM OUTSIDE LISTS: PARAGRAPHS BROKEN AT A PAGE", "=" * 100,
+          "  The reader does not join a paragraph across pages: the first paragraph after a page break that starts in "
+          "lower case (after furniture, images, captions) continues the paragraph before it, in another unit.",
+          f"  continued paragraphs {stats['paragraphs continued across a page']}; a definition shape in either half "
+          f"{stats['continued across a page, a definition shape in either half']}; in both halves (a legend may "
+          f"straddle the break) {stats['continued across a page, definition shapes in both halves']}"]
+    for x in pages[:60]:
+        L.append(f"    {x['paper']} p{x['before']}|p{x['after']} shapes {x['shapes']} inventory {x['inventory']}: "
+                 f"...{x['end'][-90:]!r} || {x['start'][:90]!r}...")
     L.append("")
     cal = [r for r in recs if r["calib"]]
     L += ["=" * 100, "CALIBRATION UNITS AMONG THE LISTS", "=" * 100]
@@ -407,9 +488,11 @@ def report(recs, stats, mismatch, strip):
         L.append(f"\n  {r['paper']} [{r['file']}] paragraphs {r['paragraphs']} main p{r['main']} ({r['kind']}); "
                  f"items {r['items']}; leading {r['leading']} trailing {r['trailing']}; heading {r['heading_status']}"
                  + (f" ({r['heading_distance']} paragraphs between)" if r["heading_distance"] else "")
+                 + (f"; between the parts: {r['between_kinds']}" if r["between"] else "")
                  + ("; page break inside" if r["page_break_inside"] else ""))
         for x, t in r["texts"].items():
             role = ("MAIN" if int(x) == r["main"] else "item" if int(x) in r["paragraphs"] else
+                    "between" if int(x) in r["between"] else
                     "heading" if int(x) == r["heading"] else "lead-in" if int(x) == r["lead_in"] else "short")
             L.append(f"      p{x} {role:7s} {t[:240]!r}")
         for s in r["stage2_incomplete"]:
@@ -420,8 +503,9 @@ def report(recs, stats, mismatch, strip):
                  f"{r['separated_items_units']}; outside {r['outside_paragraphs']}")
     f = OUT / f"BOUNDARY_AUDIT_{stamp}.txt"
     f.write_text("\n".join(L) + "\n", encoding="utf-8")
-    (OUT / f"boundary_audit_{stamp}.json").write_text(json.dumps({"stats": stats, "lists": recs}, indent=1,
-                                                                 ensure_ascii=False), encoding="utf-8")
+    (OUT / f"boundary_audit_{stamp}.json").write_text(json.dumps({"stats": stats, "lists": recs, "page_splits": pages,
+                                                                  "tag_strip": strip}, indent=1, ensure_ascii=False),
+                                                      encoding="utf-8")
     with open(OUT / f"boundary_cases_{stamp}.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["paper", "file", "paragraphs", "main", "kind", "leading", "trailing", "one_per_paragraph",
