@@ -16,7 +16,12 @@ sequence of prompt tweaks on the same 59 units.
          scored on the same gold v4 (its v3 scores stay the historical baseline on gold v3)
 
     python legend_calib2.py run
-    python legend_calib2.py score <gold_v4.json> <calib2_run.json> [<v3 calib_run.json>]
+    python legend_calib2.py score <gold_v4.json> <calib2_run.json> [<v3 calib_run.json>] [read|raw]
+
+Stage 2 (PROMPT2) is frozen (2026-11-25). Two structural alternatives were tested on the oracle input and failed
+their precommitted criteria (legend_calib2_values.py: value-level judgements, a column gate). It is not tuned further
+on this calibration set. Its known recall limit is that a column the legend decodes only in part is refused (7 of
+the 31 proposed target columns on the oracle input).
 
 The evidence check: the evidence must be printed in the unit, up to the PDF reader's artefacts (LaTeX marks, letters
 spaced one by one inside $...$, a word broken at a line end, spacing); it must print THIS code next to THIS term (at
@@ -337,7 +342,16 @@ def stage1_eval(G, ents, equiv):
 
 
 def stage2_eval(G, assoc, cols):
-    """assoc: uid -> {'t<k>c<c>': codes predicted to decode it}. Three outcomes for each gold-decoded column."""
+    """assoc: uid -> {'t<k>c<c>': codes predicted to decode it}. Three outcomes for each gold-decoded column.
+
+    Known limitation, kept for comparability: a predicted code that the column's cells do not hold is ignored, so
+    "right codes" means the column's cells get the right decoding, not that the model's code list is exact. On gold
+    v4.1, the right column + right codes results whose list also holds such a code (scorer count -> exact-list
+    count):
+      base oracle  24 -> 21    base end to end  18 -> 15    value-level test  31 -> 31
+      column gate  27 -> 24    v3 single call   21 -> 17
+    Mostly Tonelli (the full 0-3 or 1-3 legend listed for a column holding a subset), plus Cappellari ProbS
+    (end to end) and For_NC (gate)."""
     S, D = [], []
     for skip in (False, True):
         c = collections.Counter()
