@@ -1,6 +1,6 @@
-Two-stage legend calibration: gemma4:e4b-it-qat, run 2026-11-25_1158, gold v4.1 frozen 2026-11-25, GAP 40
+Two-stage legend calibration: gemma4:e4b-it-qat, run 2026-11-25_1158, gold v4.1 frozen 2026-11-25, GAP 40, stage 2 codes read (a code written with its term is read as the code)
 59 units, 106 gold mappings, 165 candidate associations.
-A stratified set with positive controls: calibration and failure analysis, not corpus-wide precision. Each unit counts once. Gold v4 differs from v3: v3 scores are not comparable to these; the v3 run rescored on gold v4 is at the end.
+A stratified set with positive controls: calibration and failure analysis, not corpus-wide precision. Each unit counts once. Gold v4.1 differs from v3: the v3 run's scores on gold v3 are not comparable to these; the v3 run rescored on this same gold v4.1 is at the end.
 
 ====================================================================================================
 STAGE 1, raw entries
@@ -56,8 +56,9 @@ EVIDENCE CHECK (exact gold pairs vs the rest of stage 1's entries)
   rejected a gold pair: Cappellari2022#p63 '$F o r _ { N C }$' = 'non-central forager': evidence not printed in the unit (evidence 'the levels of the four trait categories $( F o r _ { N C }$ non-central forager')
   rejected a gold pair: Jones2015#p67 '0' = 'relatively sedentary': code and term not next to each other (evidence 'Five experts categorized species as relatively sedentary, mobile, or very mobile')
   rejected a gold pair: Viza2023#t5r87 'x' = 'linear regression': evidence not printed in the unit (evidence 'Distribution codes for GLM: x =: linear regression')
+  diagnostic, entries whose quoted evidence is not printed, checked against the whole unit instead: exact gold pairs would pass 5 of 5, other entries would pass 0 of 0
 
-  stage 2 codes written with their terms, read as their code: oracle 5, end to end 6
+  stage 2 codes written with their terms (read as their code): oracle 5, end to end 6
 
 ====================================================================================================
 STAGE 2, oracle input (the gold's cell-code mappings): association alone
@@ -89,7 +90,7 @@ STAGE 2, end to end (stage 1's checked cell-code entries)
 
   stage 2 calls: oracle 19, end to end 18
 ====================================================================================================
-REFERENCE: the v3 single-call run (2026-11-24_2345) scored on gold v4, raw entries
+REFERENCE: the v3 single-call run (2026-11-24_2345) scored on gold v4.1, raw entries
 ====================================================================================================
   unit recognition (does the unit define anything?): precision 0.57 (23/40), recall 0.96 (23/24); true negatives 18
     code legend            recognised 16/17, with an entry of this kind 13/16
@@ -337,7 +338,7 @@ DETAIL
   missed column: Tonelli2021#p125 -> t7c11 'Zigum (1: underdeveloped; 2: developed 3: epi': gold ['1', '2'] model -
   missed column: Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for ': gold ['1', '3', '5', '7', '9'] model -
 
---- v3 run on gold v4
+--- v3 run on gold v4.1
   unit wrongly recognised: Araujo2021#p72 [prose]: PA=PA; TR=TR; MR=MR; NR=NR
   unit wrongly recognised: Cajaiba2023#t10r8 [table row]: AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5; AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5; AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5
   unit wrongly recognised: CamargoVanegas2024#p96 [prose]: N1=N1; N2=N2; N3=N3
