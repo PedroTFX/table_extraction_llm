@@ -290,7 +290,7 @@ def describe(paras, c):
         hs = "lead-in before"
     else:
         hs = "none found"
-    gap_pages = any(paras[x]["page_break_before"] for x in ps[1:]) if len(ps) > 1 else False
+    gap_pages = any(paras[x]["page_break_before"] for x in range(ps[0] + 1, ps[-1] + 1)) if len(ps) > 1 else False
     return {"main": main, "leading": lead_items, "trailing": trail_items,
             "one_per_paragraph": len(ps) > 1 and all(len(v) <= 1 for v in c["items"].values()),
             "chain_own_lead_in": own, "heading_status": hs, "heading": heading, "heading_distance": hdist,
