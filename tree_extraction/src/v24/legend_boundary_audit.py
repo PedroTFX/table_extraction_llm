@@ -40,6 +40,13 @@ from a '<' in the text ('p < 0.05') to the next '>'.
 
     python legend_boundary_audit.py [papers]      (tuning papers by default)
 -> TREE_OUTPUT/legend_coverage/BOUNDARY_AUDIT_<date>.txt, boundary_audit_<date>.json, boundary_cases_<date>.csv
+
+    python legend_boundary_audit.py --safe-tags [--against <date>] [papers]
+The same audit on the text cut with dk.SAFE_TAGS (the tag strip removes markup only; 2026-11-25), every unit the
+audit reads (inventory_audit, legend_inventory, legend_coverage, R3abc's features, unchanged) cut the same way; the
+outputs are named <date>_safetags. --against <date> (default 2026-11-25) compares its lists and page splits with that
+date's run on the old strip and carries over the labels by eye of boundary_labels_<date>.csv: each case found again
+(matched by its text, the paragraph numbers having moved), gone, or new (to label by eye).
 """
 from __future__ import annotations
 
@@ -119,8 +126,9 @@ def annotated(paper):
         if hit is not None:
             x["file"], k = seq[hit][1], hit + 1
             aligned += 1
-    # text the tag strip deletes although it is no tag
-    lost = [m.group(0) for m in re.finditer(r"<[^>]+>", prose) if not TAG.fullmatch(m.group(0))]
+    # text the tag strip in use deletes although it is no tag (the old strip's from a '<' to the next '>'; with
+    # dk.SAFE_TAGS none is expected)
+    lost = [s for s in dk.removed(prose) if not TAG.fullmatch(s)]
     return out, pages_ok, (aligned, len(out)), lost
 
 
@@ -380,7 +388,8 @@ def audit(papers):
                                            "r3abc": bool(r3[x])} for x in outside],
                    "stage2_incomplete": incomplete, "stage2_incomplete_related": related,
                    "stage2_name_outside": named_out,
-                   "calib": [f"{p}#p{x}" for x in ps if f"{p}#p{x}" in calib],
+                   "calib": [u for x in ps for u, cu in calib.items() if cu["paper"] == p and (
+                       _same(paras[x]["text"], cu["text"]) if dk.SAFE_TAGS else u == f"{p}#p{x}")],   # ids: old cut
                    "texts": {str(x): paras[x]["text"][:400]
                              for x in sorted(set(ps) | set(outside) | set(d["shorts"]) | set(between))}}
             recs.append(rec)
@@ -405,9 +414,90 @@ def audit(papers):
     return recs, stats, mismatch, strip, pages
 
 
-def report(recs, stats, mismatch, strip, pages):
-    stamp = time.strftime("%Y-%m-%d")
-    L = [f"Unit-boundary audit of list-like legends ({stamp}); no model. {stats['papers']} tuning papers, "
+HEADING_APART = ("heading before", "lead-in before", "lead-in and heading before")
+
+
+def is_flagged(r):
+    """A list the report lists in full: items separated, a heading or lead-in apart, or one item per paragraph."""
+    return bool(r["leading"] or r["trailing"] or r["heading_status"] in HEADING_APART or r["one_per_paragraph"])
+
+
+def _key(t, n=80):
+    return " ".join(str(t or "").split())[:n]
+
+
+def _same(a, b, n=60):
+    """Two paragraph texts are one case: one's start is in the other (a corrected paragraph can be longer)."""
+    a, b = _key(a, 400), _key(b, 400)
+    return bool(a and b) and (a[:n] in b or b[:n] in a)
+
+
+def compare(recs, pages, against):
+    """The lists and page splits of this run against the run on the old strip of date `against`, with the labels by
+    eye carried over (matched by text: the corrected cutting renumbers paragraphs). -> report lines"""
+    old = json.loads((OUT / f"boundary_audit_{against}.json").read_text(encoding="utf-8"))
+    lab_f = OUT / f"boundary_labels_{against}.csv"
+    labels = list(csv.DictReader(open(lab_f, encoding="utf-8"))) if lab_f.exists() else []
+    L = ["=" * 100, f"AGAINST THE RUN ON THE OLD STRIP ({against}); labels by eye from {lab_f.name}", "=" * 100]
+
+    def lab(kind, paper, where):
+        hit = [x for x in labels if x["kind"].startswith(kind) and x["paper"] == paper and x["where"] == where]
+        return (hit[0]["legend"] + (f" ({hit[0]['note'][:90]})" if hit[0]["note"] else "")) if hit else "no label"
+
+    def main_text(r):
+        return r["texts"][str(r["main"])]
+
+    flagged_old = [r for r in old["lists"] if is_flagged(r)]
+    flagged_new = [r for r in recs if is_flagged(r)]
+    L.append(f"  lists: old {len(old['lists'])} ({len(flagged_old)} with something separated), now {len(recs)} "
+             f"({len(flagged_new)})")
+    seen = set()
+    for r in flagged_old:
+        where = f"p{','.join(map(str, r['paragraphs']))}"[:60]
+        m = next((i for i, x in enumerate(flagged_new) if x["paper"] == r["paper"] and i not in seen
+                  and _same(main_text(x), main_text(r))), None)
+        if m is None:
+            m_any = next((x for x in recs if x["paper"] == r["paper"] and _same(main_text(x), main_text(r))), None)
+            state = (f"FOUND, NOTHING SEPARATED NOW (p{m_any['main']}, heading {m_any['heading_status']})" if m_any
+                     else "GONE (no list with this text)")
+        else:
+            seen.add(m)
+            x = flagged_new[m]
+            same = (x["leading"], x["trailing"], x["heading_status"]) == (r["leading"], r["trailing"], r["heading_status"])
+            state = (f"found p{x['main']}" + ("" if same else f" CHANGED: leading {r['leading']}->{x['leading']}, "
+                     f"trailing {r['trailing']}->{x['trailing']}, heading {r['heading_status']}->{x['heading_status']}"))
+        L.append(f"    {r['paper']:20s} {where:16s} [{lab('list', r['paper'], where)[:70]}]  {state}")
+    for i, x in enumerate(flagged_new):
+        if i not in seen:
+            L.append(f"    NEW {x['paper']:16s} p{','.join(map(str, x['paragraphs']))} main p{x['main']} ({x['kind']}); "
+                     f"leading {x['leading']} trailing {x['trailing']} heading {x['heading_status']}: "
+                     f"{main_text(x)[:140]!r}")
+    L.append(f"  page splits with definition shapes in both halves: old {len(old['page_splits'])}, now {len(pages)}")
+    seen = set()
+    for r in old["page_splits"]:
+        where = f"p{r['before']}|p{r['after']}"
+        m = next((i for i, x in enumerate(pages) if x["paper"] == r["paper"] and i not in seen
+                  and _same(x["start"], r["start"], 50)), None)
+        tag = lab("page", r["paper"], where)
+        if m is None:
+            L.append(f"    {r['paper']:20s} {where:12s} [{tag[:70]}]  GONE: ...{r['end'][-70:]!r} || {r['start'][:70]!r}")
+        else:
+            seen.add(m)
+            x = pages[m]
+            moved = _key(x["end"][-60:]) != _key(r["end"][-60:])
+            L.append(f"    {r['paper']:20s} {where:12s} [{tag[:70]}]  found p{x['before']}|p{x['after']}"
+                     + (f"; first half CHANGED: ...{x['end'][-70:]!r}" if moved else ""))
+    for i, x in enumerate(pages):
+        if i not in seen:
+            L.append(f"    NEW {x['paper']:16s} p{x['before']}|p{x['after']} shapes {x['shapes']}: ...{x['end'][-80:]!r} "
+                     f"|| {x['start'][:80]!r}")
+    return L + [""]
+
+
+def report(recs, stats, mismatch, strip, pages, against=None):
+    stamp = time.strftime("%Y-%m-%d") + ("_safetags" if dk.SAFE_TAGS else "")
+    L = [f"Unit-boundary audit of list-like legends ({stamp}); no model. Tag strip: "
+         + ("dk.SAFE_TAGS (markup only)" if dk.SAFE_TAGS else "the old '<[^>]+>'") + f". {stats['papers']} tuning papers, "
          f"{stats['paragraphs']} prose paragraphs, {stats['numbered list units']} of them numbered-list units.",
          f"Paragraphs rebuilt with page markers equal inventory_audit's in all papers but {len(mismatch)}"
          + (f": {', '.join(mismatch)}" if mismatch else "") + f"; paragraphs attributed to their file "
@@ -439,7 +529,7 @@ def report(recs, stats, mismatch, strip, pages):
         xs = [r for r in recs if r["heading_status"] == k]
         L.append(f"    {k:28s} {len(xs):4d} lists in {len({r['paper'] for r in xs}):3d} papers")
     sep = [r for r in recs if r["leading"] or r["trailing"]]
-    hd = [r for r in recs if r["heading_status"] in ("heading before", "lead-in before", "lead-in and heading before")]
+    hd = [r for r in recs if r["heading_status"] in HEADING_APART]
     L += ["", "=" * 100, "WHAT IS SEPARATED, AND WHERE IT GOES", "=" * 100,
           f"  items separated (leading or trailing): {len(sep)} lists",
           f"    separated item paragraphs: {sum(len(r['separated_items_units']) for r in sep)}; an inventory unit "
@@ -458,10 +548,12 @@ def report(recs, stats, mismatch, strip, pages):
           f"    a column holds 2+ of the list's codes and its header words are only outside the unit: "
           f"{sum(bool(r['stage2_name_outside']) for r in hd)}",
           f"  both (items and heading separated): {len([r for r in sep if r in hd])} lists", ""]
-    L += ["=" * 100, "ANOTHER LOSS FOUND ON THE WAY: THE TAG STRIP DELETES TEXT", "=" * 100,
-          "  dk.clean removes '<[^>]+>' before the paragraphs are cut. A '<' that opens no tag ('p < 0.05') starts a "
-          "match that runs to the next '>' (often a page comment's end), deleting the text between, blank lines "
-          "included.",
+    L += ["=" * 100, "THE TAG STRIP: TEXT IT DELETES THAT IS NO TAG", "=" * 100,
+          ("  dk.SAFE_TAGS: only markup is removed (a comment, an HTML element's tag); a removal the audit's tag "
+           "pattern calls no tag is counted here (none expected)." if dk.SAFE_TAGS else
+           "  dk.clean removes '<[^>]+>' before the paragraphs are cut. A '<' that opens no tag ('p < 0.05') starts a "
+           "match that runs to the next '>' (often a page comment's end), deleting the text between, blank lines "
+           "included."),
           f"  papers {len(strip)} of {stats['papers']}; matches {sum(x['matches'] for x in strip)}; characters deleted "
           f"{sum(x['chars'] for x in strip)}; matches that cross a blank line (paragraphs merged or lost) "
           f"{sum(x['blank_lines_crossed'] for x in strip)}",
@@ -488,10 +580,12 @@ def report(recs, stats, mismatch, strip, pages):
     L += ["=" * 100, "CALIBRATION UNITS AMONG THE LISTS", "=" * 100]
     L += [f"  {', '.join(r['calib'])}: {r['kind']}, leading {r['leading']}, trailing {r['trailing']}, heading "
           f"{r['heading_status']}" for r in cal] + [""]
+    if against:
+        L += compare(recs, pages, against)
     cut = len(L)
     L += ["=" * 100, "EVERY LIST WITH SOMETHING SEPARATED (items, or a heading / lead-in before a unit that starts at an "
           "item)", "=" * 100]
-    flagged = [r for r in recs if r in sep or r in hd or r["one_per_paragraph"]]
+    flagged = [r for r in recs if is_flagged(r)]
     for r in flagged:
         L.append(f"\n  {r['paper']} [{r['file']}] paragraphs {r['paragraphs']} main p{r['main']} ({r['kind']}); "
                  f"items {r['items']}; leading {r['leading']} trailing {r['trailing']}; heading {r['heading_status']}"
@@ -532,5 +626,13 @@ def report(recs, stats, mismatch, strip, pages):
 
 
 if __name__ == "__main__":
-    ps = sys.argv[1:] or ls.tuning_papers()
-    report(*audit(ps))
+    args, against = sys.argv[1:], None
+    if "--safe-tags" in args:
+        args.remove("--safe-tags")
+        dk.SAFE_TAGS, against = True, "2026-11-25"
+    if "--against" in args:
+        i = args.index("--against")
+        against = args[i + 1]
+        del args[i:i + 2]
+    ps = args or ls.tuning_papers()
+    report(*audit(ps), against=against)

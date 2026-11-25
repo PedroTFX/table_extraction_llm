@@ -65,9 +65,47 @@ def not_legend(paper, k, c, trait):
 CONSISTENT = 0.85
 
 
+# The tag strip. The old strip '<[^>]+>' takes any '<' for a tag's start, so a '<' in the text ('p < 0.05', '<1% = very
+# low') deletes everything up to the next '>', often paragraphs later (legend_boundary_audit, 2026-11-25: 305k chars in
+# 72 of the 82 tuning papers, legends among them). SAFE_TAGS (2026-11-25) removes only markup: an HTML comment, or an
+# HTML element's opening or closing tag with well-formed attributes, neither crossing a blank line; any other '<' is
+# text and stays. Each removal is a space, as before. OFF by default: the decoders, the inventory, R3abc, the
+# calibration units and every frozen result keep the old strip; a script turns it on (dk.SAFE_TAGS = True) before it
+# cuts text.
+SAFE_TAGS = False
+LEGACY_TAG = re.compile(r"<[^>]+>")
+HTML_ELEMENTS = frozenset("""a abbr acronym address area article aside b bdi bdo big blockquote body br button
+    caption center cite code col colgroup dd del details dfn div dl dt em figcaption figure font footer h1 h2 h3 h4 h5
+    h6 head header hr html i img ins kbd label li main mark math mi mn mo mrow msub msubsup msup mtext nav nobr ol p pre
+    q s samp section small span strike strong sub summary sup table tbody td tfoot th thead time tr tt u ul var
+    wbr""".split())
+_WS = r"(?:[ \t\r\f\v]|\n(?![ \t\r\f\v]*\n))"            # whitespace that is no blank line
+MARKUP = re.compile(
+    r"<!--(?:(?!\n[ \t\r\f\v]*\n).)*?-->"                # a comment
+    r"|</?([A-Za-z][A-Za-z0-9]*)"                         # a tag: its name, then attributes name[=value]
+    rf"(?:{_WS}+[A-Za-z_:][-\w:.]*(?:{_WS}*={_WS}*(?:\"[^\"<>]*\"|'[^'<>]*'|[^\s\"'<>=`]+))?)*{_WS}*/?>",
+    re.S)
+
+
+def _markup(m):
+    return " " if m.group(1) is None or m.group(1).lower() in HTML_ELEMENTS else m.group(0)
+
+
+def strip_tags(text):
+    """The tag strip in use (SAFE_TAGS or the old one)."""
+    return MARKUP.sub(_markup, text) if SAFE_TAGS else LEGACY_TAG.sub(" ", text)
+
+
+def removed(text):
+    """The spans the tag strip in use removes."""
+    if SAFE_TAGS:
+        return [m.group(0) for m in MARKUP.finditer(text) if _markup(m) == " "]
+    return LEGACY_TAG.findall(text)
+
+
 def clean(text):
     """Normalise paper text for searching: HTML, markdown escapes and emphasis."""
-    t = re.sub(r"<[^>]+>", " ", text)
+    t = strip_tags(text)
     t = _html.unescape(t)
     t = t.replace("\\_", "_").replace("\\*", "*")
     t = re.sub(r"(?<!\w)[*_]{1,2}([^*_\n]{1,60}?)[*_]{1,2}(?!\w)", r"\1", t)   # *C* -> C
