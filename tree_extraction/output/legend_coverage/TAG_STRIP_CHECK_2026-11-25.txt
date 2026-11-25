@@ -1,0 +1,187 @@
+tag_strip_check (2026-11-25); no model. dk.SAFE_TAGS against the old '<[^>]+>' strip; 82 tuning papers. The pipeline keeps the old strip (SAFE_TAGS off by default).
+
+1. MADE-UP CASES (safe strip | old strip)
+  ok  'leaf area (mm<sup>2</sup>) and CO<sub>2</sub> uptake'
+        safe 'leaf area (mm 2 ) and CO 2 uptake'
+        old  'leaf area (mm 2 ) and CO 2 uptake'
+  ok  '<span id="p3-1">Body</span> length'
+        safe 'Body length'
+        old  'Body length'
+  ok  '<a href="https://example.org/x?id=4&amp;v=2">see the data</a>.'
+        safe 'see the data .'
+        old  'see the data .'
+  ok  '<!-- page 3 of 9 -->Wing span'
+        safe 'Wing span'
+        old  'Wing span'
+  ok  '<details><summary>More</summary>hidden note</details>'
+        safe 'More hidden note'
+        old  'More hidden note'
+  ok  'first<br/>second<br>third'
+        safe 'first second third'
+        old  'first second third'
+  ok  '<i>Genus species</i> and <strong>bold</strong>'
+        safe 'Genus species and bold'
+        old  'Genus species and bold'
+  ok  'significant (p < 0.05); F > 3.2'
+        safe 'significant (p < 0.05); F > 3.2'
+        old  'significant (p 3.2'
+  ok  '<1% = rare; 1%-10% = scattered; >10% = dense'
+        safe '<1% = rare; 1%-10% = scattered; >10% = dense'
+        old  '10% = dense'
+  ok  'x<y and z>w'
+        safe 'x<y and z>w'
+        old  'x w'
+  ok  '0 < k < 1 and m > 2'
+        safe '0 < k < 1 and m > 2'
+        old  '0 2'
+  ok  '$p<0.001$ and $R^2>0.5$'
+        safe '$p<0.001$ and $R^2>0.5$'
+        old  '$p 0.5$'
+  ok  'patches <5 ha and >10 ha'
+        safe 'patches <5 ha and >10 ha'
+        old  'patches 10 ha'
+  ok  'the ratio <a/b> of lengths'
+        safe 'the ratio <a/b> of lengths'
+        old  'the ratio of lengths'
+  ok  'a value <Ca> in the soil'
+        safe 'a value <Ca> in the soil'
+        old  'a value in the soil'
+  ok  'rare: < 0.6% of the catch\n\nCodes: U: one generation, M: several\n\n<!-- page 2 of 11 -->\n\nnext'
+        safe paragraphs ['rare: < 0.6% of the catch', 'Codes: U: one generation, M: several', 'next']
+  ok  '<span\n\nclass="x">text</span>'
+        safe paragraphs ['<span', 'class="x">text']
+  ok  '<!-- a note\n\nText --> more'
+        safe paragraphs ['<!-- a note', 'Text --> more']
+  ok  '<sup\n>2</sup> ok'
+        safe paragraphs ['2 ok']
+  19 of 19 as expected
+
+2. TUNING PAPERS: THE OLD STRIP AGAINST THE SAFE ONE (prose as inventory_audit.paragraphs builds it)
+  papers 82; text unchanged 10 (every old match markup: 10); changed 72
+  characters (no whitespace): old 3238159, safe 3490648, kept that the old strip deleted 252489
+  paragraphs: old 12207, safe 12862 (+655)
+  required: no markup left, the old text a subsequence of the safe one, equal where the old matches are all markup -> all hold
+  tag-shaped text the safe strip keeps (no HTML element: read by eye) 0
+  papers changed (chars kept, paragraphs old -> safe):
+      Cappellari2022           11670   123 ->  149
+      Ji2024                   10160   158 ->  187
+      Derhe2016                 9838   148 ->  177
+      Korosi2022                7444   119 ->  131
+      Cajaiba2022               7341   136 ->  151
+      Cajaiba2023               7291   135 ->  150
+      Taillefer2018             7251   144 ->  163
+      Forrest2015               7240   459 ->  489
+      Russo2017                 7240   105 ->  119
+      Leong2023                 7193   173 ->  192
+      Cecala2021                7081   187 ->  201
+      Cerini2023                6835   104 ->  123
+      Kovacs2010                6474    77 ->  105
+      Guareschi2015             6403   133 ->  138
+      Tsai2020                  6316   125 ->  134
+      Wang2021                  6287   101 ->  120
+      Eckert2023                5510   138 ->  151
+      GibbParr2013              5289    96 ->  111
+      Gossner2013               5228   148 ->  164
+      Espinosa2023              4938   128 ->  137
+      Scalercio2020             4591   160 ->  174
+      Dejean2019                4455   113 ->  131
+      Kovacs2008                4453   112 ->  125
+      Odanaka2019               4433    92 ->  101
+      Teder2020                 3834    92 ->  104
+      Weber2023                 3704   170 ->  180
+      Oliveira2022              3670   136 ->  143
+      Guariento2020             3653   189 ->  197
+      Cao2024                   3588   490 ->  495
+      Tonelli2021               3564   157 ->  166
+      Torok2022                 3518    92 ->  101
+      Normandin2017             3454   218 ->  225
+      Nelson2020                3244   138 ->  144
+      Uemori2022                3147   127 ->  136
+      Noriega2023               3073   126 ->  132
+      Graf2021                  2909   140 ->  146
+      Gathof2022                2794   105 ->  111
+      Mirzaee2023               2735   169 ->  177
+      Kratschmer2019            2674   168 ->  176
+      Gibb2005                  2390   124 ->  129
+      Vidal2023                 2378   196 ->  203
+      Heiva2013                 2374   100 ->  107
+      Fiedler2021               2358   116 ->  121
+      McCravy2019               2301    77 ->   79
+      Renoz2020                 2114    61 ->   66
+      Tran2022                  2054   117 ->  123
+      Wijas2021                 1960    97 ->  103
+      Figueroa2021              1950   127 ->  137
+      Schirmel2012              1924    97 ->  101
+      Arnan2012                 1870    89 ->   95
+      Viza2023                  1717   178 ->  181
+      Xia2022                   1717   244 ->  261
+      Lizee2016                 1355   137 ->  144
+      Barber2017                1327   317 ->  323
+      Khayati2024               1282   123 ->  125
+      Eskilden2015              1099   128 ->  130
+      Uemori2021                1063   137 ->  141
+      Xu2024                     954   423 ->  424
+      Ibarra2021                 930   116 ->  119
+      Orr2024                    882   148 ->  151
+      Laha2020                   779   116 ->  118
+      Fontanilla2019             769   104 ->  104
+      Raine2018                  764   147 ->  149
+      Luo2023                    677   127 ->  132
+      Ustjuzhanin2024            668   274 ->  275
+      Jones2015                  647   123 ->  125
+      Lichtenberg2017            496   145 ->  146
+      MacDonald2021              442   147 ->  149
+      Zhao2024                   423   140 ->  143
+      Braschler2021              178   192 ->  193
+      Wallon2024                  70   254 ->  254
+      Keller1998                  55    59 ->   59
+
+3. REGRESSION: THE SIX LEGENDS THE OLD STRIP DELETED (needle | old cut | safe cut)
+  ok  Kratschmer2019  '1%–5% = low; 5%–25% = medium': old cut 0 paragraphs, safe cut 1
+        safe p61 (197 chars, 0 definition shapes: no inventory unit; prose)
+        R3abc (frozen) links: safe cut none; old cut none
+          R2 candidate (safe cut): t10c7 'A_01 / Apr / first_buds / Donn' hit ['1', '5'] explicit []
+          R2 candidate (safe cut): t10c40 'A_02 / Jun / flowering / Donne' hit ['1', '5'] explicit []
+          R2 candidate (safe cut): t10c41 'A_03 / Jun / flowering / Purba' hit ['1', '5'] explicit []
+          R2 candidate (safe cut): t10c42 'A_04 / Jun / flowering / Purba' hit ['1', '5'] explicit []
+          R2 candidate (safe cut): t10c60 'A_06 / Jul / berry_pea / Breit' hit ['1', '5'] explicit []
+          R2 candidate (safe cut): t10c62 'A_08 / Jul / berry_pea / Breit' hit ['1', '5'] explicit []
+        ...'coverage of all entomophilous plants in five categories (<1% = very low; 1%–5% = low; 5%–25% = medium; 25%–50% = high; and 50%– 100% = very high) following an adapted DAFOUR scale (Gardener, 2012).'...
+  ok  Oliveira2022    'CL = ratio of clypeus length to mesosoma length': old cut 2 paragraphs, safe cut 4
+        safe p65 (882 chars, 14 definition shapes: an inventory unit; prose)
+        R3abc (frozen) links: safe cut ["t2c1 'Trait'", "t2c3 'Explanatory variables'"]; old cut [["t2c1 'Trait'", "t2c3 'Explanatory variables'"], ["t2c1 'Trait'"]]
+          R2 candidate (safe cut): t2c1 'Trait' hit ['AL', 'CL', 'EL', 'LEG', 'ML', 'P'] explicit ['EL', 'ML', 'LEG', 'AL', 'P', 'CL']
+          R2 candidate (safe cut): t2c3 'Explanatory variables' hit ['GMDI', 'WD'] explicit ['GMDI', 'WD']
+        ..."d disturbance (GMDI) are also plotted as supplementary variables (blue vectors) following Legendre and Legendre (1998). CL = ratio of clypeus length to mesosoma length, ML = ratio of mandible length to mesosoma length, WL =mesosoma or Weber's length, IOW = ratio of inter-ocular width to"...
+  ok  Taillefer2018   'U: univoltine, M: bivoltine': old cut 0 paragraphs, safe cut 1
+        safe p157 (53 chars, 2 definition shapes: an inventory unit; prose)
+        R3abc (frozen) links: safe cut none; old cut none
+        ...'Voltinism: U: univoltine, M: bivoltine/ multivoltine.'...
+  ok  Taillefer2018   'E: eggs, L: larvae, P: pupae, A: adults': old cut 0 paragraphs, safe cut 1
+        safe p158 (77 chars, 4 definition shapes: an inventory unit; prose)
+        R3abc (frozen) links: safe cut none; old cut none
+        ...'Overwin stage: Overwintering stage – E: eggs, L: larvae, P: pupae, A: adults.'...
+  ok  Ji2024          'Number of individuals (Ind; measured/collected)': old cut 0 paragraphs, safe cut 1
+        safe p183 (254 chars, 0 definition shapes: no inventory unit; caption)
+        R3abc (frozen) links: safe cut none; old cut none
+        ...'Table S1. Number of individuals (Ind; measured/collected) and trait values (mean±SD) of the four co-occurring Nicrophorus carrion beetle species at each of the six elevations (E'...
+  ok  Ji2024          'six elevations (Elev.)': old cut 0 paragraphs, safe cut 1
+        safe p183 (254 chars, 0 definition shapes: no inventory unit; caption)
+        R3abc (frozen) links: safe cut none; old cut none
+        ...'asured/collected) and trait values (mean±SD) of the four co-occurring Nicrophorus carrion beetle species at each of the six elevations (Elev.) in Changbai Mountain. Asterisk indicates ratio of trait to body length.'...
+  ok  Cajaiba2022     'Epigaeic predators (EP) and Epigaeic omnivores (EO)': old cut 0 paragraphs, safe cut 1
+        safe p79 (820 chars, 15 definition shapes: an inventory unit; prose)
+        R3abc (frozen) links: safe cut none; old cut none
+        ...'nces in abundance (GLMM, 31.43, p < 0.001) and richness (GLMM, 11.77, p < 0.0001) of TT_FT were detected (Figure 3a,b): Epigaeic predators (EP) and Epigaeic omnivores (EO) exhibited higher abundances, when compared to the other TT_FT, while Cryptic predators (CP), Leaf-cutting Attini (LA), '...
+  ok  Viza2023        'axis Y ≥ 10; and Reduced: Axis X ≤': old cut 0 paragraphs, safe cut 1
+        safe p70 (380 chars, 3 definition shapes: an inventory unit; prose)
+        R3abc (frozen) links: safe cut none; old cut none
+          R2 candidate (safe cut): t7c10 'Iberian Peninsula Range / RU' hit ['0', '1'] explicit []
+          R2 candidate (safe cut): t7c11 'Iberian Peninsula Range / RC' hit ['0', '1'] explicit []
+          R2 candidate (safe cut): t7c12 'Iberian Peninsula Range / RL' hit ['0', '1'] explicit []
+        ...'cc = 1 0 ;$ Unchanged: Axis $X \\in (-10, +10],$ axis $Y \\in [ 0 , \\; 1 0 ) ;$ Reduced and displaced: Axis $X < 1 0 .$ , axis Y ≥ 10; and Reduced: Axis X ≤ \x0310, axis Y ϵ [0, 10).'...
+
+4. CALIBRATION UNITS (gold v4.1) WHOSE PARAGRAPH THE SAFE STRIP CHANGES
+  prose units 35; renumbered 21; text changed 0
+
+required checks: made-up cases pass; papers pass; regression needles pass  (4s)

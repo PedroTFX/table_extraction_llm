@@ -17,6 +17,18 @@ nothing in the pipeline is switched: dk.SAFE_TAGS stays off by default.
 
     python tag_strip_check.py
 -> TREE_OUTPUT/legend_coverage/TAG_STRIP_CHECK_<date>.txt; exit status 1 if a required check fails
+
+Result (2026-11-25, 82 tuning papers): every required check holds. 72 papers change, 10 are equal; 252,489
+characters (whitespace aside) that the old strip deleted are kept; paragraphs 12,207 -> 12,862. The eight needles of
+the six legends are all back in a paragraph; five land in one with 2+ definition shapes (Oliveira, whose legend the
+old cut also had in two other paragraphs; Taillefer twice; Cajaiba2022; Viza2023), Kratschmer's classes and Ji2024's
+caption in none. The frozen R3abc links none of the restored legends (Oliveira's as before): Taillefer's get no
+candidate although its trait matrix (tables 7-17) holds the Voltinism U/M and Overwintering E/L/P/A columns, a
+question for the R3abc missed-target inventory. Calibration: of the 35 prose units of gold v4.1, 21 get another
+paragraph number and none another text, so the calibration results stand (ids are of the old cut). The boundary
+audit on the safe cut (legend_boundary_audit --safe-tags): lists 72 -> 75 (3 new, none a legend), the 23 flagged
+lists found again unchanged; page splits with shapes in both halves 37 -> 36 (Derhe's age classes now whole in one
+unit, 4 pairs made by the old strip gone, 4 new pairs of results prose). Labels: boundary_labels_2026-11-25_safetags.csv.
 """
 from __future__ import annotations
 
