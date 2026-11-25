@@ -30,6 +30,9 @@ Downstream (mechanical; every case is listed for checking by eye):
             incomplete in the main unit); a column holding 2+ of the list's codes whose header shares an informative
             word with the separated heading or lead-in and not with the main unit (the variable's name is outside)
 
+Also measured (found while rebuilding the paragraphs): dk.clean's tag strip '<[^>]+>' deletes text that is no tag,
+from a '<' in the text ('p < 0.05') to the next '>'.
+
     python legend_boundary_audit.py [papers]      (tuning papers by default)
 -> TREE_OUTPUT/legend_coverage/BOUNDARY_AUDIT_<date>.txt, boundary_audit_<date>.json, boundary_cases_<date>.csv
 """
@@ -68,30 +71,50 @@ PAGE_MARK = re.compile(r"^[ \t]*<!--\s*page\s+\d+\s+of\s+\d+\s*-->[ \t]*$", re.M
 CALIB = OUT / "calib_gold_v4.1_2026-11-25.json"
 
 
+TAG = re.compile(r"<(?:!--.*?--|/?[A-Za-z][A-Za-z0-9]*(?:\s[^<>]*)?/?)>", re.S)
+
+
+def _paras(prose):
+    return [" ".join(p.split()) for p in re.split(r"\n\s*\n", dk.clean(prose)) if len(p.strip()) > 3]
+
+
 def annotated(paper):
     """The paragraphs of inventory_audit.paragraphs, each with its source file and whether a page break comes just
-    before it. -> (paragraphs, equal to inventory_audit's)"""
+    before it. -> (paragraphs, page markers equal, files aligned, the tag strip's deletions of text that is no tag)
+
+    Page breaks: a marker paragraph is added AFTER each page comment, the comment kept (dk.clean's '<[^>]+>' runs
+    from a '<' in the text, 'p < 0.05', to the next '>', often a page comment's end: moving that '>' would change
+    what it deletes). Files: _drop_reference_lists removes the supplement marker that follows a reference list, so
+    each file is cut on its own and its paragraphs are aligned to the paper's in order."""
     raw = (_paths.PAPERS / paper / f"{paper}_full.md").read_text(encoding="utf-8", errors="replace")
     prose = re.sub(r"<table.*?</table>", "\n\n", _drop_reference_lists(raw), flags=re.S | re.I)
-    prose = FILE_MARK.sub(lambda m: f"\n\n⟦FILE {m.group(1)}⟧\n\n", prose)
-    prose = PAGE_MARK.sub("\n\n⟦PAGE⟧\n\n", prose)
-    out, src, page = [], "main", False
-    for p in re.split(r"\n\s*\n", dk.clean(prose)):
-        t = " ".join(p.split())
-        if t.startswith("⟦FILE ") and t.endswith("⟧"):
-            src, page = t[6:-1], False
-            continue
+    ref = ia.paragraphs(paper)
+    marked = PAGE_MARK.sub(lambda m: m.group(0) + "\n\n⟦PAGE⟧\n\n", prose)
+    out, page = [], False
+    for t in _paras(marked):
         if t == "⟦PAGE⟧":
             page = True
             continue
-        if len(p.strip()) > 3:
-            out.append({"text": t, "file": src, "page_break_before": page})
-            page = False
-    ref = ia.paragraphs(paper)
-    same = [x["text"] for x in out] == ref
-    if not same:
+        out.append({"text": t, "file": None, "page_break_before": page})
+        page = False
+    pages_ok = [x["text"] for x in out] == ref
+    if not pages_ok:
         out = [{"text": t, "file": None, "page_break_before": None} for t in ref]
-    return out, same
+    # files
+    bounds = [(0, "main")] + [(m.end(), m.group(1)) for m in FILE_MARK.finditer(raw)]
+    seq = []
+    for (a, name), (b, _n) in zip(bounds, bounds[1:] + [(len(raw), None)]):
+        doc = re.sub(r"<table.*?</table>", "\n\n", _drop_reference_lists(raw[a:b]), flags=re.S | re.I)
+        seq += [(t, name) for t in _paras(doc)]
+    k, aligned = 0, 0
+    for x in out:
+        hit = next((j for j in range(k, min(k + 6, len(seq))) if seq[j][0] == x["text"]), None)
+        if hit is not None:
+            x["file"], k = seq[hit][1], hit + 1
+            aligned += 1
+    # text the tag strip deletes although it is no tag
+    lost = [m.group(0) for m in re.finditer(r"<[^>]+>", prose) if not TAG.fullmatch(m.group(0))]
+    return out, pages_ok, (aligned, len(out)), lost
 
 
 def is_heading(t):
@@ -243,12 +266,17 @@ def audit(papers):
         if r["unit_table"] is None:
             r3all[r["paper"]][r["unit"]].add((r["table"], r["col"]))
     recs, stats = [], collections.Counter()
-    mismatch = []
+    mismatch, strip = [], []
     for p in papers:
         t0 = time.time()
-        paras, same = annotated(p)
+        paras, same, (aligned, n_par), lost = annotated(p)
         if not same:
             mismatch.append(p)
+        stats["paragraphs with a file"] += aligned
+        if lost:
+            strip.append({"paper": p, "group": ls.SPLIT.get(p), "matches": len(lost),
+                          "chars": sum(len(x) for x in lost), "blank_lines_crossed": sum("\n\n" in x for x in lost),
+                          "examples": [x[:160] for x in lost[:3]]})
         grids = {k: ht.grid_from_html(h) for k, h in enumerate(hb.html_tables(p))}
         first = {e["table"]: e.get("first") or 1 for e in head[p]}
         cols = lc.columns(p, grids, first)
@@ -267,15 +295,19 @@ def audit(papers):
                 if d["heading_status"] != "own lead-in" else []
             out_words = set().union(*[lc.informative(paras[x]["text"]) for x in outside]) if outside else set()
             unit_words = lc.informative(paras[main]["text"])
-            incomplete, named_out = [], []
+            list_words = unit_words | out_words | set().union(*[lc.informative(paras[x]["text"]) for x in ps])
+            incomplete, named_out, related = [], [], 0
             for col in cols:
                 held = set(col["codes"]) & codes
                 if len(held) < 2:
                     continue
                 tag = f"t{col['table']}c{col['col']} {col['header'][:60]!r} codes {sorted(held)}"
                 if sep & set(col["codes"]):
+                    rel = bool(col["words"] & list_words) or (col["table"], col["col"]) in r3[main]
+                    related += rel
                     incomplete.append(tag + f" + separated {sorted(sep & set(col['codes']))}"
-                                      + (" [main unit R3abc-linked]" if (col["table"], col["col"]) in r3[main] else ""))
+                                      + (" [main unit R3abc-linked]" if (col["table"], col["col"]) in r3[main] else "")
+                                      + ("" if rel else " [header unrelated to the list]"))
                 w = (col["words"] & out_words) - unit_words
                 if w:
                     named_out.append(tag + f" header words only outside {sorted(w)}"
@@ -289,22 +321,25 @@ def audit(papers):
                                               "r3abc": bool(r3[x])} for x in ps if x != main],
                    "outside_paragraphs": [{"paragraph": x, "inventory": paras[x]["text"] in inv,
                                            "r3abc": bool(r3[x])} for x in outside],
-                   "stage2_incomplete": incomplete, "stage2_name_outside": named_out,
+                   "stage2_incomplete": incomplete, "stage2_incomplete_related": related,
+                   "stage2_name_outside": named_out,
                    "calib": [f"{p}#p{x}" for x in ps if f"{p}#p{x}" in calib],
                    "texts": {str(x): paras[x]["text"][:400] for x in sorted(set(ps) | set(outside) | set(d["shorts"]))}}
             recs.append(rec)
-        print(f"  {p:22s} {len(paras):4d} paragraphs, {sum(1 for r in recs if r['paper'] == p):3d} lists"
-              f"{'' if same else '  (file/page markers: paragraph mismatch, not used)'}  {time.time() - t0:5.1f}s",
+        print(f"  {p:22s} {len(paras):4d} paragraphs, {sum(1 for r in recs if r['paper'] == p):3d} lists, files "
+              f"aligned {aligned}/{n_par}{'' if same else '  (page markers: paragraph mismatch, not used)'}"
+              f"{f'  tag strip deletes {sum(len(x) for x in lost)} chars' if lost else ''}  {time.time() - t0:5.1f}s",
               flush=True)
-    return recs, stats, mismatch
+    return recs, stats, mismatch, strip
 
 
-def report(recs, stats, mismatch):
+def report(recs, stats, mismatch, strip):
     stamp = time.strftime("%Y-%m-%d")
     L = [f"Unit-boundary audit of list-like legends ({stamp}); no model. {stats['papers']} tuning papers, "
          f"{stats['paragraphs']} prose paragraphs, {stats['numbered list units']} of them numbered-list units.",
-         f"Paragraphs rebuilt with file and page markers equal inventory_audit's in all papers but {len(mismatch)}"
-         + (f": {', '.join(mismatch)}" if mismatch else "") + ".", ""]
+         f"Paragraphs rebuilt with page markers equal inventory_audit's in all papers but {len(mismatch)}"
+         + (f": {', '.join(mismatch)}" if mismatch else "") + f"; paragraphs attributed to their file "
+         f"{stats['paragraphs with a file']} of {stats['paragraphs']}.", ""]
     by = collections.Counter()
     for r in recs:
         by[r["kind"]] += 1
@@ -337,7 +372,9 @@ def report(recs, stats, mismatch):
           f"{sum(x['r3abc'] for r in sep for x in r['separated_items_units'])}",
           f"    main unit an R3abc candidate: {sum(r['main_r3abc'] for r in sep)}; an inventory unit "
           f"{sum(r['main_inventory'] for r in sep)}",
-          f"    a column holds 2+ of the list's codes and a separated code: {sum(bool(r['stage2_incomplete']) for r in sep)}",
+          f"    a column holds 2+ of the list's codes and a separated code: {sum(bool(r['stage2_incomplete']) for r in sep)}"
+          f" lists; with a header related to the list (an informative word shared, or R3abc-linked): "
+          f"{sum(bool(r['stage2_incomplete_related']) for r in sep)} lists",
           f"  heading or lead-in in a separate paragraph: {len(hd)} lists",
           f"    that paragraph an inventory unit {sum(x['inventory'] for r in hd for x in r['outside_paragraphs'])}, "
           f"an R3abc candidate {sum(x['r3abc'] for r in hd for x in r['outside_paragraphs'])} "
@@ -346,6 +383,18 @@ def report(recs, stats, mismatch):
           f"    a column holds 2+ of the list's codes and its header words are only outside the unit: "
           f"{sum(bool(r['stage2_name_outside']) for r in hd)}",
           f"  both (items and heading separated): {len([r for r in sep if r in hd])} lists", ""]
+    L += ["=" * 100, "ANOTHER LOSS FOUND ON THE WAY: THE TAG STRIP DELETES TEXT", "=" * 100,
+          "  dk.clean removes '<[^>]+>' before the paragraphs are cut. A '<' that opens no tag ('p < 0.05') starts a "
+          "match that runs to the next '>' (often a page comment's end), deleting the text between, blank lines "
+          "included.",
+          f"  papers {len(strip)} of {stats['papers']}; matches {sum(x['matches'] for x in strip)}; characters deleted "
+          f"{sum(x['chars'] for x in strip)}; matches that cross a blank line (paragraphs merged or lost) "
+          f"{sum(x['blank_lines_crossed'] for x in strip)}"]
+    for x in sorted(strip, key=lambda x: -x["chars"]):
+        name = x["paper"] if x["group"] in ls.TUNING else "(a paper outside the tuning set)"
+        L.append(f"    {name:22s} {x['matches']:3d} matches {x['chars']:6d} chars, {x['blank_lines_crossed']} across "
+                 f"blank lines; e.g. {x['examples'][0][:110]!r}")
+    L.append("")
     cal = [r for r in recs if r["calib"]]
     L += ["=" * 100, "CALIBRATION UNITS AMONG THE LISTS", "=" * 100]
     L += [f"  {', '.join(r['calib'])}: {r['kind']}, leading {r['leading']}, trailing {r['trailing']}, heading "
