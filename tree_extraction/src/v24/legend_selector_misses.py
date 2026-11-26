@@ -34,6 +34,9 @@ The gate trace of a (unit, column), in R3abc's order; every gate that fails is l
   a           at least one code printed next to a meaning (la.explicit_codes)
   repeat      a table row that is a candidate for the column in more than MAX_REPEAT rows of its table is data
 The trace is checked against la.variant(la.features(...), 'abc'): the two must agree on every pair.
+Each traced unit also says where it sits in the .md (the table right after and right before a paragraph) and
+whether it is by the column's own table (its row, a caption within 3000 characters before it, a note within 1500
+after it). Descriptive only: no gate uses it.
 
     python legend_selector_misses.py [papers]       (tuning papers by default)
 -> TREE_OUTPUT/legend_coverage/SELECTOR_MISSES_<date>.txt, selector_misses_<date>.json
@@ -122,6 +125,8 @@ class Paper:
                 self.key = ls.key_of(p)
             except Exception as e:                       # no GT for the paper
                 self.key, self.key_error = {}, repr(e)[:120]
+        self.raw = (_paths.PAPERS / p / f"{p}_full.md").read_text(encoding="utf-8", errors="replace")
+        self.spans = [(m.start(), m.end()) for m in re.finditer(r"<table.*?</table>", self.raw, flags=re.S | re.I)]
         self.names = names
         self.genera = {n.split()[0] for n in names if len(n.split()) >= 2}
         for col in self.cols.values():
@@ -192,6 +197,27 @@ class Paper:
                 "header": col["header"][:100], "taxon": col["taxon"], "enumerated": enumerated,
                 "codes": sorted(col["codes"])[:20], "values": col["values"][:15], "n_values": len(col["values"])}
 
+    def near(self, u):
+        """Where a unit sits against the tables (descriptive only): its own table for a table unit; for a paragraph,
+        the table right after it and right before it in the .md, with the characters between."""
+        if u["table"] is not None:
+            return {"table": u["table"]}
+        words = re.findall(r"\S+", u["text"])[:8]
+        m = re.search(r"\s+".join(map(re.escape, words)), self.raw) if words else None
+        if not m:
+            return {}
+        a = m.start()
+        nxt = next(((k, s - a) for k, (s, _e) in enumerate(self.spans) if s > a), None)
+        prv = next(((k, a - e) for k, (_s, e) in reversed(list(enumerate(self.spans))) if e <= a), None)
+        return {"next": nxt, "prev": prv}
+
+    @staticmethod
+    def own(near, k):
+        """The unit is the column's own table's row, caption (within 3000 characters before it) or note (within 1500
+        after it)."""
+        nxt, prv = near.get("next") or (None, 0), near.get("prev") or (None, 0)
+        return near.get("table") == k or (nxt[0] == k and nxt[1] < 3000) or (prv[0] == k and prv[1] < 1500)
+
     def agreement(self):
         """Every R2 row: the trace's verdict equals la.variant's. -> number of disagreements"""
         bad = 0
@@ -201,12 +227,25 @@ class Paper:
         return bad
 
     def find(self, structure, text, table=None):
-        """The unit with this structure whose text starts like the given text (table units on their table)."""
-        want = flat(text)[:80]
-        for u in self.units:
-            if (structure is None or u["structure"] == structure) and (table is None or u["table"] == table) \
-                    and flat(u["text"]).startswith(want):
-                return u
+        """The unit with this structure that holds the given text: the same text, else the one sharing the longest
+        start with it (a paper can print a caption twice, short in a list of tables and whole above the table);
+        table units on their table."""
+        full = flat(text)
+        want = full[:80]
+        pool = [u for u in self.units if (structure is None or u["structure"] == structure)
+                and (table is None or u["table"] == table)]
+        same = [u for u in pool if flat(u["text"]) == full]
+        if same:
+            return same[0]
+
+        def common(u):
+            t, n = flat(u["text"]), 0
+            while n < min(len(t), len(full)) and t[n] == full[n]:
+                n += 1
+            return n
+        starts = [u for u in pool if flat(u["text"]).startswith(want)]
+        if starts:
+            return max(starts, key=common)
         for u in self.units:
             if (table is None or u["table"] == table) and want[:50] in flat(u["text"]):
                 return u
@@ -265,9 +304,19 @@ def key_columns(P):
             rec["outcome"] = "missed"
         else:
             rec["outcome"] = "no defining unit" + (" (only its own table's rows print pairs)" if own else "")
-        traced = defining[:TOP_UNITS] if rec["outcome"] != "covered" else cov[:1]
+        if rec["outcome"] == "covered":
+            traced = cov[:1]
+        elif cov:                                        # the best defining unit of each pair no linked unit prints
+            traced = cov[:1]
+            for code in printed:
+                best = next(((u, got) for u, got in defining if code in got), None)
+                if code not in got_all and best and all(best[0] is not t[0] for t in traced):
+                    traced.append(best)
+        else:
+            traced = defining[:TOP_UNITS]
         rec["traces"] = [dict(P.trace(u, k, c), unit=uid(u), structure=u["structure"], pairs_in_unit=got,
-                              shapes=li.shape_hits(u["text"]), text=flat(u["text"])[:400])
+                              shapes=li.shape_hits(u["text"]), text=flat(u["text"])[:400], near=P.near(u),
+                              own_table=P.own(P.near(u), k))
                          for u, got in traced]
         recs.append(rec)
     return recs
@@ -314,8 +363,10 @@ def named(P, case):
         return rec
     rec.update(unit=uid(u), structure=u["structure"], shapes=li.shape_hits(u["text"]), text=flat(u["text"])[:700],
                inventory_unit=u["table"] is None and li.shape_hits(u["text"]) >= 2)
-    rec["targets"] = [dict(P.trace(u, k, c), column=f"t{k}c{c}") for k, c in targets]
-    rec["other_columns"] = [dict(tr, column=f"t{k}c{c}") for k, c, tr in P.candidates(u, exclude=set(targets))]
+    rec["near"] = P.near(u)
+    rec["targets"] = [dict(P.trace(u, k, c), column=f"t{k}c{c}", own_table=P.own(rec["near"], k)) for k, c in targets]
+    rec["other_columns"] = [dict(tr, column=f"t{k}c{c}", own_table=P.own(rec["near"], k))
+                            for k, c, tr in P.candidates(u, exclude=set(targets))]
     rec["linked"] = sorted(f"t{k}c{c}" for i, k, c in P.sel if i == u["id"])
     return rec
 
@@ -371,7 +422,9 @@ def report(A, B, agree, papers, skipped, stamp):
         L.append(f"      R3abc links the column to {r.get('linked_units') or 'no unit'}; covered pairs "
                  f"{r.get('pairs_covered') or 'none'}")
         for tr in r.get("traces", []):
-            L.append(f"      unit {tr['unit']} [{tr['structure']}, {tr['shapes']} shapes] prints {tr['pairs_in_unit']}: "
+            L.append(f"      unit {tr['unit']} [{tr['structure']}, {tr['shapes']} shapes"
+                     f"{', next to the column' + chr(39) + 's own table' if tr['own_table'] else ''}; near {tr['near']}] "
+                     f"prints {tr['pairs_in_unit']}: "
                      f"{tr['text'][:240]!r}")
             L.append(fmt_trace(tr))
     L.append("")
@@ -386,13 +439,15 @@ def report(A, B, agree, papers, skipped, stamp):
                 L.append("      no unit holds it")
                 continue
             L.append(f"      unit {r['unit']} [{r['structure']}, {r['shapes']} shapes"
-                     f"{', an inventory unit' if r['inventory_unit'] else ''}]; R3abc links {r['linked'] or 'nothing'}")
+                     f"{', an inventory unit' if r['inventory_unit'] else ''}; near {r['near']}]; R3abc links "
+                     f"{r['linked'] or 'nothing'}")
             L.append(f"      {r['text'][:500]!r}")
             for tr in r["targets"]:
-                L.append(f"      target {tr['column']}:")
+                L.append(f"      target {tr['column']}{' (the unit is by its own table)' if tr['own_table'] else ''}:")
                 L.append(fmt_trace(tr))
             for tr in r["other_columns"]:
-                L.append(f"      column sharing codes {tr['column']}:")
+                L.append(f"      column sharing codes {tr['column']}"
+                         f"{' (the unit is by its own table)' if tr['own_table'] else ''}:")
                 L.append(fmt_trace(tr))
         L.append("")
     (OUT / f"SELECTOR_MISSES_{stamp}.txt").write_text("\n".join(L) + "\n", encoding="utf-8")
