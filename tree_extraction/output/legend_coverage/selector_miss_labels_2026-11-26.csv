@@ -1,0 +1,22 @@
+source,paper,column,unit,cond1_legend_in_unit,cond1_identity,cond2_column,class,cause,first_gate,species,note
+key,Graf2021,t8c2 Nesting site,p141,yes,named by a synonym ('Nidification'),key,selector failure,header-word gate: synonym,R2: no header word,254,same unit is linked to t8c1/t8c3 through distinctive codes
+key,Cappellari2022,t3c4 Foraging range,p124/p125,yes,named ('type of foraging range'),key,selector failure,explicit test: 'C central-place forager' has no separator,a: no code next to a meaning,325,"R2 passes (NC distinctive, 'forag')"
+key,Espinosa2023,t7c4 Presence of opercular gill,p131/p136,yes,named,key,selector failure,code recognition: lowercase 'nog' not a code,R2: one code,27,
+key,AmbspergTraun1991,t0c4 Feeding group,p37,yes,footnote mark † shared with the header,key,selector failure,header-word gate: identity by footnote mark,R2: no header word,16,"own table's footnotes, one paragraph"
+key,AmbspergTraun1991,t0c5 Nesting group,p37,yes,footnote mark ‡ shared with the header,key,selector failure,header-word gate: identity by footnote mark,R2: no header word,16,
+key,Wang2021,t1c4 Feeding Trait,p117,yes,implicit: meanings only (carnivorous/omnivorous),key,selector failure,header-word gate: variable not named,R2: no header word,16,restored by the safe strip
+key,Wang2021,t1c5 Wing Morphology,p117,yes,implicit: meanings only (macropterous/brachypterous),key,selector failure,header-word gate: variable not named,R2: no header word,16,restored by the safe strip
+calibration,Eckert2023,t4c3 Habitat position,t4r70/t4r134,yes,implicit: own table's abbreviation footnote,by eye: yes,selector failure,header-word gate: variable not named; also c flags the header (frozen names hold 'habitat position'),R2: no header word,,
+calibration,Cecala2021,t1c1-t1c7 seasons (7 columns),Table S2 caption,yes,implicit: own table's caption ('sampling schedule'); headers are seasons,by eye: yes,selector failure,"header-word gate; explicit test misses 'A ""1"" indicates'",R2: no header word,,rerun found the full caption
+calibration,Viza2023,t5c3-t5c7 predictors (5 columns),t5r87,yes,named (distribution codes for GLM),by eye: yes,selector failure,"column filter: 'x' counted as an empty mark, so 1 value left",column not enumerated,,'x' is also BRT's selection mark in the same cells: ambiguous
+key,Taillefer2018,"t8c4,t8c9,t13c8,t15c3,t15c10 (5 columns)",p152-p159,yes,named ('Voltinism:' etc.),key,upstream,"table split over 11 page tables, header only on t7; t7 header holds the family row (taxon flag) and 1 value",R2: no header word,109,restored by the safe strip; Spe/Gen has no informative word even with the header
+key,Tonelli2021,t7c13 Nesting patterns,p159,partly,heading separate,key,upstream,boundary (known queue),R2: no header word,58,
+key,Tonelli2021,t7c18 Phenology,p165,yes,heading separate,key,upstream,boundary (known queue),R2: no header word,58,
+key,Wallon2024,t24c14 Dispersal,definitions table / captions,yes,named ('Dispersal'),key,upstream,header printed glued 'Dispersaldisp',R2: no header word,16,
+calibration,Cappellari2022,t0c0 Category,Fig. 4 caption,partly,generic header,by eye: yes,upstream,caption split at a page break (known queue); header 'Category' generic,R2: no header word,,
+calibration,Espinosa2023,variable-name columns (t12c1 etc.),Fig. 6 caption,yes,named,by eye: weak (variable-name columns),upstream,PDF text lost the separators ('Condelectrical'); caption broken by a table,a: no code next to a meaning,,R2 passes
+key,Vidal2023,"t11c9,c10,c11,c14,t12c5,t12c6 (6 columns)",various,no,,key,not a target,codes never defined; chance co-occurrence,,,
+key,Fiedler2021,"t7c2, t7c15",various,no,,key,not a target,binary convention / count column; chance,,,
+key,Normandin2017,t8c4 Lecty,table rows,no,,key,not a target,"paper prints '(oligolectic, polylectic)' with no codes",,,
+key,Wallon2024,"t28c5, t28c11",p253,no,,key,not a target,one-hot presence columns; legend defines headers,,,
+named,Cajaiba2022/Ji2024/Kratschmer2019/Viza2023/Cao2024,none,restored or caption units,yes,,no column holds the codes,not a target,"header abbreviations, category words or header labels",,,

@@ -1,0 +1,1091 @@
+R3abc missed-target diagnosis, 82 tuning papers, old cut (production text) and safe cut (dk.SAFE_TAGS); no model calls; R3abc frozen
+45 papers have no coded key column and no named case and are not traced
+
+trace agreement with la.variant: old 0 disagreements, safe 0 disagreements
+
+A. GT-ANCHORED: CODED COLUMNS OF THE DECODING KEY (condition 2 verified by the key)
+
+  old cut: 78 coded key columns in 32 papers
+    covered                                                     31 columns  5006 species
+    covered, some pairs in no linked unit                        4 columns   826 species
+    missed                                                      21 columns  1251 species
+    no defining unit (only its own table's rows print pairs)     3 columns   143 species
+    no printed pair                                             19 columns  1156 species
+    missed columns by the first failing gate of their best defining unit: R2: no informative header word in the unit 17; R2: one code, no distinctive code, no header word 2; a: no code printed next to a meaning 1; R2: one code, no distinctive code 1
+
+  safe cut: 78 coded key columns in 32 papers
+    covered                                                     31 columns  5006 species
+    covered, some pairs in no linked unit                        4 columns   826 species
+    missed                                                      26 columns  1341 species
+    no defining unit (only its own table's rows print pairs)     3 columns   143 species
+    no printed pair                                             14 columns  1066 species
+    missed columns by the first failing gate of their best defining unit: R2: no informative header word in the unit 22; R2: one code, no distinctive code, no header word 2; a: no code printed next to a meaning 1; R2: one code, no distinctive code 1
+
+  old -> safe, columns whose outcome changes:
+    Taillefer2018 t13c8 'Voltinism': no printed pair -> missed
+    Taillefer2018 t8c9 'Overwintering stage': no printed pair -> missed
+    Taillefer2018 t15c10 'Specialization': no printed pair -> missed
+    Wang2021 t1c4 'Feeding Trait': no printed pair -> missed
+    Wang2021 t1c5 'Wing Morphology': no printed pair -> missed
+
+  safe cut, every column not covered (best defining units traced):
+  - Cao2024 t7c2 'Functional feeding guild' [held_a]: covered, some pairs in no linked unit; 79 species; printed 5 of 5 coded pairs; defining units 11; own-table rows printing pairs 0
+      pairs {'Prd': 'Predators', 'Shr': 'Shredders', 'CG': 'Collector-gatherers', 'CF': 'Collector-filterers', 'Scr': 'Scrapers'}
+      where {'Prd': 'dictionary table', 'Shr': 'dictionary table', 'CG': 'dictionary table', 'CF': 'dictionary table', 'Scr': 'dictionary table'}
+      R3abc links the column to ['p73', 'p75', 'p363', 'p364', 't2r1']; covered pairs ['CG', 'Shr']
+      unit p73 [prose, 2 shapes; near {'next': (5, 4617), 'prev': (4, 638)}] prints ['CG']: 'For functional traits, M15 was the most common morphological type and the abundance was 34.6 % on average. Collector-gatherers (CG) was the most common functional feeding group, and sprawlers occupied nearly 40 % across four habit types. Th'
+        SELECTED; first failing gate: selected
+        header 'Functional feeding guild'; enumerated; 5 values ['CF', 'CG', 'Prd', 'Scr', 'Shr']
+        codes ['CF', 'CG', 'Prd', 'Scr', 'Shr']; in the unit ['CG'] (strict ['CG']), distinctive ['CG'], header words ['feed', 'functional'], next to a meaning ['CG']
+      unit p201 [prose, 0 shapes; near {'next': (7, 42149), 'prev': (6, 47691)}] prints ['Prd', 'Shr', 'CF']: 'Collector-filterers CF Shredders Shr Predators Prd'
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Functional feeding guild'; enumerated; 5 values ['CF', 'CG', 'Prd', 'Scr', 'Shr']
+        codes ['CF', 'CG', 'Prd', 'Scr', 'Shr']; in the unit ['CF', 'Prd', 'Shr'] (strict ['CF', 'Prd', 'Shr']), distinctive ['CF'], header words [], next to a meaning []
+      unit p208 [prose, 0 shapes; near {'next': (7, 42001), 'prev': (6, 47839)}] prints ['Scr']: 'Scrapers Scr'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header 'Functional feeding guild'; enumerated; 5 values ['CF', 'CG', 'Prd', 'Scr', 'Shr']
+        codes ['CF', 'CG', 'Prd', 'Scr', 'Shr']; in the unit ['Scr'] (strict ['Scr']), distinctive [], header words [], next to a meaning []
+  - Lizee2016 t6c4 'Voltinism' [dev]: covered, some pairs in no linked unit; 12 species; printed 4 of 4 coded pairs; defining units 25; own-table rows printing pairs 10
+      pairs {'TG': 'multivoltine', 'SeG': 'bivoltine', 'RS': 'multivoltine', 'TS': 'univoltine'}
+      where {'TG': 'same sentence', 'SeG': 'same sentence', 'RS': 'same sentence', 'TS': 'same sentence'}
+      R3abc links the column to ['p43']; covered pairs ['RS', 'SeG', 'TG']
+      unit p43 [prose, 12 shapes; near {'next': (0, 11766), 'prev': None}] prints ['TG', 'SeG', 'RS']: 'Recorded species were characterised following the functional classification of Kitahara and Fujii (1994, 1997). On the basis of resource utilisation patterns by species, these authors proposed a classification according to 2 fundamental nic'
+        SELECTED; first failing gate: selected
+        header 'Functional group'; enumerated; 4 values ['RS', 'SeG', 'TG', 'TS']
+        codes ['RS', 'SeG', 'TG', 'TS']; in the unit ['RS', 'SeG', 'TG', 'TS'] (strict ['RS', 'SeG', 'TG', 'TS']), distinctive ['RS', 'SeG', 'TG', 'TS'], header words ['functional'], next to a meaning ['SeG', 'TS', 'RS', 'TG']
+  - Teder2020 t6c6 'Overwintering stage' [dev]: covered, some pairs in no linked unit; 698 species; printed 6 of 7 coded pairs; defining units 2; own-table rows printing pairs 0
+      pairs {'E': 'egg', 'P': 'pupa', 'L': 'larva', 'A': 'adult', 'LP': 'larva', 'EL': 'egg larva', 'AP': 'adult within pupal case'}
+      where {'E': 'definition: CODE: term / CODE = term', 'P': 'definition: CODE: term / CODE = term', 'L': 'definition: CODE: term / CODE = term', 'A': 'definition: CODE: term / CODE = term', 'LP': 'same sentence', 'EL': 'not in the paper', 'AP': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to ['p103']; covered pairs ['A', 'AP', 'E', 'L', 'P']
+      unit p103 [prose, 16 shapes, next to the column's own table; near {'next': None, 'prev': (6, 35)}] prints ['E', 'P', 'L', 'A', 'AP']: 'Data used in OIK-07119. Abbreviations: size = adult wing span; overwintering stage: E = egg, L = larva, P = pupa, A = adult, AP = adult within pupal case (classified as adult overwinterers in the analysis); host type: W = woody plants (spec'
+        SELECTED; first failing gate: selected
+        header 'Overwintering stage'; enumerated; 7 values ['A', 'AP', 'E', 'EL', 'L', 'LP', 'P']
+        codes ['A', 'AP', 'E', 'EL', 'L', 'LP', 'P']; in the unit ['A', 'AP', 'E', 'L', 'P'] (strict ['A', 'AP', 'E', 'L', 'P']), distinctive ['AP'], header words ['overwinter', 'stage'], next to a meaning ['E', 'P', 'AP', 'L', 'A']
+  - Vidal2023 t12c4 'Nesting site' [dev]: covered, some pairs in no linked unit; 37 species; printed 2 of 4 coded pairs; defining units 51; own-table rows printing pairs 0
+      pairs {'0.0': 'Ground', '2.0': 'Snail shells', '3.0': 'Hives', '1.0': 'Wood'}
+      where {'0.0': 'definition: CODE term', '2.0': 'term only (prose)', '3.0': 'term only (prose)', '1.0': 'same sentence'}
+      R3abc links the column to ['p80']; covered pairs ['0.0']
+      unit p80 [prose, 2 shapes; near {'next': (0, 7840), 'prev': None}] prints ['0.0']: 'Given the regional scale of our study, we gathered information on the environmental characteristics of each study area. The resulting set of variables was used as covariables in the analyses (Dataset S1, spreadsheets data.ants and data.bees'
+        SELECTED; first failing gate: selected
+        header 'nest_site'; enumerated; 4 values ['0.0', '1.0', '2.0', '3.0']
+        codes ['0', '1', '2', '3']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words ['nest'], next to a meaning ['2']
+      unit p46 [numbered list, 2 shapes; near {'next': (0, 22895), 'prev': None}] prints ['1.0']: 'To select our study areas, we used databases provided by the Environmental Information Network of Andalusia (Junta de Andalucía REDIAM, 2022). Specifically, we employed two databases that contain records of fires in the region: one contains'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'nest_site'; enumerated; 4 values ['0.0', '1.0', '2.0', '3.0']
+        codes ['0', '1', '2', '3']; in the unit ['1', '2', '3'] (strict ['1', '2', '3']), distinctive [], header words [], next to a meaning ['1', '2', '3']
+  - AmbspergTraun1991 t0c4 'Feeding group' [held_a]: missed; 16 species; printed 4 of 4 coded pairs; defining units 2; own-table rows printing pairs 0
+      pairs {'W': 'Wood', 'S': 'Soil', 'W/S': 'Wood/soil interface', 'P': 'Polyphagous'}
+      where {'W': 'definition: CODE, term', 'S': 'definition: CODE, term', 'W/S': 'definition: CODE, term', 'P': 'definition: CODE, term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p37 [prose, 9 shapes, next to the column's own table; near {'next': (1, 3434), 'prev': (0, 2)}] prints ['W', 'S', 'W/S', 'P']: '†P, polyphagous; S, soil; W, wood; W/S, wood/soil interface. ‡A, arboreal; H, hypogeal; M, mound; M(O), found in mounds of other termites; W, wood. §B, bait; LDW, lying dead wood; M, mound; SDW, standing dead wood.'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Feeding group† / Mastotermitidae'; enumerated; 4 values ['P', 'S', 'W', 'W/S']
+        codes ['P', 'S', 'W']; in the unit ['P', 'S', 'W'] (strict ['P', 'S', 'W']), distinctive [], header words [], next to a meaning ['W', 'S', 'P']
+      unit p84 [prose, 0 shapes; near {'next': None, 'prev': (4, 4525)}] prints ['S']: 'The results of the current study only partially support the a priori predictions for termite feeding groups at CDNP, based on the work of Braithwaite et al. (1988). Wood and soil feeders were the dominant feeding groups in Kakadu savanna wo'
+        not selected; first failing gate: R2: one code, no distinctive code
+        header 'Feeding group† / Mastotermitidae'; enumerated; 4 values ['P', 'S', 'W', 'W/S']
+        codes ['P', 'S', 'W']; in the unit ['S'] (strict ['S']), distinctive [], header words ['feed'], next to a meaning ['S']
+  - AmbspergTraun1991 t0c5 'Nesting group' [held_a]: missed; 16 species; printed 5 of 6 coded pairs; defining units 4; own-table rows printing pairs 0
+      pairs {'W': 'Wood', 'M': 'Mound', 'H': 'Hypogeal', 'M(O)': 'Found in mounds of other termites', 'H, M(O)': 'Hypogeal', 'A': 'Arboreal'}
+      where {'W': 'definition: CODE, term', 'M': 'definition: CODE, term', 'H': 'definition: CODE, term', 'M(O)': 'definition: CODE, term', 'H, M(O)': 'term only (prose)', 'A': 'definition: CODE, term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p37 [prose, 9 shapes, next to the column's own table; near {'next': (1, 3434), 'prev': (0, 2)}] prints ['W', 'M', 'H', 'M(O)', 'A']: '†P, polyphagous; S, soil; W, wood; W/S, wood/soil interface. ‡A, arboreal; H, hypogeal; M, mound; M(O), found in mounds of other termites; W, wood. §B, bait; LDW, lying dead wood; M, mound; SDW, standing dead wood.'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Nesting group‡ / Mastotermitidae'; enumerated; 6 values ['A', 'H', 'H, M(O)', 'M', 'M(O)', 'W']
+        codes ['A', 'H', 'M', 'W']; in the unit ['A', 'H', 'M', 'W'] (strict ['A', 'H', 'M', 'W']), distinctive [], header words [], next to a meaning ['A', 'H', 'W', 'M']
+      unit p90 [prose, 1 shapes; near {'next': None, 'prev': (4, 7530)}] prints ['A']: 'The termite nesting habits documented at CDNP did support the a priori predictions based on the work of Braithwaite et al. (1988). At CDNP epigeal- and hypogeal-nesting species were dominant. Epigeal-nesting species were the most common fol'
+        not selected; first failing gate: R2: one code, no distinctive code
+        header 'Nesting group‡ / Mastotermitidae'; enumerated; 6 values ['A', 'H', 'H, M(O)', 'M', 'M(O)', 'W']
+        codes ['A', 'H', 'M', 'W']; in the unit ['A'] (strict ['A']), distinctive [], header words ['nest'], next to a meaning ['A']
+      unit p47 [prose, 0 shapes; near {'next': (1, 1297), 'prev': (0, 2139)}] prints ['M']: 'The direct searches produced 93 (80 with soldiers) of the 112 termite collections, including 14 of the 16 termite species sampled. Nasutitermes eucalypti accounted for 36% of the samples (Table 1). Five species, Amitermes perelegans, Ephelo'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word
+        header 'Nesting group‡ / Mastotermitidae'; enumerated; 6 values ['A', 'H', 'H, M(O)', 'M', 'M(O)', 'W']
+        codes ['A', 'H', 'M', 'W']; in the unit ['M'] (strict ['M']), distinctive [], header words [], next to a meaning ['M']
+  - Cappellari2022 t3c4 'Foraging range' [dev]: missed; 325 species; printed 2 of 2 coded pairs; defining units 3; own-table rows printing pairs 0
+      pairs {'NC': 'non-central-place forager', 'C': 'central-place forager'}
+      where {'NC': 'definition: CODE term', 'C': 'definition: CODE term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p125 [caption, 3 shapes; near {}] prints ['NC', 'C']: 'Table S4 Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and '
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Foraging'; enumerated; 2 values ['C', 'NC']
+        codes ['C', 'NC']; in the unit ['C', 'NC'] (strict ['C', 'NC']), distinctive ['NC'], header words [], next to a meaning []
+      unit p124 [caption, 2 shapes; near {}] prints ['NC', 'C']: 'Table S3 Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (C central-place forager, NC non-cent'
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Foraging'; enumerated; 2 values ['C', 'NC']
+        codes ['C', 'NC']; in the unit ['C', 'NC'] (strict ['C', 'NC']), distinctive ['NC'], header words ['forag'], next to a meaning []
+      unit p82 [prose, 0 shapes; near {'next': (1, 26724), 'prev': (0, 2635)}] prints ['C']: 'For Model 5, six models had a $\\Delta \\mathrm { A I C c } < 6$ (Table S8c). Again, only the trait category strongly affected resource overlap between wild pollinator community and the honeybee (Fig. 4c), i.e., central-place foragers showed '
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header 'Foraging'; enumerated; 2 values ['C', 'NC']
+        codes ['C', 'NC']; in the unit ['C'] (strict ['C']), distinctive [], header words [], next to a meaning []
+  - Espinosa2023 t7c4 'Presence of opercular gill' [dev]: missed; 27 species; printed 2 of 2 coded pairs; defining units 2; own-table rows printing pairs 0
+      pairs {'og': 'opercular gill', 'nog': 'non-opercular gill'}
+      where {'og': 'definition: term (CODE)', 'nog': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p136 [caption, 4 shapes; near {}] prints ['og', 'nog']: 'Table S8. Results of Fourth-corner analysis showing the relationships between environmental variables and traits for Ephemeroptera genera. Environmental variables: electrical conductivity (Cond), chemical oxygen demand (COD), total iron (Ir'
+        not selected; first failing gate: R2: one code, no distinctive code
+        header 'Traits / Presence of opercular gill'; enumerated; 2 values ['nog', 'og']
+        codes ['og']; in the unit ['og'] (strict ['og']), distinctive [], header words ['gill', 'opercular'], next to a meaning ['og']
+      unit p131 [caption, 1 shapes; near {}] prints ['og', 'nog']: 'Table S3. Table of morphological (quantitative) and ecological (qualitative) traits of Ephemeroptera genera used in the data analysis; opercular gill (og), nog: non-opercular gill size.'
+        not selected; first failing gate: R2: one code, no distinctive code
+        header 'Traits / Presence of opercular gill'; enumerated; 2 values ['nog', 'og']
+        codes ['og']; in the unit ['og'] (strict ['og']), distinctive [], header words ['gill', 'opercular'], next to a meaning ['og']
+  - Fiedler2021 t7c15 'Associated ants' [held_a]: missed; 7 species; printed 4 of 4 coded pairs; defining units 93; own-table rows printing pairs 93
+      pairs {'2': 'Crematogaster sp.', '1': 'Crematogaster sp.', '5': 'Myrmica scabrinodis, Crematogaster auberti, Lasius alienus, Lasius grandis, Camponotus aethiops, Camponotus piceus, Formica nr. rufibarbis, Formica nr. cunicularia', '3': 'Formica sp., Lasius nr. fuliginosus, Lasius emarginatus, Crematogaster scutellaris'}
+      where {'2': 'definition: CODE term', '1': 'definition: CODE term', '5': 'definition: CODE term', '3': 'definition: CODE term'}
+      R3abc links the column to ['p33', 'p47', 'p78', 'p99', 'p115']; covered pairs none
+      unit t6r76 [table row, 0 shapes; near {'table': 6}] prints ['2', '1']: 'Arhopala | thamyras | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | Crematogaster sp., Oecophylla smaragdina | Igarashi & Fukuda 1997, Tennent 2002'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'number_associated_ant_genera'; enumerated; 14 values ['1', '10', '11', '12', '13', '15', '2', '3', '4', '5']
+        codes ['1', '10', '11', '12', '13', '15', '2', '3', '4', '5', '6', '7']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['2']
+      unit t6r86 [table row, 0 shapes; near {'table': 6}] prints ['2', '1']: 'Axiocerses | harpax | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 2 | Crematogaster sp., Pheidole sp. | Jackson 1947, van Someren 1974'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'number_associated_ant_genera'; enumerated; 14 values ['1', '10', '11', '12', '13', '15', '2', '3', '4', '5']
+        codes ['1', '10', '11', '12', '13', '15', '2', '3', '4', '5', '6', '7']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['2']
+      unit t6r204 [table row, 0 shapes; near {'table': 6}] prints ['2', '1']: 'Deudorix | smilis | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 2 | Oecophylla smaragdina, Crematogaster sp. | Eastwood & Fraser 1999, Eastwood et al. 2008, Braby 2016'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'number_associated_ant_genera'; enumerated; 14 values ['1', '10', '11', '12', '13', '15', '2', '3', '4', '5']
+        codes ['1', '10', '11', '12', '13', '15', '2', '3', '4', '5', '6', '7']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['2']
+  - Fiedler2021 t7c2 'Obligate myrmecophile' [held_a]: missed; 7 species; printed 1 of 2 coded pairs; defining units 288; own-table rows printing pairs 266
+      pairs {'0': 'Yes', '1': 'No'}
+      where {'0': 'not in the paper (binary convention)', '1': 'definition: CODE term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p95 [prose, 10 shapes; near {'next': (7, 45293), 'prev': (6, 10332)}] prints ['1']: '- Douglas, F., & Braby, M.F. (1992). Notes on the distribution and biology of some Hesperiidae and Lycaenidae (Lepidoptera) in Victoria. Australian Entomologist, 19(4), 117-124. - Downey, J.C. (1962). Myrmecophily in Plebejus (Icaricia) ica'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word
+        header 'Palaearctic'; enumerated; 2 values ['0', '1']
+        codes ['0', '1']; in the unit ['1'] (strict ['1']), distinctive [], header words [], next to a meaning ['1']
+      unit p91 [prose, 9 shapes; near {'next': (7, 52211), 'prev': (6, 3414)}] prints ['1']: '- Basu, D.N., Churi, P., Soman, A., Sengupta, A., Bhakare, M., Lokhande, S., Bhoite, S., Huertas, B., & Kunte, K. (2019). The genus Tarucus Moore, [1881] (Lepidoptera: Lycaenidae) in the Indian Subcontinent. Tropical Lepidoptera Research, 2'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header 'Palaearctic'; enumerated; 2 values ['0', '1']
+        codes ['0', '1']; in the unit ['1'] (strict ['1']), distinctive [], header words [], next to a meaning []
+      unit p105 [prose, 6 shapes; near {'next': (7, 27197), 'prev': (6, 28428)}] prints ['1']: '- Kontuniemi, T. (1945). Wie überwintert Glaucopsyche alexis Poda f. schneideri Strand (Lep., Lycaenidae)? Annales Entomologicae Fennicae, 11, 124. - Korb, S.K. (1998). To the study of the associations of Formicidae (Hymenoptera) and Lycaen'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header 'Palaearctic'; enumerated; 2 values ['0', '1']
+        codes ['0', '1']; in the unit ['1'] (strict ['1']), distinctive [], header words [], next to a meaning []
+  - Graf2021 t8c2 'Nesting site' [dev]: missed; 254 species; printed 2 of 2 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'G': 'ground', 'A': 'above ground'}
+      where {'G': 'definition: (CODE) term', 'A': 'definition: (CODE) term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p141 [prose, 9 shapes, next to the column's own table; near {'next': (8, 324), 'prev': (7, 2)}] prints ['G', 'A']: 'Online Resource 5. Bee species and their functional traits in the city of Curitiba, Southern Brazil. Behavior: (SO) solitary, (P_E) primitively eussocial, (A_E) highly eusocial, (CL) cleptoparasitic. Nidification: (G) ground, (A) above grou'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Nesting site'; enumerated; 3 values ['A', 'G', 'Nesting site']
+        codes ['A', 'G']; in the unit ['A', 'G'] (strict ['A', 'G']), distinctive [], header words [], next to a meaning ['A', 'G']
+  - Normandin2017 t8c4 'Lecty' [held_a]: missed; 34 species; printed 2 of 2 coded pairs; defining units 4; own-table rows printing pairs 0
+      pairs {'P': 'Polylectic', 'O': 'Oligolectic'}
+      where {'P': 'same sentence', 'O': 'same sentence'}
+      R3abc links the column to no unit; covered pairs none
+      unit t12r127 [table row, 0 shapes; near {'table': 12}] prints ['P']: 'P.PARVUS | excavator:ground | 1.73 | Solitary | Leg&body | short | Polylectic | summer'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header 'Pollen specificity'; enumerated; 2 values ['O', 'P']
+        codes ['O', 'P']; in the unit ['P'] (strict ['P']), distinctive [], header words [], next to a meaning []
+      unit t12r128 [table row, 0 shapes; near {'table': 12}] prints ['P']: 'P.RUDBECKIAE | excavator:ground | 1.46 | Solitary | Leg&body | short | Polylectic | summer'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header 'Pollen specificity'; enumerated; 2 values ['O', 'P']
+        codes ['O', 'P']; in the unit ['P'] (strict ['P']), distinctive [], header words [], next to a meaning []
+      unit t12r129 [table row, 0 shapes; near {'table': 12}] prints ['P']: 'P.ANDRENOIDES | excavator:ground | 1.56 | Solitary | Leg&body | short | Polylectic | summer'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header 'Pollen specificity'; enumerated; 2 values ['O', 'P']
+        codes ['O', 'P']; in the unit ['P'] (strict ['P']), distinctive [], header words [], next to a meaning []
+  - Taillefer2018 t13c8 'Voltinism' [dev]: missed; 9 species; printed 2 of 2 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'U': 'Univoltine', 'M': 'Bivoltine'}
+      where {'U': 'definition: CODE: term / CODE = term', 'M': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p157 [prose, 2 shapes; near {'next': (7, 384), 'prev': (6, 54240)}] prints ['U', 'M']: 'Voltinism: U: univoltine, M: bivoltine/ multivoltine.'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'NA'; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+  - Taillefer2018 t15c10 'Specialization' [dev]: missed; 25 species; printed 3 of 3 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'F': 'Facultative', 'O': 'Obligate', 'A': 'Amphibious'}
+      where {'F': 'definition: CODE: term / CODE = term', 'O': 'definition: CODE: term / CODE = term', 'A': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p159 [prose, 3 shapes; near {'next': (7, 250), 'prev': (6, 54374)}] prints ['F', 'O', 'A']: 'Specializ: Specialization – O: obligate (specialist found exclusively in wetlands), A: amphibious (at least part of their life cycle in wetlands and remainder in terrestrial system), F: facultative (occasionally found in wetlands for water '
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'NA'; enumerated; 3 values ['A', 'F', 'O']
+        codes ['A', 'F', 'O']; in the unit ['A', 'F', 'O'] (strict ['A', 'F', 'O']), distinctive [], header words [], next to a meaning ['A', 'F', 'O']
+  - Taillefer2018 t15c3 'Feeding' [dev]: missed; 26 species; printed 2 of 2 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'G': 'Generalist', 'S': 'Specialist'}
+      where {'G': 'same sentence', 'S': 'same sentence'}
+      R3abc links the column to no unit; covered pairs none
+      unit p152 [prose, 2 shapes; near {'next': (7, 1006), 'prev': (6, 53618)}] prints ['G', 'S']: 'Spe/Gen: Specialist/ Generalist – S: feed on one genus/type of plant, animal or substrate, G'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'NA'; enumerated; 2 values ['G', 'S']
+        codes ['G', 'S']; in the unit ['G', 'S'] (strict ['G', 'S']), distinctive [], header words [], next to a meaning ['S']
+  - Taillefer2018 t8c4 'Habitat pref' [dev]: missed; 25 species; printed 3 of 3 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'L': 'Lentic', 'T': 'Terrestrial', 'M': 'Moist'}
+      where {'L': 'definition: CODE: term / CODE = term', 'T': 'definition: CODE: term / CODE = term', 'M': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p153 [prose, 4 shapes; near {'next': (7, 912), 'prev': (6, 53712)}] prints ['L', 'T', 'M']: 'Habitat pref: Habitat preference for oviposition – M: moist, L: lentic, T: terrestrial'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Tephritidae' [taxon header]; enumerated; 3 values ['L', 'M', 'T']
+        codes ['L', 'M', 'T']; in the unit ['L', 'M', 'T'] (strict ['L', 'M', 'T']), distinctive [], header words [], next to a meaning ['L', 'T', 'M']
+  - Taillefer2018 t8c9 'Overwintering stage' [dev]: missed; 24 species; printed 3 of 3 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'A': 'Adults', 'L': 'Larvae', 'P': 'Pupae'}
+      where {'A': 'definition: CODE: term / CODE = term', 'L': 'definition: CODE: term / CODE = term', 'P': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p158 [prose, 4 shapes; near {'next': (7, 329), 'prev': (6, 54295)}] prints ['A', 'L', 'P']: 'Overwin stage: Overwintering stage – E: eggs, L: larvae, P: pupae, A: adults.'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Tephritidae' [taxon header]; enumerated; 3 values ['A', 'L', 'P']
+        codes ['A', 'L', 'P']; in the unit ['A', 'L', 'P'] (strict ['A', 'L', 'P']), distinctive [], header words [], next to a meaning ['L', 'A', 'P']
+  - Tonelli2021 t7c13 'Nesting Patterns' [dev]: missed; 58 species; printed 1 of 6 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'11': 'No-nest building: eggs are laid within dung pat without brood ball construction (i.e., Aphodius, Trichillum, Pedaridium, etc.)', '8': 'Paracoprid 4: small body size species burying dung slowly and at shallow depth (≤ 10 cm) without well-developed brood mass (i.e., Aphodius)', '5': 'Paracoprid 1: large body size species burying dung rapidly and at great depth (≥ 50 cm) (i.e., Copris, Bubas, etc.)', '7': 'Paracoprid 3: small body size species burying dung slowly and at shallow depth (≤ 30 cm) with well-developed brood mass (i.e., Onthophagus)', '10': 'Cleptocoprid: use of brood masses/balls of other species (i.e., Aphodius sensu lato, On- thophagus sensu lato, Caccobius sensu lato, etc.);', '2': 'Telecoprid 2: medium-little sized beetles which produce brood balls and show a high interaction with the excrement (i.e., Gymnopleurus, Sisyphus, Canthon etc.)'}
+      where {'11': 'term only (prose)', '8': 'term only (prose)', '5': 'term only (prose)', '7': 'term only (prose)', '10': 'not in the paper', '2': 'same sentence'}
+      R3abc links the column to ['p85', 'p100', 'p152', 'p162']; covered pairs none
+      unit p159 [numbered list, 9 shapes; near {'next': (7, 18550), 'prev': (6, 2482)}] prints ['2']: '1. Telecoprid 1: large-sized beetles which produce brood balls and show a high interaction with the excrement (i.e., Scarabaeus, Kheper, Malagoniella, Megathopa etc.); 2. Telecoprid 2: medium-little sized beetles which produce brood balls a'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Nesting patterns (see supplementary material S1 for details)'; enumerated; 6 values ['10', '11', '2', '5', '7', '8']
+        codes ['10', '11', '2', '5', '7', '8']; in the unit ['10', '2', '5', '7', '8'] (strict ['10', '2', '5', '7', '8']), distinctive [], header words [], next to a meaning ['5', '8', '2', '7']
+  - Tonelli2021 t7c18 'Phenology' [dev]: missed; 58 species; printed 6 of 8 coded pairs; defining units 4; own-table rows printing pairs 0
+      pairs {'7': 'Spring, summer and autumn', '2': 'Winter and spring', '1': 'Autumn, winter and spring', '5': 'Spring and summer', '14': 'All year', '3': 'Spring', '8': 'Summer and autumn', '11': 'Autumn'}
+      where {'7': 'term only (prose)', '2': 'same sentence', '1': 'same sentence', '5': 'term only (prose)', '14': 'same sentence', '3': 'same sentence', '8': 'same sentence', '11': 'same sentence'}
+      R3abc links the column to no unit; covered pairs none
+      unit p165 [numbered list, 0 shapes; near {'next': (7, 16605), 'prev': (6, 4427)}] prints ['2', '1', '14', '3', '8', '11']: '1. Autumn, winter and spring; 2. Winter and spring; 3. Spring; 4. Winter, spring and summer; 5. Spring and summer; 6. Summer; 7. Spring, summer and autumn; 8. Summer and autumn; 9. Summer, autumn and winter; 10. Spring and autumn; 11. Autum'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Phenology'; enumerated; 8 values ['1', '11', '14', '2', '3', '5', '7', '8']
+        codes ['1', '11', '14', '2', '3', '5', '7', '8']; in the unit ['1', '11', '14', '2', '3', '5', '7', '8'] (strict ['1', '11', '14', '2', '3', '5', '7', '8']), distinctive [], header words [], next to a meaning ['3', '14', '5', '1', '8', '2', '7', '11']
+      unit t5r21 [table row, 0 shapes; near {'table': 5}] prints ['1']: 'Phenology 1 (Autumn, winter and spring) | X'
+        not selected; first failing gate: R2: one code, no distinctive code (also: a: no code printed next to a meaning)
+        header 'Phenology'; enumerated; 8 values ['1', '11', '14', '2', '3', '5', '7', '8']
+        codes ['1', '11', '14', '2', '3', '5', '7', '8']; in the unit ['1'] (strict ['1']), distinctive [], header words ['phenology'], next to a meaning []
+      unit t5r22 [table row, 0 shapes; near {'table': 5}] prints ['8']: 'Phenology 8 (Summer and autumn) | X'
+        not selected; first failing gate: R2: one code, no distinctive code (also: a: no code printed next to a meaning)
+        header 'Phenology'; enumerated; 8 values ['1', '11', '14', '2', '3', '5', '7', '8']
+        codes ['1', '11', '14', '2', '3', '5', '7', '8']; in the unit ['8'] (strict ['8']), distinctive [], header words ['phenology'], next to a meaning []
+  - Vidal2023 t11c10 'Insects in diet' [dev]: missed; 61 species; printed 1 of 2 coded pairs; defining units 14; own-table rows printing pairs 28
+      pairs {'1.0': 'Yes', '0.0': 'No'}
+      where {'1.0': 'not in the paper (binary convention)', '0.0': 'definition: CODE term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p98 [caption, 12 shapes; near {'next': (0, 670), 'prev': None}] prints ['0.0']: 'Table 1 Effects of fire and time since fire on the taxonomic community structure of ants (a) and bees (b); and on the functional community structure of ants (c) and bees (d). Metrics are A = abundance, S = richness, H = Shannon diversity in'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'insects'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      unit p125 [prose, 9 shapes; near {'next': (2, 64506), 'prev': (1, 754)}] prints ['0.0']: 'There were no significant effects of fire on the functional composition of ant communities (fire: $\\mathrm{F}=0.24,p=0.58;$ time: $F = 2.88, p = 0.16;$ and interaction: $\\mathrm { F } = 1 . 5 3 , p = 0 . 0 9 )$ . The same was mostly true fo'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'insects'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      unit p113 [prose, 7 shapes; near {'next': (1, 2696), 'prev': (0, 5842)}] prints ['0.0']: 'The taxonomic community composition of ants was significantly influenced by fire, time since fire, and their interaction (fire: $\\mathtt { F } = 2 . 3 8 , p =$ 0.001, $\\mathtt { R } ^ { 2 } = 0 . 0 2 ;$ time: F = 3.98, p = 0.001, R 2 = 0.05'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'insects'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+  - Vidal2023 t11c11 'Sugary liquids in diet' [dev]: missed; 61 species; printed 1 of 2 coded pairs; defining units 14; own-table rows printing pairs 28
+      pairs {'0.0': 'No', '1.0': 'Yes'}
+      where {'0.0': 'definition: CODE term', '1.0': 'not in the paper (binary convention)'}
+      R3abc links the column to no unit; covered pairs none
+      unit p98 [caption, 12 shapes; near {'next': (0, 670), 'prev': None}] prints ['0.0']: 'Table 1 Effects of fire and time since fire on the taxonomic community structure of ants (a) and bees (b); and on the functional community structure of ants (c) and bees (d). Metrics are A = abundance, S = richness, H = Shannon diversity in'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'liquids'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      unit p125 [prose, 9 shapes; near {'next': (2, 64506), 'prev': (1, 754)}] prints ['0.0']: 'There were no significant effects of fire on the functional composition of ant communities (fire: $\\mathrm{F}=0.24,p=0.58;$ time: $F = 2.88, p = 0.16;$ and interaction: $\\mathrm { F } = 1 . 5 3 , p = 0 . 0 9 )$ . The same was mostly true fo'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'liquids'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      unit p113 [prose, 7 shapes; near {'next': (1, 2696), 'prev': (0, 5842)}] prints ['0.0']: 'The taxonomic community composition of ants was significantly influenced by fire, time since fire, and their interaction (fire: $\\mathtt { F } = 2 . 3 8 , p =$ 0.001, $\\mathtt { R } ^ { 2 } = 0 . 0 2 ;$ time: F = 3.98, p = 0.001, R 2 = 0.05'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'liquids'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+  - Vidal2023 t11c14 'Degree of worker polymorphism' [dev]: missed; 61 species; printed 1 of 3 coded pairs; defining units 5; own-table rows printing pairs 0
+      pairs {'1.0': 'Low', '3.0': 'High', '2.0': 'Medium'}
+      where {'1.0': 'same sentence', '3.0': 'term only (prose)', '2.0': 'term only (prose)'}
+      R3abc links the column to no unit; covered pairs none
+      unit p40 [numbered list, 5 shapes; near {'next': (0, 24960), 'prev': None}] prints ['1.0']: 'The objective of our study was to assess the effects of fire and time since fire on two taxonomic groups—ants and bees. We conducted our research along a regional gradient in southern Spain in 35 pine forests that had experienced a wildfire'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'pol'; enumerated; 3 values ['1.0', '2.0', '3.0']
+        codes ['1', '2', '3']; in the unit ['1', '2', '3'] (strict ['1', '2', '3']), distinctive [], header words [], next to a meaning ['1', '3', '2']
+      unit p70 [numbered list, 5 shapes; near {'next': (0, 11945), 'prev': None}] prints ['1.0']: 'All the analyses were performed using R (v. 4.1.3; R Core Team, 2022). First, we characterized the taxonomic structure and composition of the ant and bee communities. We defined ant abundance $( \\mathrm { A _ { a n t s } } )$ as the mean nu'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'pol'; enumerated; 3 values ['1.0', '2.0', '3.0']
+        codes ['1', '2', '3']; in the unit ['1', '2', '3'] (strict ['1', '2', '3']), distinctive [], header words [], next to a meaning ['1', '3', '2']
+      unit p123 [caption, 3 shapes; near {'next': (2, 65258), 'prev': (1, 2)}] prints ['1.0']: 'Fig. 4. Ant species occurrence and time since fire in burned plots. The species are sorted by decreasing order of occurrence $( \\mathrm { m e a n } \\pm \\mathrm { S E } )$ . On the left axis is the total number of occurrences for each specie'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'pol'; enumerated; 3 values ['1.0', '2.0', '3.0']
+        codes ['1', '2', '3']; in the unit ['1', '2', '3'] (strict ['1', '2', '3']), distinctive [], header words [], next to a meaning ['1', '3', '2']
+  - Vidal2023 t11c9 'Seeds in diet' [dev]: missed; 61 species; printed 1 of 2 coded pairs; defining units 14; own-table rows printing pairs 28
+      pairs {'0.0': 'No', '1.0': 'Yes'}
+      where {'0.0': 'definition: CODE term', '1.0': 'not in the paper (binary convention)'}
+      R3abc links the column to no unit; covered pairs none
+      unit p98 [caption, 12 shapes; near {'next': (0, 670), 'prev': None}] prints ['0.0']: 'Table 1 Effects of fire and time since fire on the taxonomic community structure of ants (a) and bees (b); and on the functional community structure of ants (c) and bees (d). Metrics are A = abundance, S = richness, H = Shannon diversity in'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'seeds'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      unit p125 [prose, 9 shapes; near {'next': (2, 64506), 'prev': (1, 754)}] prints ['0.0']: 'There were no significant effects of fire on the functional composition of ant communities (fire: $\\mathrm{F}=0.24,p=0.58;$ time: $F = 2.88, p = 0.16;$ and interaction: $\\mathrm { F } = 1 . 5 3 , p = 0 . 0 9 )$ . The same was mostly true fo'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'seeds'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      unit p113 [prose, 7 shapes; near {'next': (1, 2696), 'prev': (0, 5842)}] prints ['0.0']: 'The taxonomic community composition of ants was significantly influenced by fire, time since fire, and their interaction (fire: $\\mathtt { F } = 2 . 3 8 , p =$ 0.001, $\\mathtt { R } ^ { 2 } = 0 . 0 2 ;$ time: F = 3.98, p = 0.001, R 2 = 0.05'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'seeds'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+  - Vidal2023 t12c5 'Body size' [dev]: missed; 37 species; printed 1 of 4 coded pairs; defining units 2; own-table rows printing pairs 0
+      pairs {'2.0': 'Medium', '1.0': 'Small', '3.0': 'Large', '0.0': 'Very small'}
+      where {'2.0': 'term only (prose)', '1.0': 'same sentence', '3.0': 'term only (prose)', '0.0': 'not in the paper'}
+      R3abc links the column to no unit; covered pairs none
+      unit p113 [prose, 7 shapes; near {'next': (1, 2696), 'prev': (0, 5842)}] prints ['1.0']: 'The taxonomic community composition of ants was significantly influenced by fire, time since fire, and their interaction (fire: $\\mathtt { F } = 2 . 3 8 , p =$ 0.001, $\\mathtt { R } ^ { 2 } = 0 . 0 2 ;$ time: F = 3.98, p = 0.001, R 2 = 0.05'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'body_size'; enumerated; 4 values ['0.0', '1.0', '2.0', '3.0']
+        codes ['0', '1', '2', '3']; in the unit ['0', '1', '2', '3'] (strict ['0', '1', '2', '3']), distinctive [], header words [], next to a meaning []
+      unit p50 [prose, 0 shapes; near {'next': (0, 20562), 'prev': None}] prints ['1.0']: 'The 35 study areas were all found in pine forests (Pinus halepensis, P. pinaster, P. nigra, and P. pinea; see Table S1) that had a relatively dense understory composed of typical Mediterranean shrubs, including Salvia rosmarinus, Pistacea l'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word
+        header 'body_size'; enumerated; 4 values ['0.0', '1.0', '2.0', '3.0']
+        codes ['0', '1', '2', '3']; in the unit ['1'] (strict ['1']), distinctive [], header words [], next to a meaning ['1']
+  - Vidal2023 t12c6 'Tongue length' [dev]: missed; 37 species; printed 2 of 2 coded pairs; defining units 4; own-table rows printing pairs 0
+      pairs {'2.0': 'Long', '1.0': 'Short'}
+      where {'2.0': 'same sentence', '1.0': 'same sentence'}
+      R3abc links the column to no unit; covered pairs none
+      unit p40 [numbered list, 5 shapes; near {'next': (0, 24960), 'prev': None}] prints ['2.0', '1.0']: 'The objective of our study was to assess the effects of fire and time since fire on two taxonomic groups—ants and bees. We conducted our research along a regional gradient in southern Spain in 35 pine forests that had experienced a wildfire'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'tongue_length'; enumerated; 2 values ['1.0', '2.0']
+        codes ['1', '2']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['1', '2']
+      unit p38 [prose, 2 shapes; near {'next': (0, 28061), 'prev': None}] prints ['2.0']: 'because there is an increase in floral resources and boring insect exit holes used by cavity-nesting bees (Galbraith et al., 2019); because bee abundance is negatively related to canopy cover (Grundel et al., 2010); or because floral abunda'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word
+        header 'tongue_length'; enumerated; 2 values ['1.0', '2.0']
+        codes ['1', '2']; in the unit ['2'] (strict ['2']), distinctive [], header words [], next to a meaning ['2']
+      unit p62 [prose, 1 shapes; near {'next': (0, 16627), 'prev': None}] prints ['2.0']: 'Sampling of ants and bees was conducted in 201 $^ { 6 , }$ from May through August. The goal was not to comprehensively sample ant and bee diversity, but rather to rapidly assess group presence at burned and unburned areas for the sake of c'
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'tongue_length'; enumerated; 2 values ['1.0', '2.0']
+        codes ['1', '2']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning []
+  - Wallon2024 t24c14 'Dispersal Abilities' [dev]: missed; 16 species; printed 2 of 2 coded pairs; defining units 6; own-table rows printing pairs 0
+      pairs {'Hdisp': 'High dispersal ability', 'Ldisp': 'Low dispersal ability'}
+      where {'Hdisp': 'definition: CODE: term / CODE = term', 'Ldisp': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+      unit p93 [caption, 18 shapes; near {'next': (2, 3628), 'prev': (1, 8684)}] prints ['Hdisp', 'Ldisp']: 'Figure 2. Heatmap for winter and summer season, highlighting the results of the analysis of variance Figure 2. Heatmap for winter and summer season, highlighting the results of the analysis of variance(ANOVA), considering all arthropods and'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Dispersaldisp'; enumerated; 2 values ['Hdisp', 'Ldisp']
+        codes ['Hdisp', 'Ldisp']; in the unit ['Hdisp', 'Ldisp'] (strict ['Hdisp', 'Ldisp']), distinctive [], header words [], next to a meaning ['Hdisp', 'Ldisp']
+      unit p199 [prose, 12 shapes; near {'next': (7, 1050), 'prev': (6, 59)}] prints ['Hdisp', 'Ldisp']: 'Table A2. Results of the post hoc pairwise comparisons performed on the different traits of all arthropods when the ANOVA models were significant. Significant results are marked in bold. Traits presented are Herbivore; Predator; Fungivore; '
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Dispersaldisp'; enumerated; 2 values ['Hdisp', 'Ldisp']
+        codes ['Hdisp', 'Ldisp']; in the unit ['Hdisp', 'Ldisp'] (strict ['Hdisp', 'Ldisp']), distinctive [], header words [], next to a meaning ['Hdisp', 'Ldisp']
+      unit p190 [prose, 9 shapes; near {}] prints ['Hdisp', 'Ldisp']: 'Table A1. Results of the ANOVA performed to investigate the effects of the elevation and the treatment on functional traits of all arthropods, including the interaction terms (Elev:Treatment) on each CWM variable. Adjusted p values are also'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Dispersaldisp'; enumerated; 2 values ['Hdisp', 'Ldisp']
+        codes ['Hdisp', 'Ldisp']; in the unit ['Hdisp', 'Ldisp'] (strict ['Hdisp', 'Ldisp']), distinctive [], header words [], next to a meaning ['Hdisp', 'Ldisp']
+  - Wallon2024 t28c11 'Diel activity' [dev]: missed; 32 species; printed 2 of 2 coded pairs; defining units 20; own-table rows printing pairs 0
+      pairs {'1': 'Day', '0': 'Night'}
+      where {'1': 'same sentence', '0': 'same sentence'}
+      R3abc links the column to no unit; covered pairs none
+      unit p253 [caption, 15 shapes; near {'next': (30, 936), 'prev': (29, 25)}] prints ['1', '0']: 'Table S2. Beetle species collected over the winter and the summer in all sites studied . Species taxonomy and trait attributes are given. Body size (Stand. body size) in (mm); Type of food ingested Plants (FoodPl); Animals (FoodAni); Fungi '
+        not selected; first failing gate: R2: no informative header word in the unit
+        header '1'; enumerated; 2 values ['0', '1']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning ['1', '0']
+      unit t20r1 [table row, 1 shapes; near {'table': 20}] prints ['0']: 'Winter | ActivNight | Elev:Treatment | LOW C.-MID C. - | 0.168 | 0.023 | 54 | -7.351 | <0.001 | LOW C.< MID C. -'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header '1'; enumerated; 2 values ['0', '1']
+        codes ['0', '1']; in the unit ['0'] (strict ['0']), distinctive [], header words [], next to a meaning []
+      unit t2r11 [table row, 0 shapes; near {'table': 2}] prints ['0']: 'Active Night | Summer | 0.78~0.81 ~0.83 | 0.76~0.79 ~0.81'
+        not selected; first failing gate: R2: one code, no distinctive code, no header word (also: a: no code printed next to a meaning)
+        header '1'; enumerated; 2 values ['0', '1']
+        codes ['0', '1']; in the unit ['0'] (strict ['0']), distinctive [], header words [], next to a meaning []
+  - Wallon2024 t28c5 'Type of Food' [dev]: missed; 32 species; printed 2 of 2 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'1': 'Plants', '0': 'Animals'}
+      where {'1': 'same sentence', '0': 'same sentence'}
+      R3abc links the column to no unit; covered pairs none
+      unit p253 [caption, 15 shapes; near {'next': (30, 936), 'prev': (29, 25)}] prints ['1', '0']: 'Table S2. Beetle species collected over the winter and the summer in all sites studied . Species taxonomy and trait attributes are given. Body size (Stand. body size) in (mm); Type of food ingested Plants (FoodPl); Animals (FoodAni); Fungi '
+        not selected; first failing gate: R2: no informative header word in the unit
+        header '1'; enumerated; 2 values ['0', '1']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning ['1', '0']
+  - Wang2021 t1c4 'Feeding Trait' [held_a]: missed; 16 species; printed 2 of 2 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'C': 'Carnivorous', 'O': 'Omnivorous'}
+      where {'C': 'definition: term (CODE)', 'O': 'definition: term (CODE)'}
+      R3abc links the column to no unit; covered pairs none
+      unit p117 [caption, 7 shapes; near {}] prints ['C', 'O']: 'Table S1: Identity, abundance, and functional traits of ground beetle individuals collected from 40 sampling plots in natural poplar forests along the Irtysh River in Xinjiang (Northwest China) (Notes. Ground beetles were classified as larg'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Feeding Trait'; enumerated; 2 values ['C', 'O']
+        codes ['C', 'O']; in the unit ['C', 'O'] (strict ['C', 'O']), distinctive [], header words [], next to a meaning ['O', 'C']
+  - Wang2021 t1c5 'Wing Morphology' [held_a]: missed; 16 species; printed 2 of 2 coded pairs; defining units 1; own-table rows printing pairs 0
+      pairs {'M': 'Macropterous', 'B': 'Brachypterous'}
+      where {'M': 'definition: term (CODE)', 'B': 'definition: term (CODE)'}
+      R3abc links the column to no unit; covered pairs none
+      unit p117 [caption, 7 shapes; near {}] prints ['M', 'B']: 'Table S1: Identity, abundance, and functional traits of ground beetle individuals collected from 40 sampling plots in natural poplar forests along the Irtysh River in Xinjiang (Northwest China) (Notes. Ground beetles were classified as larg'
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Wing Morphology'; enumerated; 2 values ['B', 'M']
+        codes ['B', 'M']; in the unit ['B', 'M'] (strict ['B', 'M']), distinctive [], header words [], next to a meaning ['M', 'B']
+  - Chichorro2022 t9c41 'Diet Breadth' [dev]: no defining unit (only its own table's rows print pairs); 17 species; printed 3 of 3 coded pairs; defining units 0; own-table rows printing pairs 17
+      pairs {'2.0': 'oligophagous', '1.0': 'monophagous', '3.0': 'polyphagous'}
+      where {'2.0': 'definition: CODE: term / CODE = term', '1.0': 'definition: CODE: term / CODE = term', '3.0': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+  - Chichorro2022 t9c59 'Microhabitat' [dev]: no defining unit (only its own table's rows print pairs); 60 species; printed 5 of 5 coded pairs; defining units 0; own-table rows printing pairs 60
+      pairs {'2.0': 'terricolous', '5.0': 'arboricolous', '4.0': 'arbusticolous', '3.0': 'graminicolous/forbicolous', '1.0': 'troglobiont'}
+      where {'2.0': 'definition: CODE: term / CODE = term', '5.0': 'definition: CODE: term / CODE = term', '4.0': 'definition: CODE: term / CODE = term', '3.0': 'definition: CODE: term / CODE = term', '1.0': 'definition: CODE: term / CODE = term'}
+      R3abc links the column to no unit; covered pairs none
+  - Wijas2021 t12c2 'Feeding group' [dev]: no defining unit (only its own table's rows print pairs); 66 species; printed 1 of 1 coded pairs; defining units 0; own-table rows printing pairs 15
+      pairs {'NA': 'dung'}
+      where {'NA': 'same sentence'}
+      R3abc links the column to no unit; covered pairs none
+
+  safe cut, covered columns: Arnan2012 t6c1 via ['p93', 'p35']; Arnan2012 t5c2 via ['p93', 'p34']; Arnan2012 t5c3 via ['p93', 'p34']; Arnan2012 t5c4 via ['p93']; Arnan2012 t6c3 via ['p93']; Derhe2016 t1c8 via ['p167', 'p150']; Fiedler2021 t7c15 via ['p99', 'p115']; Graf2021 t8c1 via ['p141']; Graf2021 t8c3 via ['p141']; Guariento2020 t4c7 via ['p176', 'p177']; Guariento2020 t4c8 via ['p176', 'p177']; Guariento2020 t4c17 via ['p186']; Heiva2013 t0c1 via ['p43']; Keller1998 t1c4 via ['p18']; Keller1998 t1c6 via ['p18']; Korosi2022 t5c2 via ['p62']; Kratschmer2019 t13c2 via ['t8r11']; Lizee2016 t7c5 via ['p43']; McCune2023 t0c5 via ['p96']; Taillefer2018 t17c1 via ['p105', 'p150']; Teder2020 t6c7 via ['p103']; Teder2020 t6c8 via ['p103']; Teder2020 t6c9 via ['p103']; Tonelli2021 t7c11 via ['t7r0c11', 'p134']; Tonelli2021 t7c14 via ['p152']; Tonelli2021 t7c15 via ['t7r0c15', 'p154']; Tonelli2021 t7c17 via ['t7r0c17', 'p162']; Uemori2021 t10c6 via ['p54']; Uemori2022 t3c1 via ['p63', 'p64']; Uemori2022 t3c6 via ['p64', 't1r6']; Wallon2024 t28c10 via ['p199', 'p190']
+
+B. NAMED CASES OUTSIDE THE KEY (condition 2 by eye from the listed values)
+
+  --- old cut ---
+  - [restored by the safe strip] Cajaiba2022 'Epigaeic predators (EP) and Epigaeic omnivores (EO)'
+      no unit holds it
+  - [calibration unit never proposed] Cao2024 'Fig. 3. Percentage abundance of chironomid taxa'
+      unit p65 [caption, 0 shapes; near {'next': (5, 5253), 'prev': (4, 2)}]; R3abc links nothing
+      'Fig. 3. Percentage abundance of chironomid taxa in different habitats (samples in each habitat were ordered based on DWT, so the driest samples are at the top, and the wettest at the base). The five habitats were abbreviated as follows: Hu-Sphagnum hummock; Ho-Sphagnum hollow; Di-ditch; Po-pond; Pl-pool.'
+      column sharing codes t6c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header ''; enumerated; 12 values ['C/N', 'Ca', 'Cond.', 'DO', 'DWT', 'K', 'LOI', 'Mg', 'ORP', 'TN']
+        codes ['C', 'Ca', 'DO', 'DWT', 'K', 'LOI', 'Mg', 'N', 'ORP', 'TN', 'TOC', 'pH']; in the unit ['DWT'] (strict ['DWT']), distinctive ['DWT'], header words [], next to a meaning []
+      column sharing codes t6c5:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'DWT'; enumerated; 9 values ['***', '-0.095', '-0.25', '-0.28', '-0.40', '-0.57', '-0.58', '0.15', 'DWT']
+        codes ['DWT']; in the unit ['DWT'] (strict ['DWT']), distinctive ['DWT'], header words [], next to a meaning []
+  - [calibration missed target] Cappellari2022 'Fig. 4 Model estimates from the model-averaging procedure based on the four sets'
+      unit p63 [caption, 1 shapes; near {'next': (1, 25726), 'prev': (0, 3633)}]; R3abc links ['t5c3']
+      'Fig. 4 Model estimates from the model-averaging procedure based on the four sets of models considering single traits of pollinators, i.e., a proboscis length (Model 3), b body size (Model 4), c type of foraging range (Model 5), and d taxonomic family (Model 6). Explanatory variables of the four global models are honeybee abundance (Apis, lntransformed), temperature (Temp), the levels of the four trait categories $( P r o b { S }$ proboscis similar to the honeybee, $P r o b { L }$ proboscis longe'
+      target t0c0:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Category'; enumerated; 8 values ['Apis', 'Apis \\(\\times\\) FRic', 'Apis \\(\\times\\) FRic \\(\\times\\) TSim', 'Apis \\(\\times\\) TSim', 'FRic', 'FRic \\(\\times\\) TSim', 'TSim', 'Temp']
+        codes ['Apis', 'FRic', 'TSim', 'Temp']; in the unit ['Apis', 'Temp'] (strict ['Apis', 'Temp']), distinctive [], header words [], next to a meaning ['Temp', 'Apis']
+      column sharing codes t5c3:
+        SELECTED; first failing gate: selected
+        header 'Explanatory variables'; enumerated; 6 values ['Apis + Temp + FDis + TSim + Apis × FDis + Apis × TSim + FDis × TSim + Apis × FDis × TSim', 'Apis + Temp + FRic + TSim + Apis × FRic + Apis × TSim + FRic × TSim + Apis × FRic × TSim', 'Apis × Body + Temp', 'Apis × Fam + Temp', 'Apis × For + Temp', 'Apis × Prob + Temp']
+        codes ['Apis', 'FDis', 'FRic', 'TSim', 'Temp']; in the unit ['Apis', 'Temp'] (strict ['Apis', 'Temp']), distinctive [], header words ['explanatory'], next to a meaning ['Temp', 'Apis']
+      column sharing codes t8c2:
+        not selected; first failing gate: R2: one code, no distinctive code
+        header '(a) Proboscis length / Apis'; enumerated; 15 values ['-0.032', '-0.034', '-0.036', '-0.047', '-0.048', '-0.061', '-0.065', '-0.074', '-0.085', '-0.091']
+        codes ['Apis']; in the unit ['Apis'] (strict ['Apis']), distinctive [], header words ['apis', 'length', 'probosci'], next to a meaning ['Apis']
+      column sharing codes t8c3:
+        not selected; first failing gate: R2: one code, no distinctive code
+        header 'Temp'; enumerated; 10 values ['0.025', '0.027', '0.030', '0.032', '0.041', '0.071', '0.081', '0.087', '0.096', 'Temp']
+        codes ['Temp']; in the unit ['Temp'] (strict ['Temp']), distinctive [], header words ['temp'], next to a meaning ['Temp']
+      column sharing codes t1c0:
+        not selected; first failing gate: column not enumerated: 50 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'Site code'; NOT enumerated; 50 values ['A', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI']
+        codes ['A', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK']; in the unit ['B', 'C', 'F', 'L', 'N', 'P', 'S'] (strict ['B', 'C', 'F', 'L', 'N', 'P', 'S']), distinctive [], header words [], next to a meaning []
+      column sharing codes t2c3:
+        not selected; first failing gate: column not enumerated: 74 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'Corolla (mm)'; NOT enumerated; 74 values ['0.05', '0.1', '0.3', '0.4', '0.5', '1', '1.3', '1.5', '1.75', '10']
+        codes ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '2', '20']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words [], next to a meaning []
+      column sharing codes t3c2:
+        not selected; first failing gate: column not enumerated: 102 distinct values (also: a: no code printed next to a meaning)
+        header 'Proboscis (mm)'; NOT enumerated; 102 values ['0.4', '0.5', '0.55', '0.6', '0.65', '0.68', '0.7', '0.75', '0.8', '0.9']
+        codes ['1', '12', '16', '2', '3', '4', '5', '6', '7', '9']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words ['probosci'], next to a meaning []
+      column sharing codes t6c0:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Ranking'; enumerated; 15 values ['1', '10', '11', '12', '13', '14', '15', '2', '3', '4']
+        codes ['1', '10', '11', '12', '13', '14', '15', '2', '3', '4', '5', '6']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c0:
+        not selected; first failing gate: column not enumerated: 28 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'Ranking'; NOT enumerated; 28 values ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18']
+        codes ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words [], next to a meaning []
+      column sharing codes t8c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header '(a) Proboscis length / Ranking'; enumerated; 10 values ['(b) Body size category', '(c) Type of foraging range', '(d) Taxonomic family', '1', '2', '3', '4', '5', '6', 'Ranking']
+        codes ['1', '2', '3', '4', '5', '6']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words ['length', 'probosci'], next to a meaning []
+      column sharing codes t1c7:
+        not selected; first failing gate: column not enumerated: 42 distinct values (also: a: no code printed next to a meaning)
+        header 'Honeybee ab'; NOT enumerated; 42 values ['101', '108', '109', '113', '115', '116', '119', '145', '149', '150']
+        codes ['19', '2', '21', '22', '24', '25', '3', '31', '34', '35', '4', '44']; in the unit ['3', '4', '5'] (strict ['3', '4', '5']), distinctive [], header words ['honeybee'], next to a meaning []
+      column sharing codes t3c3:
+        not selected; first failing gate: column not enumerated: 52 distinct values (also: a: no code printed next to a meaning)
+        header 'Body (mm)'; NOT enumerated; 52 values ['10', '10.5', '11', '11.25', '11.5', '12', '12.25', '12.5', '13', '13.25']
+        codes ['10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '22']; in the unit ['4', '5', '6'] (strict ['4', '5', '6']), distinctive [], header words ['body'], next to a meaning []
+      column sharing codes t4c1:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'N'; enumerated; 15 values ['102', '116', '16', '2', '2000', '258', '3', '37', '4', '40']
+        codes ['16', '2', '3', '37', '4', '40', '43', '8', '81', '86']; in the unit ['3', '4'] (strict ['3', '4']), distinctive [], header words [], next to a meaning []
+  - [calibration missed target] Cecala2021 'Table S2. Sampling schedule for the 13 nurseries in the study from March 2016 to'
+      unit p134 [caption, 0 shapes; near {}]; R3abc links ['t0c0', 't1c0', 't1c8', 't6c2', 't6c3']
+      'Table S2. Sampling schedule for the 13 nurseries in the study from March 2016 to May 2018. A “1” indicates that nursery was sampled, while a “0” indicates it was not sampled due to logistical reasons. Blacked-out cells indicate seasons when sampling was not possible due to closure of nursery property. Columns sums (bottom row) indicate the total number of nurseries sampled in that season, while row sums (rightmost column) indicate the total number of times that nursery was sampled in the study.'
+      target t1c1:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2016 / Spring'; enumerated; 3 values ['0', '1', '7']
+        codes ['0', '1', '7']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c2:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2016 / Summer'; enumerated; 3 values ['0', '1', '9']
+        codes ['0', '1', '9']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c3:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2016 / Autumn'; enumerated; 3 values ['0', '1', '8']
+        codes ['0', '1', '8']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c4:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2017 / Spring'; enumerated; 3 values ['0', '1', '10']
+        codes ['0', '1', '10']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c5:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2017 / Summer'; enumerated; 3 values ['0', '1', '10']
+        codes ['0', '1', '10']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c6:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2017 / Autumn'; enumerated; 3 values ['0', '1', '5']
+        codes ['0', '1', '5']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c7:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2018 / Spring'; enumerated; 3 values ['0', '1', '9']
+        codes ['0', '1', '9']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t2c9:
+        not selected; first failing gate: column not enumerated: 38 distinct values (also: R2: no informative header word in the unit)
+        header 'vane trapping / females'; NOT enumerated; 38 values ['0', '1', '10', '103', '11', '12', '125', '126', '13', '1692']
+        codes ['0', '1', '10', '11', '12', '13', '19', '2', '20', '22', '28', '3']; in the unit ['0', '1', '13', '2'] (strict ['0', '1', '13', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t6c2:
+        SELECTED; first failing gate: selected
+        header 'native nurseries'; enumerated; 12 values ['0', '1', '10', '12', '13', '14', '2', '3', '4', '5']
+        codes ['0', '1', '10', '12', '13', '14', '2', '3', '4', '5', '6', '8']; in the unit ['0', '1', '13', '2'] (strict ['0', '1', '13', '2']), distinctive [], header words ['nurseri'], next to a meaning ['2']
+      column sharing codes t0c0:
+        SELECTED; first failing gate: selected
+        header 'Nursery'; enumerated; 14 values ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+        codes ['1', '10', '11', '12', '13', '2', '3', '4', '5', '6', '7', '8']; in the unit ['1', '13', '2'] (strict ['1', '13', '2']), distinctive [], header words ['nursery'], next to a meaning ['2']
+      column sharing codes t1c0:
+        SELECTED; first failing gate: selected
+        header 'Nursery'; enumerated; 14 values ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+        codes ['1', '10', '11', '12', '13', '2', '3', '4', '5', '6', '7', '8']; in the unit ['1', '13', '2'] (strict ['1', '13', '2']), distinctive [], header words ['nursery'], next to a meaning ['2']
+      column sharing codes t2c7:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'sweep netting / females'; enumerated; 12 values ['0', '1', '10', '11', '12', '2', '3', '4', '40', '5']
+        codes ['0', '1', '10', '11', '12', '2', '3', '4', '40', '5', '6', '9']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t2c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'sweep netting / males'; enumerated; 12 values ['0', '1', '10', '12', '15', '17', '2', '3', '4', '5']
+        codes ['0', '1', '10', '12', '15', '17', '2', '3', '4', '5', '7', '8']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t2c10:
+        not selected; first failing gate: column not enumerated: 20 distinct values (also: R2: no informative header word in the unit)
+        header 'vane trapping / males'; NOT enumerated; 20 values ['0', '1', '10', '103', '107', '112', '116', '133', '16', '17']
+        codes ['0', '1', '10', '16', '17', '2', '26', '3', '39', '4', '42', '5']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t6c3:
+        SELECTED; first failing gate: selected
+        header 'conventional nurseries'; enumerated; 11 values ['0', '1', '2', '25', '3', '4', '5', '6', '7', '8']
+        codes ['0', '1', '2', '25', '3', '4', '5', '6', '7', '8', '9']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words ['nurseri'], next to a meaning ['2']
+      column sharing codes t1c8:
+        SELECTED; first failing gate: selected
+        header 'samplings per nursery'; enumerated; 7 values ['1', '2', '3', '5', '58', '6', '7']
+        codes ['1', '2', '3', '5', '58', '6', '7']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words ['nursery'], next to a meaning ['2']
+      column sharing codes t3c2:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'numerator degrees of freedom'; enumerated; 3 values ['1', '2', '4']
+        codes ['1', '2', '4']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t5c3:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'solitary'; enumerated; 8 values ['1', '14', '2', '20', '22', '25', '31', 'solitary']
+        codes ['1', '14', '2', '20', '22', '25', '31']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['2']
+  - [calibration missed target] Eckert2023 'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore'
+      unit t4r134 [footnote, 5 shapes; near {'table': 4}]; R3abc links ['t4c2']
+      'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore, Soil = soil-dweller, Litter = litter-dweller, Veg = vegetation-dweller.'
+      target t4c3 (the unit is by its own table):
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+      column sharing codes t4c2 (the unit is by its own table):
+        SELECTED; first failing gate: selected
+        header 'Forage strategy'; enumerated; 4 values ['Forage strategy', 'GenForager', 'Pred', 'Sap']
+        codes ['GenForager', 'Pred', 'Sap']; in the unit ['GenForager', 'Pred', 'Sap'] (strict ['GenForager', 'Pred', 'Sap']), distinctive ['GenForager'], header words [], next to a meaning ['GenForager', 'Pred', 'Sap']
+      column sharing codes t6c5:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+  - [calibration missed target] Eckert2023 'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore'
+      unit t4r70 [footnote, 5 shapes; near {'table': 4}]; R3abc links ['t4c2']
+      'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore, Soil = soil-dweller, Litter = litter-dweller, Veg = vegetation-dweller.'
+      target t4c3 (the unit is by its own table):
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+      column sharing codes t4c2 (the unit is by its own table):
+        SELECTED; first failing gate: selected
+        header 'Forage strategy'; enumerated; 4 values ['Forage strategy', 'GenForager', 'Pred', 'Sap']
+        codes ['GenForager', 'Pred', 'Sap']; in the unit ['GenForager', 'Pred', 'Sap'] (strict ['GenForager', 'Pred', 'Sap']), distinctive ['GenForager'], header words [], next to a meaning ['GenForager', 'Pred', 'Sap']
+      column sharing codes t6c5:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+  - [calibration unit never proposed] Espinosa2023 'Fig. 6 Results of the Fourth-corner analysis'
+      unit p88 [caption, 1 shapes; near {'next': (5, 39965), 'prev': (4, 2)}]; R3abc links nothing
+      'Fig. 6 Results of the Fourth-corner analysis showing the relationships between environmental variables and functional traits. Black cells indicate positive significant relationships and dark gray cells indicate negative significant relationships. Environmental variables: Condelectrical conductivity, COD chemical oxygen demand, IronTottotal iron, Phospho-Tottotal phosphorus, Mangtottotal manganese, OxyDis dis-'
+      column sharing codes t2c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Variable'; enumerated; 10 values ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'Mangtot', 'OxyDis', 'PhosphoTet', 'TDS', 'Turbity', 'pH']
+        codes ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'OxyDis', 'PhosphoTet', 'TDS', 'pH']; in the unit ['COD', 'OxyDis'] (strict ['COD', 'OxyDis']), distinctive ['COD', 'OxyDis'], header words [], next to a meaning []
+      column sharing codes t12c1:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Environmental variables'; enumerated; 12 values ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'Mangtot', 'Nitrate', 'OxyDis', 'PhosphoTot', 'TDS', 'Temperature']
+        codes ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'OxyDis', 'PhosphoTot', 'TDS', 'pH']; in the unit ['COD', 'OxyDis'] (strict ['COD', 'OxyDis']), distinctive ['COD', 'OxyDis'], header words ['environmental'], next to a meaning []
+      column sharing codes t0c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Variable'; enumerated; 9 values ['COD', 'Cond', 'IronTot', 'MangTot', 'Nitrate', 'PhosphoTot', 'Temperature', 'Turbidity', 'pH']
+        codes ['COD', 'Cond', 'IronTot', 'MangTot', 'PhosphoTot', 'pH']; in the unit ['COD'] (strict ['COD']), distinctive ['COD'], header words [], next to a meaning []
+      column sharing codes t9c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Variable'; enumerated; 14 values ['%Explanation', 'COD', 'Conductivity', 'Eigenvalues', 'Impact.Index', 'ItonTot', 'MangTot', 'Nitrate', 'OxygenDis', 'PhosphoTot']
+        codes ['COD', 'ItonTot', 'MangTot', 'OxygenDis', 'PhosphoTot', 'SolidTot', 'pH']; in the unit ['COD'] (strict ['COD']), distinctive ['COD'], header words [], next to a meaning []
+  - [restored by the safe strip] Ji2024 'Number of individuals (Ind; measured/collected)'
+      no unit holds it
+  - [restored by the safe strip] Ji2024 'six elevations (Elev.)'
+      no unit holds it
+  - [restored by the safe strip] Kratschmer2019 '1%–5% = low; 5%–25% = medium'
+      no unit holds it
+  - [restored by the safe strip] Oliveira2022 'CL = ratio of clypeus length to mesosoma length'
+      unit p125 [caption, 14 shapes, an inventory unit; near {}]; R3abc links ['t2c1', 't2c3']
+      'Table S1. Global multimeric disturbance index (GMDI), water deficit (WD), presence of ant species, and mean (M) and variance (V) of traits HBN, north-eastern Brazil. CL = ratio of clypeus length to mesosoma length, ML = ratio of mandible length to mesosoma length, WL = mesosoma or Weber’s length, IOW = ratio of inter-ocular width to mesosoma length, EL = ratio of eye length to mesosoma length, P = count of hairs crossing mesosoma profile, LEG = ratio of leg length (combined length of femur and t'
+      column sharing codes t2c1:
+        SELECTED; first failing gate: selected
+        header 'Trait'; enumerated; 6 values ['AL', 'CL', 'EL', 'LEG', 'ML', 'P']
+        codes ['AL', 'CL', 'EL', 'LEG', 'ML', 'P']; in the unit ['AL', 'CL', 'EL', 'LEG', 'ML', 'P'] (strict ['AL', 'CL', 'EL', 'LEG', 'ML', 'P']), distinctive ['AL', 'CL', 'EL', 'LEG', 'ML'], header words [], next to a meaning ['P', 'LEG', 'CL', 'EL', 'AL', 'ML']
+      column sharing codes t2c3:
+        SELECTED; first failing gate: selected
+        header 'Explanatory variables'; enumerated; 3 values ['GMDI', 'GMDI+WD', 'WD']
+        codes ['GMDI', 'WD']; in the unit ['GMDI', 'WD'] (strict ['GMDI', 'WD']), distinctive ['GMDI', 'WD'], header words [], next to a meaning ['GMDI', 'WD']
+  - [restored by the safe strip] Taillefer2018 'U: univoltine, M: bivoltine'
+      no unit holds it
+  - [restored by the safe strip] Taillefer2018 'E: eggs, L: larvae, P: pupae, A: adults'
+      no unit holds it
+  - [calibration missed target] Viza2023 'Table S2. Model performances by each species. Columns of predictor variables sho'
+      unit t5r87 [footnote, 1 shapes; near {'table': 5}]; R3abc links ['t5c1']
+      'Table S2. Model performances by each species. Columns of predictor variables showed variables selected and the corresponded distribution for each model. Distribution codes for GLM: x2 + x =: quadratic regression; x =: linear regression. In BRT, variables selected were indicated with a “x”'
+      target t5c3 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio3'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c4 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio4'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c5 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio8'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c6 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio9'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c7 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio15'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      column sharing codes t5c1 (the unit is by its own table):
+        SELECTED; first failing gate: selected
+        header 'Model selected'; enumerated; 2 values ['BRT', 'GLM']
+        codes ['BRT', 'GLM']; in the unit ['BRT', 'GLM'] (strict ['BRT', 'GLM']), distinctive ['BRT', 'GLM'], header words ['model', 'select'], next to a meaning ['BRT']
+  - [restored by the safe strip] Viza2023 'axis Y ≥ 10; and Reduced: Axis X ≤'
+      no unit holds it
+
+  --- safe cut ---
+  - [restored by the safe strip] Cajaiba2022 'Epigaeic predators (EP) and Epigaeic omnivores (EO)'
+      unit p79 [prose, 15 shapes, an inventory unit; near {}]; R3abc links nothing
+      'Among the trophic type functional traits (TT_FT), Epigaeic omnivores (EO), comprising 4441 individuals and 37 species, followed by Epigaeic predators (EP) with 1748 individuals and 18 species, dominated in terms of abundance and richness. Conversely, Cryptic predators (CP) with 12 individuals and five species and Leaf-cutting Attini (LA) and Arboreal dominants (AD) (73 and 74 individuals and seven and five species, respectively) were less abundant and relatively poorer in diversity. Statisticall'
+      column sharing codes t5c1:
+        not selected; first failing gate: column not enumerated: 49 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'PF'; NOT enumerated; 49 values ['0', '1', '10', '108', '11', '111', '113', '118', '12', '13']
+        codes ['0', '1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19']; in the unit ['0', '11', '12', '18', '3', '37'] (strict ['0', '11', '12', '18', '3', '37']), distinctive [], header words [], next to a meaning []
+      column sharing codes t5c2:
+        not selected; first failing gate: column not enumerated: 40 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'FS-15'; NOT enumerated; 40 values ['0', '1', '11', '12', '13', '139', '14', '15', '16', '17']
+        codes ['0', '1', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2']; in the unit ['0', '11', '12', '18', '3', '31'] (strict ['0', '11', '12', '18', '3', '31']), distinctive [], header words [], next to a meaning []
+      column sharing codes t5c4:
+        not selected; first failing gate: column not enumerated: 34 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'AG'; NOT enumerated; 34 values ['0', '1', '103', '11', '12', '13', '15', '16', '19', '194']
+        codes ['0', '1', '11', '12', '13', '15', '16', '19', '2', '21', '23', '27']; in the unit ['0', '11', '12', '3', '31', '37'] (strict ['0', '11', '12', '3', '31', '37']), distinctive [], header words [], next to a meaning []
+      column sharing codes t5c3:
+        not selected; first failing gate: column not enumerated: 35 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'FS-5'; NOT enumerated; 35 values ['0', '1', '11', '12', '13', '14', '15', '16', '19', '2']
+        codes ['0', '1', '11', '12', '13', '14', '15', '16', '19', '2', '21', '22']; in the unit ['0', '11', '12', '3', '37'] (strict ['0', '11', '12', '3', '37']), distinctive [], header words [], next to a meaning []
+      column sharing codes t5c5:
+        not selected; first failing gate: column not enumerated: 33 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'PA'; NOT enumerated; 33 values ['0', '1', '10', '107', '11', '12', '13', '14', '15', '154']
+        codes ['0', '1', '10', '11', '12', '13', '14', '15', '16', '17', '2', '26']; in the unit ['0', '11', '12', '3', '31'] (strict ['0', '11', '12', '3', '31']), distinctive [], header words [], next to a meaning []
+  - [calibration unit never proposed] Cao2024 'Fig. 3. Percentage abundance of chironomid taxa'
+      unit p70 [caption, 0 shapes; near {'next': (5, 5253), 'prev': (4, 2)}]; R3abc links nothing
+      'Fig. 3. Percentage abundance of chironomid taxa in different habitats (samples in each habitat were ordered based on DWT, so the driest samples are at the top, and the wettest at the base). The five habitats were abbreviated as follows: Hu-Sphagnum hummock; Ho-Sphagnum hollow; Di-ditch; Po-pond; Pl-pool.'
+      column sharing codes t6c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header ''; enumerated; 12 values ['C/N', 'Ca', 'Cond.', 'DO', 'DWT', 'K', 'LOI', 'Mg', 'ORP', 'TN']
+        codes ['C', 'Ca', 'DO', 'DWT', 'K', 'LOI', 'Mg', 'N', 'ORP', 'TN', 'TOC', 'pH']; in the unit ['DWT'] (strict ['DWT']), distinctive ['DWT'], header words [], next to a meaning []
+      column sharing codes t6c5:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'DWT'; enumerated; 9 values ['***', '-0.095', '-0.25', '-0.28', '-0.40', '-0.57', '-0.58', '0.15', 'DWT']
+        codes ['DWT']; in the unit ['DWT'] (strict ['DWT']), distinctive ['DWT'], header words [], next to a meaning []
+  - [calibration missed target] Cappellari2022 'Fig. 4 Model estimates from the model-averaging procedure based on the four sets'
+      unit p88 [caption, 1 shapes; near {'next': (1, 25726), 'prev': (0, 3633)}]; R3abc links ['t5c3']
+      'Fig. 4 Model estimates from the model-averaging procedure based on the four sets of models considering single traits of pollinators, i.e., a proboscis length (Model 3), b body size (Model 4), c type of foraging range (Model 5), and d taxonomic family (Model 6). Explanatory variables of the four global models are honeybee abundance (Apis, lntransformed), temperature (Temp), the levels of the four trait categories $( P r o b { S }$ proboscis similar to the honeybee, $P r o b { L }$ proboscis longe'
+      target t0c0:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Category'; enumerated; 8 values ['Apis', 'Apis \\(\\times\\) FRic', 'Apis \\(\\times\\) FRic \\(\\times\\) TSim', 'Apis \\(\\times\\) TSim', 'FRic', 'FRic \\(\\times\\) TSim', 'TSim', 'Temp']
+        codes ['Apis', 'FRic', 'TSim', 'Temp']; in the unit ['Apis', 'Temp'] (strict ['Apis', 'Temp']), distinctive [], header words [], next to a meaning ['Temp', 'Apis']
+      column sharing codes t5c3:
+        SELECTED; first failing gate: selected
+        header 'Explanatory variables'; enumerated; 6 values ['Apis + Temp + FDis + TSim + Apis × FDis + Apis × TSim + FDis × TSim + Apis × FDis × TSim', 'Apis + Temp + FRic + TSim + Apis × FRic + Apis × TSim + FRic × TSim + Apis × FRic × TSim', 'Apis × Body + Temp', 'Apis × Fam + Temp', 'Apis × For + Temp', 'Apis × Prob + Temp']
+        codes ['Apis', 'FDis', 'FRic', 'TSim', 'Temp']; in the unit ['Apis', 'Temp'] (strict ['Apis', 'Temp']), distinctive [], header words ['explanatory'], next to a meaning ['Temp', 'Apis']
+      column sharing codes t8c2:
+        not selected; first failing gate: R2: one code, no distinctive code
+        header '(a) Proboscis length / Apis'; enumerated; 15 values ['-0.032', '-0.034', '-0.036', '-0.047', '-0.048', '-0.061', '-0.065', '-0.074', '-0.085', '-0.091']
+        codes ['Apis']; in the unit ['Apis'] (strict ['Apis']), distinctive [], header words ['apis', 'length', 'probosci'], next to a meaning ['Apis']
+      column sharing codes t8c3:
+        not selected; first failing gate: R2: one code, no distinctive code
+        header 'Temp'; enumerated; 10 values ['0.025', '0.027', '0.030', '0.032', '0.041', '0.071', '0.081', '0.087', '0.096', 'Temp']
+        codes ['Temp']; in the unit ['Temp'] (strict ['Temp']), distinctive [], header words ['temp'], next to a meaning ['Temp']
+      column sharing codes t1c0:
+        not selected; first failing gate: column not enumerated: 50 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'Site code'; NOT enumerated; 50 values ['A', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI']
+        codes ['A', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK']; in the unit ['B', 'C', 'F', 'L', 'N', 'P', 'S'] (strict ['B', 'C', 'F', 'L', 'N', 'P', 'S']), distinctive [], header words [], next to a meaning []
+      column sharing codes t2c3:
+        not selected; first failing gate: column not enumerated: 74 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'Corolla (mm)'; NOT enumerated; 74 values ['0.05', '0.1', '0.3', '0.4', '0.5', '1', '1.3', '1.5', '1.75', '10']
+        codes ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '2', '20']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words [], next to a meaning []
+      column sharing codes t3c2:
+        not selected; first failing gate: column not enumerated: 102 distinct values (also: a: no code printed next to a meaning)
+        header 'Proboscis (mm)'; NOT enumerated; 102 values ['0.4', '0.5', '0.55', '0.6', '0.65', '0.68', '0.7', '0.75', '0.8', '0.9']
+        codes ['1', '12', '16', '2', '3', '4', '5', '6', '7', '9']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words ['probosci'], next to a meaning []
+      column sharing codes t6c0:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Ranking'; enumerated; 15 values ['1', '10', '11', '12', '13', '14', '15', '2', '3', '4']
+        codes ['1', '10', '11', '12', '13', '14', '15', '2', '3', '4', '5', '6']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c0:
+        not selected; first failing gate: column not enumerated: 28 distinct values (also: R2: no informative header word in the unit; a: no code printed next to a meaning)
+        header 'Ranking'; NOT enumerated; 28 values ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18']
+        codes ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words [], next to a meaning []
+      column sharing codes t8c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header '(a) Proboscis length / Ranking'; enumerated; 10 values ['(b) Body size category', '(c) Type of foraging range', '(d) Taxonomic family', '1', '2', '3', '4', '5', '6', 'Ranking']
+        codes ['1', '2', '3', '4', '5', '6']; in the unit ['3', '4', '5', '6'] (strict ['3', '4', '5', '6']), distinctive [], header words ['length', 'probosci'], next to a meaning []
+      column sharing codes t1c7:
+        not selected; first failing gate: column not enumerated: 42 distinct values (also: a: no code printed next to a meaning)
+        header 'Honeybee ab'; NOT enumerated; 42 values ['101', '108', '109', '113', '115', '116', '119', '145', '149', '150']
+        codes ['19', '2', '21', '22', '24', '25', '3', '31', '34', '35', '4', '44']; in the unit ['3', '4', '5'] (strict ['3', '4', '5']), distinctive [], header words ['honeybee'], next to a meaning []
+      column sharing codes t3c3:
+        not selected; first failing gate: column not enumerated: 52 distinct values (also: a: no code printed next to a meaning)
+        header 'Body (mm)'; NOT enumerated; 52 values ['10', '10.5', '11', '11.25', '11.5', '12', '12.25', '12.5', '13', '13.25']
+        codes ['10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '22']; in the unit ['4', '5', '6'] (strict ['4', '5', '6']), distinctive [], header words ['body'], next to a meaning []
+      column sharing codes t4c1:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'N'; enumerated; 15 values ['102', '116', '16', '2', '2000', '258', '3', '37', '4', '40']
+        codes ['16', '2', '3', '37', '4', '40', '43', '8', '81', '86']; in the unit ['3', '4'] (strict ['3', '4']), distinctive [], header words [], next to a meaning []
+  - [calibration missed target] Cecala2021 'Table S2. Sampling schedule for the 13 nurseries in the study from March 2016 to'
+      unit p148 [caption, 0 shapes; near {}]; R3abc links ['t0c0', 't1c0', 't1c8', 't6c2', 't6c3']
+      'Table S2. Sampling schedule for the 13 nurseries in the study from March 2016 to May 2018. A “1” indicates that nursery was sampled, while a “0” indicates it was not sampled due to logistical reasons. Blacked-out cells indicate seasons when sampling was not possible due to closure of nursery property. Columns sums (bottom row) indicate the total number of nurseries sampled in that season, while row sums (rightmost column) indicate the total number of times that nursery was sampled in the study.'
+      target t1c1:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2016 / Spring'; enumerated; 3 values ['0', '1', '7']
+        codes ['0', '1', '7']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c2:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2016 / Summer'; enumerated; 3 values ['0', '1', '9']
+        codes ['0', '1', '9']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c3:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2016 / Autumn'; enumerated; 3 values ['0', '1', '8']
+        codes ['0', '1', '8']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c4:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2017 / Spring'; enumerated; 3 values ['0', '1', '10']
+        codes ['0', '1', '10']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c5:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2017 / Summer'; enumerated; 3 values ['0', '1', '10']
+        codes ['0', '1', '10']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c6:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2017 / Autumn'; enumerated; 3 values ['0', '1', '5']
+        codes ['0', '1', '5']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      target t1c7:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header '2018 / Spring'; enumerated; 3 values ['0', '1', '9']
+        codes ['0', '1', '9']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t2c9:
+        not selected; first failing gate: column not enumerated: 38 distinct values (also: R2: no informative header word in the unit)
+        header 'vane trapping / females'; NOT enumerated; 38 values ['0', '1', '10', '103', '11', '12', '125', '126', '13', '1692']
+        codes ['0', '1', '10', '11', '12', '13', '19', '2', '20', '22', '28', '3']; in the unit ['0', '1', '13', '2'] (strict ['0', '1', '13', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t6c2:
+        SELECTED; first failing gate: selected
+        header 'native nurseries'; enumerated; 12 values ['0', '1', '10', '12', '13', '14', '2', '3', '4', '5']
+        codes ['0', '1', '10', '12', '13', '14', '2', '3', '4', '5', '6', '8']; in the unit ['0', '1', '13', '2'] (strict ['0', '1', '13', '2']), distinctive [], header words ['nurseri'], next to a meaning ['2']
+      column sharing codes t0c0:
+        SELECTED; first failing gate: selected
+        header 'Nursery'; enumerated; 14 values ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+        codes ['1', '10', '11', '12', '13', '2', '3', '4', '5', '6', '7', '8']; in the unit ['1', '13', '2'] (strict ['1', '13', '2']), distinctive [], header words ['nursery'], next to a meaning ['2']
+      column sharing codes t1c0:
+        SELECTED; first failing gate: selected
+        header 'Nursery'; enumerated; 14 values ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+        codes ['1', '10', '11', '12', '13', '2', '3', '4', '5', '6', '7', '8']; in the unit ['1', '13', '2'] (strict ['1', '13', '2']), distinctive [], header words ['nursery'], next to a meaning ['2']
+      column sharing codes t2c7:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'sweep netting / females'; enumerated; 12 values ['0', '1', '10', '11', '12', '2', '3', '4', '40', '5']
+        codes ['0', '1', '10', '11', '12', '2', '3', '4', '40', '5', '6', '9']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t2c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'sweep netting / males'; enumerated; 12 values ['0', '1', '10', '12', '15', '17', '2', '3', '4', '5']
+        codes ['0', '1', '10', '12', '15', '17', '2', '3', '4', '5', '7', '8']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t2c10:
+        not selected; first failing gate: column not enumerated: 20 distinct values (also: R2: no informative header word in the unit)
+        header 'vane trapping / males'; NOT enumerated; 20 values ['0', '1', '10', '103', '107', '112', '116', '133', '16', '17']
+        codes ['0', '1', '10', '16', '17', '2', '26', '3', '39', '4', '42', '5']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t6c3:
+        SELECTED; first failing gate: selected
+        header 'conventional nurseries'; enumerated; 11 values ['0', '1', '2', '25', '3', '4', '5', '6', '7', '8']
+        codes ['0', '1', '2', '25', '3', '4', '5', '6', '7', '8', '9']; in the unit ['0', '1', '2'] (strict ['0', '1', '2']), distinctive [], header words ['nurseri'], next to a meaning ['2']
+      column sharing codes t1c8:
+        SELECTED; first failing gate: selected
+        header 'samplings per nursery'; enumerated; 7 values ['1', '2', '3', '5', '58', '6', '7']
+        codes ['1', '2', '3', '5', '58', '6', '7']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words ['nursery'], next to a meaning ['2']
+      column sharing codes t3c2:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'numerator degrees of freedom'; enumerated; 3 values ['1', '2', '4']
+        codes ['1', '2', '4']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['2']
+      column sharing codes t5c3:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'solitary'; enumerated; 8 values ['1', '14', '2', '20', '22', '25', '31', 'solitary']
+        codes ['1', '14', '2', '20', '22', '25', '31']; in the unit ['1', '2'] (strict ['1', '2']), distinctive [], header words [], next to a meaning ['2']
+  - [calibration missed target] Eckert2023 'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore'
+      unit t4r134 [footnote, 5 shapes; near {'table': 4}]; R3abc links ['t4c2']
+      'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore, Soil = soil-dweller, Litter = litter-dweller, Veg = vegetation-dweller.'
+      target t4c3 (the unit is by its own table):
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+      column sharing codes t4c2 (the unit is by its own table):
+        SELECTED; first failing gate: selected
+        header 'Forage strategy'; enumerated; 4 values ['Forage strategy', 'GenForager', 'Pred', 'Sap']
+        codes ['GenForager', 'Pred', 'Sap']; in the unit ['GenForager', 'Pred', 'Sap'] (strict ['GenForager', 'Pred', 'Sap']), distinctive ['GenForager'], header words [], next to a meaning ['GenForager', 'Pred', 'Sap']
+      column sharing codes t6c5:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+  - [calibration missed target] Eckert2023 'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore'
+      unit t4r70 [footnote, 5 shapes; near {'table': 4}]; R3abc links ['t4c2']
+      'Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore, Soil = soil-dweller, Litter = litter-dweller, Veg = vegetation-dweller.'
+      target t4c3 (the unit is by its own table):
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+      column sharing codes t4c2 (the unit is by its own table):
+        SELECTED; first failing gate: selected
+        header 'Forage strategy'; enumerated; 4 values ['Forage strategy', 'GenForager', 'Pred', 'Sap']
+        codes ['GenForager', 'Pred', 'Sap']; in the unit ['GenForager', 'Pred', 'Sap'] (strict ['GenForager', 'Pred', 'Sap']), distinctive ['GenForager'], header words [], next to a meaning ['GenForager', 'Pred', 'Sap']
+      column sharing codes t6c5:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Habitat position' [taxon header]; enumerated; 4 values ['Habitat position', 'Litter', 'Soil', 'Veg']
+        codes ['Litter', 'Soil', 'Veg']; in the unit ['Litter', 'Soil', 'Veg'] (strict ['Litter', 'Soil', 'Veg']), distinctive [], header words [], next to a meaning ['Soil', 'Veg', 'Litter']
+  - [calibration unit never proposed] Espinosa2023 'Fig. 6 Results of the Fourth-corner analysis'
+      unit p97 [caption, 1 shapes; near {'next': (5, 39965), 'prev': (4, 2)}]; R3abc links nothing
+      'Fig. 6 Results of the Fourth-corner analysis showing the relationships between environmental variables and functional traits. Black cells indicate positive significant relationships and dark gray cells indicate negative significant relationships. Environmental variables: Condelectrical conductivity, COD chemical oxygen demand, IronTottotal iron, Phospho-Tottotal phosphorus, Mangtottotal manganese, OxyDis dis-'
+      column sharing codes t2c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Variable'; enumerated; 10 values ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'Mangtot', 'OxyDis', 'PhosphoTet', 'TDS', 'Turbity', 'pH']
+        codes ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'OxyDis', 'PhosphoTet', 'TDS', 'pH']; in the unit ['COD', 'OxyDis'] (strict ['COD', 'OxyDis']), distinctive ['COD', 'OxyDis'], header words [], next to a meaning []
+      column sharing codes t12c1:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Environmental variables'; enumerated; 12 values ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'Mangtot', 'Nitrate', 'OxyDis', 'PhosphoTot', 'TDS', 'Temperature']
+        codes ['COD', 'Cond', 'ImpactIndex', 'IronTot', 'OxyDis', 'PhosphoTot', 'TDS', 'pH']; in the unit ['COD', 'OxyDis'] (strict ['COD', 'OxyDis']), distinctive ['COD', 'OxyDis'], header words ['environmental'], next to a meaning []
+      column sharing codes t0c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Variable'; enumerated; 9 values ['COD', 'Cond', 'IronTot', 'MangTot', 'Nitrate', 'PhosphoTot', 'Temperature', 'Turbidity', 'pH']
+        codes ['COD', 'Cond', 'IronTot', 'MangTot', 'PhosphoTot', 'pH']; in the unit ['COD'] (strict ['COD']), distinctive ['COD'], header words [], next to a meaning []
+      column sharing codes t9c0:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Variable'; enumerated; 14 values ['%Explanation', 'COD', 'Conductivity', 'Eigenvalues', 'Impact.Index', 'ItonTot', 'MangTot', 'Nitrate', 'OxygenDis', 'PhosphoTot']
+        codes ['COD', 'ItonTot', 'MangTot', 'OxygenDis', 'PhosphoTot', 'SolidTot', 'pH']; in the unit ['COD'] (strict ['COD']), distinctive ['COD'], header words [], next to a meaning []
+  - [restored by the safe strip] Ji2024 'Number of individuals (Ind; measured/collected)'
+      unit p183 [caption, 0 shapes; near {'next': (5, 1437), 'prev': (4, 48029)}]; R3abc links nothing
+      'Table S1. Number of individuals (Ind; measured/collected) and trait values (mean±SD) of the four co-occurring Nicrophorus carrion beetle species at each of the six elevations (Elev.) in Changbai Mountain. Asterisk indicates ratio of trait to body length.'
+  - [restored by the safe strip] Ji2024 'six elevations (Elev.)'
+      unit p183 [caption, 0 shapes; near {'next': (5, 1437), 'prev': (4, 48029)}]; R3abc links nothing
+      'Table S1. Number of individuals (Ind; measured/collected) and trait values (mean±SD) of the four co-occurring Nicrophorus carrion beetle species at each of the six elevations (Elev.) in Changbai Mountain. Asterisk indicates ratio of trait to body length.'
+  - [restored by the safe strip] Kratschmer2019 '1%–5% = low; 5%–25% = medium'
+      unit p61 [prose, 0 shapes; near {'next': (1, 3387), 'prev': (0, 144)}]; R3abc links nothing
+      'coverage of all entomophilous plants in five categories (<1% = very low; 1%–5% = low; 5%–25% = medium; 25%–50% = high; and 50%– 100% = very high) following an adapted DAFOUR scale (Gardener, 2012).'
+      column sharing codes t10c6:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Total abundance'; enumerated; 15 values ['1', '128', '13', '14', '2', '20', '22', '3', '30', '4']
+        codes ['1', '13', '14', '2', '20', '22', '3', '30', '4', '5', '6', '70']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words [], next to a meaning []
+      column sharing codes t10c7:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'A_01 / Apr / first_buds / Donnerskirchen / temporary vegetated / medium'; enumerated; 3 values ['0', '1', '5']
+        codes ['0', '1', '5']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['medium'], next to a meaning []
+      column sharing codes t10c11:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'A_05 / Apr / first_buds / Purbach / temporary vegetated / low'; enumerated; 4 values ['0', '1', '3', '5']
+        codes ['0', '1', '3', '5']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words [], next to a meaning []
+      column sharing codes t10c40:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'A_02 / Jun / flowering / Donnerskirchen / temporary vegetated / high'; enumerated; 5 values ['0', '1', '32', '4', '5']
+        codes ['0', '1', '32', '4', '5']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['high'], next to a meaning []
+      column sharing codes t10c41:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'A_03 / Jun / flowering / Purbach / temporary vegetated / very high'; enumerated; 5 values ['0', '1', '2', '3', '5']
+        codes ['0', '1', '2', '3', '5']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['high', 'very'], next to a meaning []
+      column sharing codes t10c42:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'A_04 / Jun / flowering / Purbach / permanently vegetated / medium'; enumerated; 6 values ['0', '1', '2', '3', '5', '8']
+        codes ['0', '1', '2', '3', '5', '8']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['medium'], next to a meaning []
+      column sharing codes t10c60:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'A_06 / Jul / berry_pea / Breitenbrunn / permanently vegetated / medium'; enumerated; 4 values ['0', '1', '5', '6']
+        codes ['0', '1', '5', '6']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['medium'], next to a meaning []
+      column sharing codes t10c62:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'A_08 / Jul / berry_pea / Breitenbrunn / permanently vegetated / very low'; enumerated; 3 values ['0', '1', '5']
+        codes ['0', '1', '5']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['very'], next to a meaning []
+      column sharing codes t11c51:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'S_13 / Mar / fower_buds / Poyos / temporary vegetated / very high'; enumerated; 4 values ['0', '1', '5', '8']
+        codes ['0', '1', '5', '8']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['high', 'very'], next to a meaning []
+      column sharing codes t11c63:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'S_09 / April / flowering / Alcaudon / temporary vegetated / very high'; enumerated; 3 values ['0', '1', '5']
+        codes ['0', '1', '5']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words ['high', 'very'], next to a meaning []
+      column sharing codes t12c6:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Total abundance'; enumerated; 9 values ['1', '10', '15', '2', '23', '3', '5', '7', '80']
+        codes ['1', '10', '15', '2', '23', '3', '5', '7', '80']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words [], next to a meaning []
+      column sharing codes t12c33:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'F_13 / Mai / flower_buds / Martigné Briand / permanently vegetated / low'; enumerated; 3 values ['0', '1', '5']
+        codes ['0', '1', '5']; in the unit ['1', '5'] (strict ['1', '5']), distinctive [], header words [], next to a meaning []
+  - [restored by the safe strip] Oliveira2022 'CL = ratio of clypeus length to mesosoma length'
+      unit p65 [prose, 14 shapes, an inventory unit; near {'next': (2, 5288), 'prev': (1, 1922)}]; R3abc links ['t2c1', 't2c3']
+      'F I G U R E 2 Principal component analysis (PCA) of ant morphological traits (black vectors) along aridity and disturbance gradients in the Catimbau National Park, northeastern Brazil, for four ant species: a) Dinoponera quadriceps, b) Dorymyrmex goeldii, c) Ectatomma muticum, and d) Pheidole radoskowskii. Aridity (WD) and disturbance (GMDI) are also plotted as supplementary variables (blue vectors) following Legendre and Legendre (1998). CL = ratio of clypeus length to mesosoma length, ML = rat'
+      column sharing codes t2c1:
+        SELECTED; first failing gate: selected
+        header 'Trait'; enumerated; 6 values ['AL', 'CL', 'EL', 'LEG', 'ML', 'P']
+        codes ['AL', 'CL', 'EL', 'LEG', 'ML', 'P']; in the unit ['AL', 'CL', 'EL', 'LEG', 'ML', 'P'] (strict ['AL', 'CL', 'EL', 'LEG', 'ML', 'P']), distinctive ['AL', 'CL', 'EL', 'LEG', 'ML'], header words [], next to a meaning ['P', 'LEG', 'CL', 'EL', 'AL', 'ML']
+      column sharing codes t2c3:
+        SELECTED; first failing gate: selected
+        header 'Explanatory variables'; enumerated; 3 values ['GMDI', 'GMDI+WD', 'WD']
+        codes ['GMDI', 'WD']; in the unit ['GMDI', 'WD'] (strict ['GMDI', 'WD']), distinctive ['GMDI', 'WD'], header words [], next to a meaning ['GMDI', 'WD']
+  - [restored by the safe strip] Taillefer2018 'U: univoltine, M: bivoltine'
+      unit p157 [prose, 2 shapes, an inventory unit; near {'next': (7, 384), 'prev': (6, 54240)}]; R3abc links nothing
+      'Voltinism: U: univoltine, M: bivoltine/ multivoltine.'
+      column sharing codes t8c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Tephritidae' [taxon header]; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+      column sharing codes t9c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'M'; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+      column sharing codes t10c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'M'; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+      column sharing codes t11c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Opomyzidae'; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+      column sharing codes t12c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'M'; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+      column sharing codes t13c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'NA'; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+      column sharing codes t16c8:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'M'; enumerated; 2 values ['M', 'U']
+        codes ['M', 'U']; in the unit ['M', 'U'] (strict ['M', 'U']), distinctive [], header words [], next to a meaning ['M', 'U']
+      column sharing codes t7c8 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: R2: one code, no distinctive code, no header word)
+        header 'Voltinism / Micropezidae' [taxon header]; NOT enumerated; 1 values ['U']
+        codes ['U']; in the unit ['U'] (strict ['U']), distinctive [], header words ['voltinism'] (dropped), next to a meaning ['U']
+  - [restored by the safe strip] Taillefer2018 'E: eggs, L: larvae, P: pupae, A: adults'
+      unit p158 [prose, 4 shapes, an inventory unit; near {'next': (7, 329), 'prev': (6, 54295)}]; R3abc links nothing
+      'Overwin stage: Overwintering stage – E: eggs, L: larvae, P: pupae, A: adults.'
+      column sharing codes t9c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'P'; enumerated; 4 values ['A', 'E', 'L', 'P']
+        codes ['A', 'E', 'L', 'P']; in the unit ['A', 'E', 'L', 'P'] (strict ['A', 'E', 'L', 'P']), distinctive [], header words [], next to a meaning ['L', 'E', 'A', 'P']
+      column sharing codes t8c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Tephritidae' [taxon header]; enumerated; 3 values ['A', 'L', 'P']
+        codes ['A', 'L', 'P']; in the unit ['A', 'L', 'P'] (strict ['A', 'L', 'P']), distinctive [], header words [], next to a meaning ['L', 'A', 'P']
+      column sharing codes t16c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'L'; enumerated; 3 values ['A', 'L', 'P']
+        codes ['A', 'L', 'P']; in the unit ['A', 'L', 'P'] (strict ['A', 'L', 'P']), distinctive [], header words [], next to a meaning ['L', 'A', 'P']
+      column sharing codes t10c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'P'; enumerated; 2 values ['A', 'P']
+        codes ['A', 'P']; in the unit ['A', 'P'] (strict ['A', 'P']), distinctive [], header words [], next to a meaning ['A', 'P']
+      column sharing codes t11c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'Opomyzidae'; enumerated; 2 values ['A', 'L']
+        codes ['A', 'L']; in the unit ['A', 'L'] (strict ['A', 'L']), distinctive [], header words [], next to a meaning ['L', 'A']
+      column sharing codes t12c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'NA'; enumerated; 2 values ['A', 'L']
+        codes ['A', 'L']; in the unit ['A', 'L'] (strict ['A', 'L']), distinctive [], header words [], next to a meaning ['L', 'A']
+      column sharing codes t13c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'NA'; enumerated; 2 values ['A', 'P']
+        codes ['A', 'P']; in the unit ['A', 'P'] (strict ['A', 'P']), distinctive [], header words [], next to a meaning ['A', 'P']
+      column sharing codes t15c9:
+        not selected; first failing gate: R2: no informative header word in the unit
+        header 'A'; enumerated; 2 values ['L', 'P']
+        codes ['L', 'P']; in the unit ['L', 'P'] (strict ['L', 'P']), distinctive [], header words [], next to a meaning ['L', 'P']
+  - [calibration missed target] Viza2023 'Table S2. Model performances by each species. Columns of predictor variables sho'
+      unit t5r87 [footnote, 1 shapes; near {'table': 5}]; R3abc links ['t5c1']
+      'Table S2. Model performances by each species. Columns of predictor variables showed variables selected and the corresponded distribution for each model. Distribution codes for GLM: x2 + x =: quadratic regression; x =: linear regression. In BRT, variables selected were indicated with a “x”'
+      target t5c3 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio3'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c4 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio4'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c5 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio8'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c6 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio9'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      target t5c7 (the unit is by its own table):
+        not selected; first failing gate: column not enumerated: 1 distinct values (also: a: no code printed next to a meaning)
+        header 'Predictor Variables / Bio15'; NOT enumerated; 1 values ['x2 + x']
+        codes ['x2']; in the unit ['x2'] (strict ['x2']), distinctive ['x2'], header words ['predictor'], next to a meaning []
+      column sharing codes t5c1 (the unit is by its own table):
+        SELECTED; first failing gate: selected
+        header 'Model selected'; enumerated; 2 values ['BRT', 'GLM']
+        codes ['BRT', 'GLM']; in the unit ['BRT', 'GLM'] (strict ['BRT', 'GLM']), distinctive ['BRT', 'GLM'], header words ['model', 'select'], next to a meaning ['BRT']
+  - [restored by the safe strip] Viza2023 'axis Y ≥ 10; and Reduced: Axis X ≤'
+      unit p70 [prose, 3 shapes, an inventory unit; near {'next': (3, 15708), 'prev': (2, 1218)}]; R3abc links nothing
+      'Within this space, the proposed categories of range shifts were operationally defined as: Expanded: Axis X ϵ [10, +∞), axis $Y \\in$ $[ 1 0 , + \\infty ) ;$ Displaced: Axis $X \\in (-10, +10)$ , axis $Y \\succ = 1 0 ;$ Unchanged: Axis $X \\in (-10, +10],$ axis $Y \\in [ 0 , \\; 1 0 ) ;$ Reduced and displaced: Axis $X < 1 0 .$ , axis Y ≥ 10; and Reduced: Axis X ≤ \x0310, axis Y ϵ [0, 10).'
+      column sharing codes t7c4:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Body size / BS'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c5:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Body size / BM'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c6:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Body size / BL'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c7:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Distribution / DC'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c8:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Distribution / DF'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c9:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Distribution / DR'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c10:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Iberian Peninsula Range / RU'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words ['range'], next to a meaning []
+      column sharing codes t7c11:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Iberian Peninsula Range / RC'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words ['range'], next to a meaning []
+      column sharing codes t7c12:
+        not selected; first failing gate: a: no code printed next to a meaning
+        header 'Iberian Peninsula Range / RL'; enumerated; 2 values ['0.0', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words ['range'], next to a meaning []
+      column sharing codes t7c13:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Altitudinal distribution / AL'; enumerated; 5 values ['0.0', '0.33', '0.34', '0.5', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c14:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Altitudinal distribution / AM'; enumerated; 5 values ['0.0', '0.33', '0.34', '0.5', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+      column sharing codes t7c15:
+        not selected; first failing gate: R2: no informative header word in the unit (also: a: no code printed next to a meaning)
+        header 'Altitudinal distribution / AH'; enumerated; 5 values ['0.0', '0.33', '0.34', '0.5', '1.0']
+        codes ['0', '1']; in the unit ['0', '1'] (strict ['0', '1']), distinctive [], header words [], next to a meaning []
+
