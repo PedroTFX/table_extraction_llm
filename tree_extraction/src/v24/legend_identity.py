@@ -49,6 +49,12 @@ through the meanings only (Wang2021's caption, Eckert2023's own-table note). The
            C5  decoy stratum: at most 2 links
            C6  sample stratum: at most 2 links
          The route passes only if all six hold. Nothing is wired in either way without the user's word.
+         Result (run 2026-11-26_1518, gemma4:e4b-it-qat): FAILS C2, precision 0.69 (24 of 35 links); C1 6 of 6,
+         recall 0.77, 0 links on the 170 numeric control and sample pairs. NOT ADOPTED; no revised test authorised.
+         False links: 9 columns of named entities (countries, sites, parks, continents) that a passage only
+         mentions, Pessoa2017's figure colour key, Raine2018's header enumeration. Misses: 3 variable-name columns
+         refused for partial definitions, 2 complete legends refused for a generic header, 2 Eckert2023 own-table
+         notes. Write-up: output/legend_coverage/IDENTITY_ROUTE_RESULT_2026-11-27.md.
 
     python legend_identity.py pool [papers]       (tuning papers by default)
     python legend_identity.py gold
